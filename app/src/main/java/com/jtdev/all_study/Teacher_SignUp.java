@@ -20,7 +20,7 @@ public class Teacher_SignUp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_10teacher_sign_up);
+        setContentView(R.layout.activity_06_teacher_sign_up);
 
         Button signupbutton = findViewById(R.id.signupbutton);
         Button backbutton = findViewById(R.id.backbutton);
@@ -32,7 +32,7 @@ public class Teacher_SignUp extends AppCompatActivity {
         });
 
         signupbutton.setOnClickListener(v -> {
-            Intent intent = new Intent(Teacher_SignUp.this, Signin_SignUp.class);
+            Intent intent = new Intent(Teacher_SignUp.this, Login_SignUp.class);
             Toast.makeText(Teacher_SignUp.this, "Account successfully created!", Toast.LENGTH_SHORT).show();
             startActivity(intent);
         });

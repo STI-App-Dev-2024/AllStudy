@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_01main);
+        setContentView(R.layout.activity_01_main);
 
         // 3 seconds
         int SPLASH_TIME_OUT = 3000;
@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 // Start MainActivity after the timer ends
-                Intent intent = new Intent(MainActivity.this, Signin_SignUp.class);
+                Intent intent = new Intent(MainActivity.this, Login_SignUp.class);
                 startActivity(intent);
                 finish();  // Finish the Splash Activity so the user can't go back to it
             }

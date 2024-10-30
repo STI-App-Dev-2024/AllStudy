@@ -36,4 +36,6 @@
     <string name="teacher_sign_in">Teacher Sign In</string>
     <string name="are_you_a">Are you a</string>
     <string name="back_button">Back Button</string>
+    <string name="signup_box">Signup box</string>
+    <string name="log_in">Log In</string>
 </resources>

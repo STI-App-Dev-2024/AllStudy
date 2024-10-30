@@ -37,13 +37,13 @@
             android:name=".TeacherOrStudentSignUp"
             android:exported="false" />
         <activity
-            android:name=".SignmeIn"
+            android:name=".Login"
             android:exported="false" />
         <activity
             android:name=".TeacherLogIn"
             android:exported="false" />
         <activity
-            android:name=".Signin_SignUp"
+            android:name=".Login_SignUp"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

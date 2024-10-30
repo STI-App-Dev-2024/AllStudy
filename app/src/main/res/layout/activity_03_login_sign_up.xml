@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Signin_SignUp">
+    tools:context=".Login_SignUp">
 
     <ImageView
         android:id="@+id/splash"
@@ -22,7 +22,7 @@
         android:layout_below="@+id/splash"
         android:layout_centerHorizontal="true"
         android:backgroundTint="#313231"
-        android:text="@string/sign_in"
+        android:text="@string/log_in"
         android:textSize="20sp"
         android:layout_margin="10dp"/>
 

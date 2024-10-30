@@ -12,44 +12,36 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Signin_SignUp extends AppCompatActivity {
-
-
-    //For unit testing
-    public boolean isValidEmail(String email) {
-        String emailRegex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$";
-        return email.matches(emailRegex);
-    } //For unit testing
-
+public class Login extends AppCompatActivity {
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_03signin_sign_up);
+        setContentView(R.layout.activity_07_log_in);
 
-        Button signup = findViewById(R.id.signup);
-        Button signin = findViewById(R.id.signin);
+        Button navback = findViewById(R.id.navback);
+        Button buttonsign = findViewById(R.id.buttonsign);
 
-        // Set up insets for the main view
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        signup.setOnClickListener(v -> {
-            // Logic for Sign Up button
-            Intent intent = new Intent(Signin_SignUp.this, TeacherOrStudentSignUp.class);
+        buttonsign.setOnClickListener(v -> {
+            Intent intent = new Intent(Login.this, HomePageAllStudy.class);
+            Toast.makeText(Login.this, "Welcome back!", Toast.LENGTH_SHORT).show();
             startActivity(intent);
+
         });
 
-
-        signin.setOnClickListener(v -> {
-            // Logic for Sign In button
-            Intent intent = new Intent(Signin_SignUp.this, SignmeIn.class);
+        navback.setOnClickListener(v -> {
+            Intent intent = new Intent(Login.this, Login_SignUp.class);
             startActivity(intent);
+
         });
+
     }
 }

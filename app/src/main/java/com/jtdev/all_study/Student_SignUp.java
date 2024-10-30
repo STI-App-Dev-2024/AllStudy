@@ -7,7 +7,6 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -20,7 +19,7 @@ public class Student_SignUp extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_05student_sign_up);
+        setContentView(R.layout.activity_05_student_sign_up);
 
         Button signupbutton = findViewById(R.id.signupbutton);
         ImageButton backbutton = findViewById(R.id.backbutton);
@@ -32,7 +31,7 @@ public class Student_SignUp extends AppCompatActivity {
         });
 
         signupbutton.setOnClickListener(view -> {
-            Intent intent = new Intent(Student_SignUp.this, Signin_SignUp.class);
+            Intent intent = new Intent(Student_SignUp.this, Login_SignUp.class);
             Toast.makeText(Student_SignUp.this, "Account successfully created!", Toast.LENGTH_SHORT).show();
             startActivity(intent);
         });

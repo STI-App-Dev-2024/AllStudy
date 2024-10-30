@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignmeIn">
+    tools:context=".Login">
 
     <ImageView
         android:id="@+id/comp"
@@ -18,10 +18,10 @@
         android:id="@+id/navback"
         android:layout_width="42dp"
         android:layout_height="42dp"
-        android:background="@drawable/navigate_next"
+        android:background="@drawable/back_button"
         android:layout_marginStart="42dp"
         android:layout_marginTop="40dp"
-        android:src="@drawable/navigate_next" />
+        android:src="@drawable/back_button" />
 
     <ImageView
         android:id="@+id/rectangle"
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="386dp"
         android:layout_centerHorizontal="true"
-        android:text="@string/sign_in"
+        android:text="@string/log_in"
         android:textSize="30sp"/>
 
     <EditText

@@ -8,28 +8,31 @@
         android:id="@+id/allstudyhalf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:src="@drawable/allstudyhalfbg" />
 
-    <Button
+    <ImageButton
         android:id="@+id/backbutton"
-        android:layout_width="42dp"
-        android:layout_height="42dp"
-        android:background="@drawable/navigate_next"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginStart="42dp"
         android:layout_marginTop="40dp"
-        android:src="@drawable/navigate_next" />
+        android:contentDescription="@string/back_button"
+        android:src="@drawable/back_button"
+        android:background="@color/white"/>
 
     <ImageView
         android:layout_width="360dp"
         android:layout_height="555dp"
         android:layout_below="@id/allstudyhalf"
         android:layout_centerHorizontal="true"
+        android:contentDescription="@string/signup_box"
         android:src="@drawable/custom_rectangle" />
 
     <TextView
-        android:id="@+id/Tsignup"
+        android:id="@+id/signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/allstudyhalf"
@@ -37,80 +40,82 @@
         android:padding="20dp"
         android:text="@string/sign_up"
         android:textSize="30sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/Tfirstname"
+        android:id="@+id/firstname"
         android:layout_width="325dp"
-        android:layout_height="41dp"
-        android:layout_below="@+id/Tsignup"
-        android:layout_centerHorizontal="true"
+        android:layout_height="48dp"
+        android:layout_below="@+id/signup"
+        android:background="@drawable/round_edit_text"
         android:hint="@string/first_name"
-        android:padding="10dp"
-        android:textSize="20sp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/round_edit_text" />
+        android:autofillHints="First Name"
+        android:inputType="textPersonName"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp" />
 
     <EditText
-        android:id="@+id/Tlastname"
+        android:id="@+id/lastname"
         android:layout_width="325dp"
-        android:layout_height="41dp"
-        android:layout_below="@+id/Tfirstname"
+        android:layout_height="48dp"
+        android:layout_below="@+id/firstname"
         android:layout_centerHorizontal="true"
         android:hint="@string/last_name"
+        android:autofillHints="Last Name"
+        android:inputType="textPersonName"
         android:padding="10dp"
-        android:textSize="20sp"
         android:layout_marginTop="10dp"
         android:background="@drawable/round_edit_text" />
 
     <EditText
-        android:id="@+id/teacherid"
+        android:id="@+id/studentid"
         android:layout_width="325dp"
-        android:layout_height="41dp"
-        android:layout_below="@+id/Tlastname"
+        android:layout_height="48dp"
+        android:layout_below="@+id/lastname"
         android:layout_centerHorizontal="true"
-        android:hint="@string/teacheridSign_up"
+        android:hint="@string/student_id"
+        android:autofillHints="Student ID"
+        android:inputType="number"
         android:padding="10dp"
         android:layout_marginTop="10dp"
-        android:textSize="20sp"
         android:background="@drawable/round_edit_text" />
 
     <EditText
-        android:id="@+id/Tpassword"
+        android:id="@+id/password"
         android:layout_width="325dp"
-        android:layout_height="41dp"
-        android:layout_below="@+id/teacherid"
+        android:layout_height="48dp"
+        android:layout_below="@+id/studentid"
         android:layout_centerHorizontal="true"
         android:hint="@string/password"
+        android:autofillHints="Password"
+        android:inputType="textPassword"
         android:padding="10dp"
         android:layout_marginTop="10dp"
-        android:textSize="20sp"
-        android:background="@drawable/round_edit_text"
-        android:inputType="textPassword" />
+        android:background="@drawable/round_edit_text" />
 
     <EditText
-        android:id="@+id/Tconfirmpassword"
+        android:id="@+id/confirmpassword"
         android:layout_width="325dp"
-        android:layout_height="41dp"
-        android:layout_below="@+id/Tpassword"
+        android:layout_height="48dp"
+        android:layout_below="@+id/password"
         android:layout_centerHorizontal="true"
         android:hint="@string/confirm_password"
+        android:autofillHints="Confirm Password"
+        android:inputType="textPassword"
         android:padding="10dp"
         android:layout_marginTop="10dp"
-        android:textSize="20sp"
-        android:background="@drawable/round_edit_text"
-        android:inputType="textPassword" />
+        android:background="@drawable/round_edit_text" />
 
     <Button
         android:id="@+id/signupbutton"
         android:layout_width="294dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/Tconfirmpassword"
+        android:layout_height="49dp"
+        android:layout_below="@+id/confirmpassword"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="@string/sign_up"
         android:backgroundTint="#313231"
-        android:textSize="20sp" />
+        android:text="@string/sign_up"
+        android:textSize="20sp"
+        android:layout_margin="20dp"/>
 
 
 </RelativeLayout>

@@ -1,7 +1,6 @@
 package com.jtdev.all_study;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -17,7 +16,7 @@ public class TeacherOrStudentSignUp extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_04teacher_or_student_sign_up);
+        setContentView(R.layout.activity_04_teacher_or_student_sign_up);
 
         // Initialize buttons
         ImageButton teacher = findViewById(R.id.teacher);
@@ -45,7 +44,7 @@ public class TeacherOrStudentSignUp extends AppCompatActivity {
 
         // Back button click listener
         navback.setOnClickListener(v -> {
-            Intent intent = new Intent(TeacherOrStudentSignUp.this, Signin_SignUp.class);
+            Intent intent = new Intent(TeacherOrStudentSignUp.this, Login_SignUp.class);
             startActivity(intent);
         });
     }
