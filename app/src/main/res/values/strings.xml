@@ -38,4 +38,8 @@
     <string name="back_button">Back Button</string>
     <string name="signup_box">Signup box</string>
     <string name="log_in">Log In</string>
+    <string name="new_password">New Password</string>
+    <string name="enter_new_password">Enter New Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="confirm">Confirm</string>
 </resources>

@@ -2,14 +2,14 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    tools:context=".HomePageAllStudy">
 
     <ImageView
         android:layout_width="350dp"
-        android:layout_height="wrap_content"
+        android:layout_height="205dp"
         android:background="@drawable/rectangle_6"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="180dp" />
