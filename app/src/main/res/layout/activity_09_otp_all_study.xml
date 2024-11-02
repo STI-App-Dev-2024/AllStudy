@@ -104,10 +104,11 @@
         android:id="@+id/Tnavback"
         android:layout_width="42dp"
         android:layout_height="42dp"
-        android:background="@drawable/back_button"
         android:layout_marginStart="4dp"
         android:layout_marginTop="35dp"
-        android:src="@drawable/back_button" />
+        android:src="@drawable/back_button"
+        android:background="@android:color/transparent"
+        />
 
     <LinearLayout
         android:id="@+id/layout"
