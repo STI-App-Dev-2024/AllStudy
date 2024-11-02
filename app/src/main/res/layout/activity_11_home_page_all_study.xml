@@ -15,11 +15,13 @@
         android:layout_marginTop="180dp" />
 
     <ImageView
-        android:layout_width="134dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="225dp"
+        android:layout_width="126dp"
+        android:layout_height="127dp"
+        android:layout_marginStart="210dp"
         android:layout_marginTop="218dp"
-        android:background="@drawable/code" />
+        android:src="@drawable/squarestroke"
+        android:scaleType="centerCrop"
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -28,7 +30,8 @@
         android:layout_marginTop="200dp"
         android:layout_marginStart="45dp"
         android:textColor="@color/white"
-        android:textSize="25sp" />
+        android:textSize="20sp"
+        android:fontFamily="@font/product_sans_regular"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -36,28 +39,30 @@
         android:layout_marginTop="320dp"
         android:layout_marginStart="50dp"
         android:text="@string/join_now"
+        android:fontFamily="@font/product_sans_regular"
         android:textColor="@color/black"
         android:backgroundTint="@color/white" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/coding"
+        android:text="Computer Science"
         android:layout_marginTop="260dp"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="20dp"
         android:textColor="@color/white"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:shadowColor="@color/white"
-        android:textStyle="bold" />
+        android:fontFamily="@font/product_sans_bold" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/more_active_servers"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="400dp"
-        android:layout_marginStart="40dp"
-        android:textStyle="bold"
-        android:textSize="30sp" />
+        android:fontFamily="@font/product_sans_regular"
+        android:text="@string/more_active_servers"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
 
     <ImageView
         android:layout_width="500dp"
@@ -82,26 +87,37 @@
 
     <ImageView
         android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/generic_avatar"
-        android:layout_marginStart="340dp"
-        android:layout_marginTop="30dp" />
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/allstudy"
+        android:layout_marginHorizontal="100dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/generic_avatar" />
+
+    <TextView
+        android:layout_width="175dp"
+        android:layout_height="42dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="35dp" />
+        android:layout_marginTop="40dp"
+        android:text="ALLSTUDY"
+        android:fontFamily="@font/product_sans_bold"
+        android:textSize="35sp"
+        android:textColor="@color/black"
+        />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="140dp"
+        android:fontFamily="@font/product_sans"
         android:text="@string/list_of_servers"
-        android:textStyle="bold"
-        android:textSize="30sp"
-        android:layout_marginTop="120dp"
-        android:layout_marginStart="35dp" />
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        />
 
 
 </RelativeLayout>

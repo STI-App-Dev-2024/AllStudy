@@ -31,7 +31,8 @@
         android:layout_centerInParent="true"
         android:layout_margin="16dp"
         android:textSize="35sp"
-        android:text="@string/verification"/>
+        android:text="@string/verification"
+        android:fontFamily="@font/product_sans_regular"/>
 
     <LinearLayout
         android:id="@+id/circlesLayout"
@@ -94,16 +95,18 @@
         android:layout_below="@id/circlesLayout"
         android:layout_margin="20dp"
         android:text="@string/send"
+        android:textSize="20sp"
         android:layout_centerInParent="true"
-        android:backgroundTint="#313231" />
+        android:backgroundTint="#313231"
+        android:fontFamily="@font/product_sans_regular"/>
 
     <ImageButton
         android:id="@+id/Tnavback"
         android:layout_width="42dp"
         android:layout_height="42dp"
         android:background="@drawable/back_button"
-        android:layout_marginStart="42dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="35dp"
         android:src="@drawable/back_button" />
 
     <LinearLayout
@@ -119,7 +122,8 @@
             android:id="@+id/dont_have_account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/didn_t_receive_a_code" />
+            android:text="@string/didn_t_receive_a_code"
+            android:fontFamily="@font/product_sans_regular"/>
 
         <TextView
             android:id="@+id/signmeup"
@@ -129,6 +133,7 @@
             android:focusable="true"
             android:text="@string/resend"
             android:textColor="#26198F"
+            android:fontFamily="@font/product_sans_regular"
             android:paddingStart="5dp"/>
 
     </LinearLayout>

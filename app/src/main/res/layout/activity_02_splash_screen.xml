@@ -10,9 +10,9 @@
 
     <ImageView
         android:id="@+id/splashimage"
-        android:layout_width="500dp"
+        android:layout_width="370dp"
         android:layout_height="800dp"
-        android:scaleType="centerCrop"
+        android:scaleType="center"
         android:src="@drawable/splashscreen2" />
 
 
