@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -14,16 +16,22 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class Forgot_Password extends AppCompatActivity {
-private Button send;
-private EditText email;
+    private Button send;
+    private EditText email;
+    private ImageButton backButton;
+    private TextView signUpText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_08_forgot_password);
 
-        Button send = findViewById(R.id.send);
-        EditText email = findViewById(R.id.email);
+        // Initialize UI elements
+        send = findViewById(R.id.send);
+        email = findViewById(R.id.email);
+        backButton = findViewById(R.id.backbutton);
+        signUpText = findViewById(R.id.signmeup);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -31,11 +39,31 @@ private EditText email;
             return insets;
         });
 
+        // Set up click listener for the Send button
         send.setOnClickListener(v -> {
-            Intent intent = new Intent(Forgot_Password.this, OTP_AllStudy.class);
-            Toast.makeText(Forgot_Password.this, "OTP Sent!", Toast.LENGTH_SHORT).show();
-            startActivity(intent);
+            // Here you should add logic to send the OTP
+            String emailInput = email.getText().toString().trim();
+            if (!emailInput.isEmpty()) {
+                // Intent to OTP screen
+                Intent intent = new Intent(Forgot_Password.this, OTP_AllStudy.class);
+                Toast.makeText(Forgot_Password.this, "OTP Sent!", Toast.LENGTH_SHORT).show();
+                startActivity(intent);
+            } else {
+                Toast.makeText(Forgot_Password.this, "Please enter your email", Toast.LENGTH_SHORT).show();
+            }
+        });
 
+        // Set up click listener for the Back button
+        backButton.setOnClickListener(v -> {
+            // Handle back action
+            onBackPressed();
+        });
+
+        // Set up click listener for the Sign Up text
+        signUpText.setOnClickListener(v -> {
+            // Navigate to Sign Up Activity (Assuming you have a SignUp activity)
+            Intent intent = new Intent(Forgot_Password.this, OTP_AllStudy.class);
+            startActivity(intent);
         });
     }
 }

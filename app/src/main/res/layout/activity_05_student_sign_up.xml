@@ -41,7 +41,7 @@
         android:layout_below="@+id/allstudyhalf"
         android:layout_centerHorizontal="true"
         android:padding="20dp"
-        android:text="@string/sign_up"
+        android:text="@string/student_sign_up"
         android:textSize="30sp"
         android:fontFamily="@font/product_sans_bold"
         />
@@ -56,7 +56,8 @@
         android:autofillHints="First Name"
         android:inputType="textPersonName"
         android:layout_centerHorizontal="true"
-        android:padding="10dp" />
+        android:padding="10dp"
+        android:fontFamily="@font/product_sans_regular"/>
 
     <EditText
         android:id="@+id/lastname"
@@ -69,7 +70,8 @@
         android:inputType="textPersonName"
         android:padding="10dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/round_edit_text" />
+        android:background="@drawable/round_edit_text"
+        android:fontFamily="@font/product_sans_regular"/>
 
     <EditText
         android:id="@+id/studentid"
@@ -82,7 +84,8 @@
         android:inputType="number"
         android:padding="10dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/round_edit_text" />
+        android:background="@drawable/round_edit_text"
+        android:fontFamily="@font/product_sans_regular"/>
 
     <EditText
         android:id="@+id/password"
@@ -95,7 +98,8 @@
         android:inputType="textPassword"
         android:padding="10dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/round_edit_text" />
+        android:background="@drawable/round_edit_text"
+        android:fontFamily="@font/product_sans_regular"/>
 
     <EditText
         android:id="@+id/confirmpassword"
@@ -108,18 +112,20 @@
         android:inputType="textPassword"
         android:padding="10dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/round_edit_text" />
+        android:background="@drawable/round_edit_text"
+        android:fontFamily=""/>
 
     <Button
         android:id="@+id/signupbutton"
-        android:layout_width="294dp"
-        android:layout_height="49dp"
+        android:layout_width="295dp"
+        android:layout_height="50dp"
         android:layout_below="@+id/confirmpassword"
         android:layout_centerHorizontal="true"
         android:backgroundTint="#313231"
         android:text="@string/sign_up"
         android:textSize="20sp"
-        android:layout_margin="20dp"/>
+        android:layout_margin="15dp"
+        android:fontFamily="@font/product_sans_bold"/>
 
 
 </RelativeLayout>

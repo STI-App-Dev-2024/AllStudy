@@ -42,4 +42,13 @@
     <string name="enter_new_password">Enter New Password</string>
     <string name="confirm_new_password">Confirm New Password</string>
     <string name="confirm">Confirm</string>
+    <string name="allstudy">ALLSTUDY</string>
+    <string name="description_squarestroke" />
+    <string name="description_image" />
+    <string name="description_bar" />
+    <string name="description_avatar" />
+    <string name="more_active_serverss">More Active Servers</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="student_sign_up">Student Sign Up</string>
+    <string name="teacher_sign_upp">Teacher Sign Up</string>
 </resources>

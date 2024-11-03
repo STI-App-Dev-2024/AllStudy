@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -23,7 +24,7 @@ public class Teacher_SignUp extends AppCompatActivity {
         setContentView(R.layout.activity_06_teacher_sign_up);
 
         Button signupbutton = findViewById(R.id.signupbutton);
-        Button backbutton = findViewById(R.id.backbutton);
+        ImageButton backbutton = findViewById(R.id.backbutton);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
