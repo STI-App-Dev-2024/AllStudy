@@ -16,10 +16,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class Forgot_Password extends AppCompatActivity {
-    private Button send;
     private EditText email;
-    private ImageButton backButton;
-    private TextView signUpText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +25,10 @@ public class Forgot_Password extends AppCompatActivity {
         setContentView(R.layout.activity_08_forgot_password);
 
         // Initialize UI elements
-        send = findViewById(R.id.send);
+        Button send = findViewById(R.id.send);
         email = findViewById(R.id.email);
-        backButton = findViewById(R.id.backbutton);
-        signUpText = findViewById(R.id.signmeup);
+        ImageButton backButton = findViewById(R.id.backbutton);
+        TextView signUpText = findViewById(R.id.signmeup);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

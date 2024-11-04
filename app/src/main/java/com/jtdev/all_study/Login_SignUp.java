@@ -44,7 +44,6 @@ public class Login_SignUp extends AppCompatActivity {
             startActivity(intent);
         });
 
-
         signin.setOnClickListener(v -> {
             // Logic for Sign In button
             Intent intent = new Intent(Login_SignUp.this, Login.class);

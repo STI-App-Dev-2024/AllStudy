@@ -9,12 +9,13 @@
 
     <!-- Background Image Rectangle-->
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="350dp"
         android:layout_height="205dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="155dp"
-        android:src="@drawable/rectangle_6"
-        android:contentDescription="@string/description_image" />
+        android:contentDescription="@string/description_image"
+        android:src="@drawable/rectangle_6" />
 
     <!-- Square Programming Stroke Image -->
     <ImageView
@@ -62,6 +63,7 @@
 
     <!-- More Active Servers Text -->
     <TextView
+        android:id="@+id/moreactiveserver"
         android:layout_width="175dp"
         android:layout_height="20dp"
         android:layout_marginTop="370dp"
@@ -115,5 +117,22 @@
         android:textSize="25sp"
         android:textColor="@color/black"
         android:fontFamily="@font/product_sans_regular" />
+
+
+    <Button
+        android:id="@+id/seemore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="-250dp"
+        android:backgroundTint="#F0EFEF"
+        android:elevation="10dp"
+        android:text="@string/see_more"
+        android:textColor="#1060FF" />
+
 
 </RelativeLayout>

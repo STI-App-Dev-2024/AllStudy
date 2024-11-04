@@ -13,7 +13,7 @@
         android:layout_height="385dp"
         android:src="@drawable/halfsplash"
         android:layout_centerHorizontal="true"
-        />
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/rectangles"
@@ -21,7 +21,8 @@
         android:layout_height="424dp"
         android:src="@drawable/custom_rectangle"
         android:layout_below="@+id/splashforotp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/verification"
@@ -102,13 +103,13 @@
 
     <ImageButton
         android:id="@+id/Tnavback"
-        android:layout_width="42dp"
-        android:layout_height="42dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="35dp"
         android:src="@drawable/back_button"
         android:background="@android:color/transparent"
-        />
+        tools:ignore="ContentDescription" />
 
     <LinearLayout
         android:id="@+id/layout"
@@ -134,8 +135,9 @@
             android:focusable="true"
             android:text="@string/resend"
             android:textColor="#26198F"
-            android:fontFamily="@font/product_sans_regular"
-            android:paddingStart="5dp"/>
+            android:fontFamily="@font/product_sans_bold"
+            android:paddingStart="5dp"
+            tools:ignore="RtlSymmetry" />
 
     </LinearLayout>
 
