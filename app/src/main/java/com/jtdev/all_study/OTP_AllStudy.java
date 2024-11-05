@@ -3,7 +3,6 @@ package com.jtdev.all_study;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
@@ -14,24 +13,16 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class OTP_AllStudy extends AppCompatActivity {
 
-    private EditText otp1;
-    private EditText otp2;
-    private EditText otp3;
-    private EditText otp4;
-
-    private Button send_button;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_09_otp_all_study);
 
-        otp1 = findViewById(R.id.otp1);
-        otp2 = findViewById(R.id.otp2);
-        otp3 = findViewById(R.id.otp3);
-        otp4 = findViewById(R.id.otp4);
-        send_button = findViewById(R.id.send_button);
+        EditText otp1 = findViewById(R.id.otp1);
+        EditText otp2 = findViewById(R.id.otp2);
+        EditText otp3 = findViewById(R.id.otp3);
+        EditText otp4 = findViewById(R.id.otp4);
 
         otp1.addTextChangedListener(new TextWatcher() {
             @Override
@@ -89,6 +80,6 @@ public class OTP_AllStudy extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        
+
     }
 }
