@@ -33,7 +33,7 @@ public class Student_SignUp extends AppCompatActivity {
         });
 
         signupbutton.setOnClickListener(view -> {
-            Intent intent = new Intent(Student_SignUp.this, Login_SignUp.class);
+            Intent intent = new Intent(Student_SignUp.this, Login.class);
             Toast.makeText(Student_SignUp.this, "Account successfully created!", Toast.LENGTH_SHORT).show();
             startActivity(intent);
         });

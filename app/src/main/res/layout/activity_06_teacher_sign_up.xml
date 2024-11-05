@@ -120,7 +120,7 @@
         android:fontFamily="@font/product_sans_regular"/>
 
     <Button
-        android:id="@+id/t_sign_up_button"
+        android:id="@+id/sign_up_button"
         android:layout_width="295dp"
         android:layout_height="50dp"
         android:layout_below="@+id/confirm_password"

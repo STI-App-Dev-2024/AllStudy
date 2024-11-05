@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Toast;
-
+import android.widget.CompoundButton;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;

@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -16,8 +15,6 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class Teacher_SignUp extends AppCompatActivity {
 
-    private EditText t_first_name, t_last_name, teacher_id, t_password, t_confirm_password;
-
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +22,8 @@ public class Teacher_SignUp extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_06_teacher_sign_up);
 
-        Button signupbutton = findViewById(R.id.signupbutton);
         ImageButton backbutton = findViewById(R.id.backbutton);
+        Button sign_up_button = findViewById(R.id.sign_up_button);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -34,8 +31,8 @@ public class Teacher_SignUp extends AppCompatActivity {
             return insets;
         });
 
-        signupbutton.setOnClickListener(v -> {
-            Intent intent = new Intent(Teacher_SignUp.this, Login_SignUp.class);
+        sign_up_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Teacher_SignUp.this, Login.class);
             Toast.makeText(Teacher_SignUp.this, "Account successfully created!", Toast.LENGTH_SHORT).show();
             startActivity(intent);
         });

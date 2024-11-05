@@ -61,7 +61,7 @@
             android:contentDescription="@string/teacher_log_in"
             android:src="@drawable/teachericon"
             android:background="@drawable/circle_for_profile"
-            android:layout_marginStart="100dp"/>
+            android:layout_marginStart="100dp" />
 
     </LinearLayout>
 
