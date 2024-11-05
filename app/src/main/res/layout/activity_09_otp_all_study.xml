@@ -55,7 +55,7 @@
         android:orientation="horizontal">
 
     <EditText
-        android:id="@+id/circle1"
+        android:id="@+id/otp1"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginEnd="10dp"
@@ -64,10 +64,10 @@
         android:maxLength="1"
         android:gravity="center"
         android:background="@drawable/circle_background"
-        android:nextFocusForward="@id/circle2"/>
+        android:nextFocusForward="@id/otp2"/>
 
     <EditText
-        android:id="@+id/circle2"
+        android:id="@+id/otp2"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginEnd="10dp"
@@ -76,10 +76,10 @@
         android:maxLength="1"
         android:gravity="center"
         android:background="@drawable/circle_background"
-        android:nextFocusForward="@id/circle3"/>
+        android:nextFocusForward="@id/otp3"/>
 
     <EditText
-        android:id="@+id/circle3"
+        android:id="@+id/otp3"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginEnd="10dp"
@@ -88,10 +88,10 @@
         android:maxLength="1"
         android:gravity="center"
         android:background="@drawable/circle_background"
-        android:nextFocusForward="@id/circle4"/>
+        android:nextFocusForward="@id/otp4"/>
 
     <EditText
-        android:id="@+id/circle4"
+        android:id="@+id/otp4"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginEnd="10dp"
@@ -104,7 +104,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/send"
+        android:id="@+id/send_button"
         android:layout_width="294dp"
         android:layout_height="49dp"
         android:layout_below="@id/circlesLayout"

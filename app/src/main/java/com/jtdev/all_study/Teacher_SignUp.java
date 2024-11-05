@@ -1,9 +1,9 @@
 package com.jtdev.all_study;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -15,7 +15,13 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class Teacher_SignUp extends AppCompatActivity {
 
-    @SuppressLint("MissingInflatedId")
+    private EditText first_name;
+    private EditText last_name;
+    private EditText teacher_id;
+    private EditText password;
+    private EditText confirm_password;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +29,11 @@ public class Teacher_SignUp extends AppCompatActivity {
         setContentView(R.layout.activity_06_teacher_sign_up);
 
         ImageButton backbutton = findViewById(R.id.backbutton);
+        first_name = findViewById(R.id.first_name);
+        last_name = findViewById(R.id.last_name);
+        teacher_id = findViewById(R.id.teacher_id);
+        password = findViewById(R.id.password);
+        confirm_password = findViewById(R.id.confirm_password);
         Button sign_up_button = findViewById(R.id.sign_up_button);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -32,9 +43,11 @@ public class Teacher_SignUp extends AppCompatActivity {
         });
 
         sign_up_button.setOnClickListener(v -> {
-            Intent intent = new Intent(Teacher_SignUp.this, Login.class);
-            Toast.makeText(Teacher_SignUp.this, "Account successfully created!", Toast.LENGTH_SHORT).show();
-            startActivity(intent);
+            if (areAllFieldsValid()) {
+                Intent intent = new Intent(Teacher_SignUp.this, Login.class);
+                Toast.makeText(Teacher_SignUp.this, "Account successfully created!", Toast.LENGTH_SHORT).show();
+                startActivity(intent);
+            }
         });
 
         backbutton.setOnClickListener(v -> {
@@ -42,5 +55,32 @@ public class Teacher_SignUp extends AppCompatActivity {
             startActivity(intent);
         });
 
+    }
+    private boolean areAllFieldsValid() {
+        if (first_name.getText().toString().isEmpty()) {
+            first_name.setError("First name is required");
+            return false;
+        }
+
+        if (last_name.getText().toString().isEmpty()) {
+            last_name.setError("Last name is required");
+            return false;
+        }
+
+        if (teacher_id.getText().toString().isEmpty()) {
+            teacher_id.setError("Teacher ID is required");
+            return false;
+        }
+
+        if (password.getText().toString().isEmpty()) {
+            password.setError("Password is required");
+            return false;
+        }
+
+        if (confirm_password.getText().toString().isEmpty()) {
+            confirm_password.setError("Confirm Password is required");
+            return false;
+        }
+        return true;
     }
 }

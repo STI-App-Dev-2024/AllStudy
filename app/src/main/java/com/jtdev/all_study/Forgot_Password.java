@@ -1,6 +1,5 @@
 package com.jtdev.all_study;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -17,7 +16,6 @@ import androidx.core.view.WindowInsetsCompat;
 public class Forgot_Password extends AppCompatActivity {
     private EditText email;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 

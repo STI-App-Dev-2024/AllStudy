@@ -47,7 +47,7 @@
         />
 
     <EditText
-        android:id="@+id/firstname"
+        android:id="@+id/first_name"
         android:layout_width="325dp"
         android:layout_height="48dp"
         android:layout_below="@+id/signup"
@@ -60,10 +60,10 @@
         android:fontFamily="@font/product_sans_regular"/>
 
     <EditText
-        android:id="@+id/lastname"
+        android:id="@+id/last_name"
         android:layout_width="325dp"
         android:layout_height="48dp"
-        android:layout_below="@+id/firstname"
+        android:layout_below="@+id/first_name"
         android:layout_centerHorizontal="true"
         android:hint="@string/last_name"
         android:autofillHints="Last Name"
@@ -74,10 +74,10 @@
         android:fontFamily="@font/product_sans_regular"/>
 
     <EditText
-        android:id="@+id/studentid"
+        android:id="@+id/student_id"
         android:layout_width="325dp"
         android:layout_height="48dp"
-        android:layout_below="@+id/lastname"
+        android:layout_below="@+id/last_name"
         android:layout_centerHorizontal="true"
         android:hint="@string/student_id"
         android:autofillHints="Student ID"
@@ -91,7 +91,7 @@
         android:id="@+id/password"
         android:layout_width="325dp"
         android:layout_height="48dp"
-        android:layout_below="@+id/studentid"
+        android:layout_below="@+id/student_id"
         android:layout_centerHorizontal="true"
         android:hint="@string/password"
         android:autofillHints="Password"
@@ -102,7 +102,7 @@
         android:fontFamily="@font/product_sans_regular"/>
 
     <EditText
-        android:id="@+id/confirmpassword"
+        android:id="@+id/confirm_password"
         android:layout_width="325dp"
         android:layout_height="48dp"
         android:layout_below="@+id/password"
@@ -116,10 +116,10 @@
         android:fontFamily="@font/product_sans_regular"/>
 
     <Button
-        android:id="@+id/signupbutton"
+        android:id="@+id/sign_up_button"
         android:layout_width="295dp"
         android:layout_height="50dp"
-        android:layout_below="@+id/confirmpassword"
+        android:layout_below="@+id/confirm_password"
         android:layout_centerHorizontal="true"
         android:backgroundTint="#313231"
         android:text="@string/sign_up"
