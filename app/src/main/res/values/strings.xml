@@ -57,4 +57,8 @@
     <string name="server_picture">Server Picture</string>
     <string name="user_profile">User Profile</string>
     <string name="task_bar">Task bar</string>
+    <string name="all_study">ALLSTUDY</string>
+    <string name="server_notification">server notification</string>
+    <string name="join_button">Join Button</string>
+    <string name="favorite_button">Favorite Button</string>
 </resources>
