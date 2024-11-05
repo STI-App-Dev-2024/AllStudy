@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -12,16 +13,16 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class TeacherOrStudentSignUp extends AppCompatActivity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_04_teacher_or_student_sign_up);
 
         // Initialize buttons
-        ImageButton teacher = findViewById(R.id.teacher);
-        ImageButton student = findViewById(R.id.student);
         ImageButton navback = findViewById(R.id.navback);
+        ImageButton student = findViewById(R.id.student);
+        ImageButton teacher = findViewById(R.id.teacher);
 
         // Handle system window insets for proper layout
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -30,9 +31,9 @@ public class TeacherOrStudentSignUp extends AppCompatActivity {
             return insets;
         });
 
-        teacher.setOnClickListener(v -> {
-            Intent intent = new Intent(TeacherOrStudentSignUp.this, Teacher_SignUp.class);
-            Toast.makeText(TeacherOrStudentSignUp.this, "Welcome, Teacher!", Toast.LENGTH_SHORT).show();
+        // Back button click listener
+        navback.setOnClickListener(v -> {
+            Intent intent = new Intent(TeacherOrStudentSignUp.this, Login_SignUp.class);
             startActivity(intent);
         });
 
@@ -42,10 +43,11 @@ public class TeacherOrStudentSignUp extends AppCompatActivity {
             startActivity(intent);
         });
 
-        // Back button click listener
-        navback.setOnClickListener(v -> {
-            Intent intent = new Intent(TeacherOrStudentSignUp.this, Login_SignUp.class);
+        teacher.setOnClickListener(v -> {
+            Intent intent = new Intent(TeacherOrStudentSignUp.this, Teacher_SignUp.class);
+            Toast.makeText(TeacherOrStudentSignUp.this, "Welcome, teacher!", Toast.LENGTH_SHORT).show();
             startActivity(intent);
         });
+
     }
 }

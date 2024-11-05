@@ -55,4 +55,6 @@
     <string name="navigate_to_previous_page">Navigate to previous page</string>
     <string name="computer_science">Computer Science</string>
     <string name="server_picture">Server Picture</string>
+    <string name="user_profile">User Profile</string>
+    <string name="task_bar">Task bar</string>
 </resources>

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -15,6 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class Teacher_SignUp extends AppCompatActivity {
 
+    private EditText t_first_name, t_last_name, teacher_id, t_password, t_confirm_password;
 
     @SuppressLint("MissingInflatedId")
     @Override

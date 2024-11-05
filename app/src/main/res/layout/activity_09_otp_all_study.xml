@@ -17,12 +17,12 @@
 
     <ImageButton
         android:id="@+id/nav_back"
-        android:layout_width="50dp"
+        android:layout_width="55dp"
         android:layout_height="50dp"
-        android:layout_marginStart="21dp"
+        android:layout_marginStart="26dp"
         android:layout_marginTop="35dp"
-        android:src="@drawable/back_button"
         android:background="@android:color/transparent"
+        android:src="@drawable/back_button"
         tools:ignore="ContentDescription" />
 
     <ImageView
@@ -121,7 +121,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/send"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="18dp"
         android:orientation="horizontal">
 
         <TextView
@@ -129,10 +129,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/didn_t_receive_a_code"
-            android:fontFamily="@font/product_sans_regular"/>
+            android:fontFamily="@font/product_sans_regular"
+            android:textSize="18sp"/>
 
         <TextView
-            android:id="@+id/signmeup"
+            android:id="@+id/resend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="true"
@@ -140,7 +141,8 @@
             android:text="@string/resend"
             android:textColor="#26198F"
             android:fontFamily="@font/product_sans_bold"
-            android:padding="5dp" />
+            android:padding="5dp"
+            android:textSize="18sp"/>
 
     </LinearLayout>
 

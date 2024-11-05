@@ -9,7 +9,7 @@
     tools:context=".Login_SignUp">
 
     <ImageView
-        android:id="@+id/splash"
+        android:id="@+id/splash_screen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/halfsplash_for_signin_signup"
@@ -17,10 +17,10 @@
         tools:ignore="ContentDescription" />
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/log_in"
         android:layout_width="294dp"
         android:layout_height="55dp"
-        android:layout_below="@+id/splash"
+        android:layout_below="@+id/splash_screen"
         android:layout_centerHorizontal="true"
         android:backgroundTint="#313231"
         android:text="@string/log_in"
@@ -29,11 +29,11 @@
         android:fontFamily="@font/product_sans_bold"/>
 
     <Button
-        android:id="@+id/signup"
+        android:id="@+id/sign_up"
         android:layout_width="294dp"
         android:layout_height="49dp"
         android:layout_marginTop="13dp"
-        android:layout_below="@+id/login"
+        android:layout_below="@+id/log_in"
         android:layout_centerHorizontal="true"
         android:text="@string/sign_up"
         android:textSize="20sp"
@@ -42,16 +42,16 @@
         android:fontFamily="@font/product_sans_bold" />
 
     <LinearLayout
-        android:id="@+id/termsandcondition"
+        android:id="@+id/terms_and_condition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/signup"
+        android:layout_below="@id/sign_up"
         android:layout_centerHorizontal="true"
         android:orientation="horizontal"
         android:layout_marginTop="8dp">
 
     <CheckBox
-        android:id="@+id/checkbox"
+        android:id="@+id/agree_box"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/i_agree_to_the"

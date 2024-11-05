@@ -20,8 +20,8 @@
         android:id="@+id/navback"
         android:layout_width="55dp"
         android:layout_height="50dp"
+        android:layout_marginStart="26dp"
         android:background="@android:color/transparent"
-        android:layout_marginStart="21dp"
         android:layout_marginTop="35dp"
         android:contentDescription="@string/navigate_to_previous_page"
         android:src="@drawable/back_button" />

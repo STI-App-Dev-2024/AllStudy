@@ -1,11 +1,10 @@
 package com.jtdev.all_study;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class Forgot_Password extends AppCompatActivity {
     private EditText email;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +27,6 @@ public class Forgot_Password extends AppCompatActivity {
         // Initialize UI elements
         Button send = findViewById(R.id.send);
         email = findViewById(R.id.email);
-        ImageButton backButton = findViewById(R.id.backbutton);
         TextView signUpText = findViewById(R.id.signmeup);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -48,12 +47,6 @@ public class Forgot_Password extends AppCompatActivity {
             } else {
                 Toast.makeText(Forgot_Password.this, "Please enter your email", Toast.LENGTH_SHORT).show();
             }
-        });
-
-        // Set up click listener for the Back button
-        backButton.setOnClickListener(v -> {
-            // Handle back action
-            onBackPressed();
         });
 
         // Set up click listener for the Sign Up text
