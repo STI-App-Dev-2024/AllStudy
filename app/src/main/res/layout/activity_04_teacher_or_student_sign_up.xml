@@ -8,32 +8,34 @@
     tools:context=".TeacherOrStudentSignUp">
 
     <ImageView
-        android:id="@+id/logonamin"
+        android:id="@+id/allstudylogo"
         android:layout_width="222dp"
         android:layout_height="202dp"
         android:layout_centerHorizontal="true"
         android:layout_margin="50dp"
+        android:importantForAccessibility="no"
         android:src="@drawable/logonamin" />
 
     <ImageButton
         android:id="@+id/navback"
-        android:layout_width="42dp"
-        android:layout_height="42dp"
+        android:layout_width="55dp"
+        android:layout_height="50dp"
         android:background="@android:color/transparent"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="21dp"
         android:layout_marginTop="35dp"
+        android:contentDescription="@string/navigate_to_previous_page"
         android:src="@drawable/back_button" />
 
     <TextView
-        android:id="@+id/areayoua"
+        android:id="@+id/are_you_a"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/logonamin"
+        android:layout_below="@+id/allstudylogo"
         android:text="@string/are_you_a"
         android:textSize="25sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:fontFamily="@font/product_sans_bold"/>
+        android:fontFamily="@font/product_sans_bold" />
 
     <LinearLayout
         android:id="@+id/teacher_or_student"
@@ -41,13 +43,14 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_centerInParent="true"
-        android:layout_below="@id/areayoua"
+        android:layout_below="@id/are_you_a"
         android:layout_marginTop="30dp">
 
         <ImageButton
             android:id="@+id/student"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/student_log_in"
             android:src="@drawable/studenticon"
             android:background="@drawable/circle_for_profile"/>
 
@@ -55,6 +58,7 @@
             android:id="@+id/teacher"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/teacher_log_in"
             android:src="@drawable/teachericon"
             android:background="@drawable/circle_for_profile"
             android:layout_marginStart="100dp"/>

@@ -14,7 +14,6 @@
     <string name="forgot_passwords">Forgot password?</string>
     <string name="dont_have_an_account">Don\'t have an account?</string>
     <string name="Sign_Up">Sign Up</string>
-    <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign Up</string>
     <string name="sign_in">Sign In</string>
     <string name="teacher">Teacher</string>
     <string name="student">Student</string>
@@ -27,11 +26,9 @@
     <string name="more_active_servers">More active Servers</string>
     <string name="list_of_servers">List of Servers</string>
     <string name="verification">Verification</string>
-    <string name="didn_t_receive_a_code_resend">Didn\'t receive a code? Resend</string>
     <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="didn_t_receive_a_code">Didn\'t receive a code?</string>
     <string name="resend">Resend</string>
-    <string name="i_agree_to_the_terms_and_conditions">I agree to the terms and conditions</string>
     <string name="student_sign_in">Student Sign In</string>
     <string name="teacher_sign_in">Teacher Sign In</string>
     <string name="are_you_a">Are you a</string>
@@ -52,4 +49,10 @@
     <string name="student_sign_up">Student Sign Up</string>
     <string name="teacher_sign_upp">Teacher Sign Up</string>
     <string name="see_more">See more</string>
+    <string name="i_agree_to_the">I agree to the</string>
+    <string name="terms_conditions"><![CDATA[terms & conditions]]></string>
+    <string name="student_log_in">Student Log In</string>
+    <string name="navigate_to_previous_page">Navigate to previous page</string>
+    <string name="computer_science">Computer Science</string>
+    <string name="server_picture">Server Picture</string>
 </resources>

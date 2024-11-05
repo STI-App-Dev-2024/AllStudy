@@ -7,81 +7,15 @@
     android:layout_height="match_parent"
     tools:context=".HomePageAllStudy">
 
-    <!-- Background Image Rectangle-->
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="350dp"
-        android:layout_height="205dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="155dp"
-        android:contentDescription="@string/description_image"
-        android:src="@drawable/rectangle_6" />
-
-    <!-- Square Programming Stroke Image -->
-    <ImageView
-        android:layout_width="126dp"
-        android:layout_height="127dp"
-        android:layout_marginStart="210dp"
-        android:layout_marginTop="200dp"
-        android:src="@drawable/squarestroke"
-        android:scaleType="centerCrop"
-        android:contentDescription="@string/description_squarestroke" />
-
-    <!-- Active Server Text -->
     <TextView
-        android:layout_width="130dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="185dp"
-        android:layout_marginStart="50dp"
-        android:text="@string/active_server"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:fontFamily="@font/product_sans_regular" />
-
-    <!-- Join Now Button -->
-
-    <!-- Computer Science Text -->
-    <Button
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="290dp"
-        android:backgroundTint="@color/white"
-        android:fontFamily="@font/product_sans_regular"
-        android:text="@string/join_now"
-        android:textColor="@color/black" />
-
-    <TextView
+        android:id="@+id/all_study"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="240dp"
-        android:layout_marginStart="25dp"
-        android:text="Computer Science"
-        android:textColor="@color/white"
-        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="@string/allstudy"
+        android:textSize="40sp"
         android:fontFamily="@font/product_sans_bold" />
-
-    <!-- More Active Servers Text -->
-    <TextView
-        android:id="@+id/moreactiveserver"
-        android:layout_width="175dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="370dp"
-        android:layout_marginStart="10dp"
-        android:text="@string/more_active_serverss"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:fontFamily="@font/product_sans_regular" />
-
-    <!-- Bottom Background Bar -->
-    <ImageView
-        android:layout_width="500dp"
-        android:layout_height="140dp"
-        android:layout_marginTop="830dp"
-        android:background="@drawable/rectangle"
-        android:backgroundTint="#4c4746"
-        android:contentDescription="@string/description_bar" />
-
 
     <ImageButton
         android:id="@+id/generic_avatar"
@@ -92,47 +26,106 @@
         android:layout_marginTop="38dp"
         android:layout_marginEnd="16dp"
         android:src="@drawable/generic_avatar"
-        android:background="@drawable/generic_avatar"
-        android:contentDescription="Generic Button"
-        />
+        android:background="@drawable/generic_avatar" />
 
-    <!-- All Study Title Text -->
     <TextView
+        android:id="@+id/list_of_servers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:text="@string/allstudy"
-        android:textSize="35sp"
-        android:textColor="@color/black"
+        android:layout_below="@id/all_study"
+        android:text="@string/list_of_servers"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:textSize="25sp"
         android:fontFamily="@font/product_sans_bold" />
 
-    <!-- List of Servers Text -->
-    <TextView
+    <RelativeLayout
+        android:id="@+id/server_box"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="115dp"
-        android:text="@string/list_of_servers"
-        android:textSize="25sp"
-        android:textColor="@color/black"
-        android:fontFamily="@font/product_sans_regular" />
+        android:layout_below="@+id/list_of_servers"
+        android:layout_centerHorizontal="true">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="380dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/description_image"
+        android:src="@drawable/rectangle_6" />
+
+    <TextView
+        android:id="@+id/active_server"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:text="@string/active_server"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:fontFamily="@font/product_sans_bold" />
+
+        <TextView
+            android:id="@+id/computer_science"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/computer_science"
+            android:layout_below="@+id/active_server"
+            android:textColor="@color/white"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="6dp"
+            android:textSize="26sp"
+            android:fontFamily="@font/product_sans_bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="235dp"
+            android:layout_marginTop="70dp"
+            android:contentDescription="@string/server_picture"
+            android:src="@drawable/squarestroke" />
+
+        <Button
+        android:id="@+id/join_now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/product_sans_bold"
+        android:text="@string/join_now"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="55dp"
+        android:textColor="@color/black"
+        android:layout_below="@id/computer_science"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/more_active_server"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/more_active_serverss"
+        android:textSize="23sp"
+        android:layout_below="@+id/server_box"
+        android:fontFamily="@font/product_sans_bold"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp" />
 
     <Button
-        android:id="@+id/seemore"
+        android:id="@+id/see_more"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/imageView"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="130dp"
-        android:layout_marginBottom="-250dp"
         android:backgroundTint="#F0EFEF"
         android:elevation="10dp"
         android:text="@string/see_more"
-        android:textColor="#1060FF" />
+        android:textColor="#1060FF"
+        android:layout_below="@+id/more_active_server" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tab_below"
+        android:layout_alignParentBottom="true"/>
 
 
 </RelativeLayout>

@@ -4,6 +4,9 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,7 +15,6 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class Login_SignUp extends AppCompatActivity {
-
 
     //For unit testing
     public boolean isValidEmail(String email) {
@@ -29,7 +31,9 @@ public class Login_SignUp extends AppCompatActivity {
         setContentView(R.layout.activity_03_login_sign_up);
 
         Button signup = findViewById(R.id.signup);
-        Button signin = findViewById(R.id.signin);
+        Button login = findViewById(R.id.login);
+
+        CheckBox checkBox = findViewById(R.id.checkbox);
 
         // Set up insets for the main view
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -39,15 +43,24 @@ public class Login_SignUp extends AppCompatActivity {
         });
 
         signup.setOnClickListener(v -> {
-            // Logic for Sign Up button
-            Intent intent = new Intent(Login_SignUp.this, TeacherOrStudentSignUp.class);
-            startActivity(intent);
+                    if (checkBox.isChecked()) {
+                        // Logic for Sign Up button
+                        Intent intent = new Intent(Login_SignUp.this, TeacherOrStudentSignUp.class);
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(Login_SignUp.this, "Please agree to the terms & condition first.", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+        login.setOnClickListener(v -> {
+            if (checkBox.isChecked()) {
+                // Logic for Log In button
+                Intent intent = new Intent(Login_SignUp.this, Login.class);
+                startActivity(intent);
+            } else {
+                Toast.makeText(Login_SignUp.this, "Please agree to the terms & condition first.", Toast.LENGTH_SHORT).show();
+            }
         });
 
-        signin.setOnClickListener(v -> {
-            // Logic for Sign In button
-            Intent intent = new Intent(Login_SignUp.this, Login.class);
-            startActivity(intent);
-        });
     }
 }
