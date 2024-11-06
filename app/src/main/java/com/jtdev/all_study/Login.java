@@ -81,7 +81,7 @@ public class Login extends AppCompatActivity {
         if (emailInput.equals(correctEmail) && passwordInput.equals(correctPassword)) {
             // Login successful
             Toast.makeText(Login.this, "Welcome back!", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(Login.this, HomePageAllStudy.class);
+            Intent intent = new Intent(Login.this, Student_HomePage.class);
             startActivity(intent);
             finish();
         } else {

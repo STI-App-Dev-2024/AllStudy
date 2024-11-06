@@ -19,7 +19,7 @@ public class SplashScreen extends AppCompatActivity {
         int SPLASH_TIME_OUT = 3000;
         new Handler().postDelayed(() -> {
             // Start MainActivity after the timer ends
-            Intent intent = new Intent(SplashScreen.this, HomePageAllStudy.class);
+            Intent intent = new Intent(SplashScreen.this, Student_HomePage.class);
             startActivity(intent);
             finish();  // Finish the Splash Activity so the user can't go back to it
         }, SPLASH_TIME_OUT);
