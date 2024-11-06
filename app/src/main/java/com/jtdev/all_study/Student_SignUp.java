@@ -50,37 +50,43 @@ public class Student_SignUp extends AppCompatActivity {
         });
 
         backbutton.setOnClickListener(view -> {
-            Intent intent = new Intent(Student_SignUp.this, TeacherOrStudentSignUp.class);
+            Intent intent = new Intent(Student_SignUp.this, Teacher_or_Student_SignUp.class);
             startActivity(intent);
         });
 
     }
 
     private boolean areAllFieldsValid() {
-        if (first_name.getText().toString().trim().isEmpty()) {
-            first_name.setError("First Name is required");
-            return false;
+        boolean isValid = true;
+
+        if (first_name.getText().toString().isEmpty()) {
+            first_name.setError("First name is required");
+            isValid = false;
         }
 
-        if (last_name.getText().toString().trim().isEmpty()) {
-            last_name.setError("Last Name is required");
-            return false;
+        if (last_name.getText().toString().isEmpty()) {
+            last_name.setError("Last name is required");
+            isValid = false;
         }
 
-        if (student_id.getText().toString().trim().isEmpty()) {
-            student_id.setError("Student ID is required");
-            return false;
+        if (student_id.getText().toString().isEmpty()) {
+            student_id.setError("Teacher ID is required");
+            isValid = false;
         }
 
-        if (password.getText().toString().trim().isEmpty()) {
+        if (password.getText().toString().isEmpty()) {
             password.setError("Password is required");
-            return false;
+            isValid = false;
         }
 
-        if (confirm_password.getText().toString().trim().isEmpty()) {
+        if (confirm_password.getText().toString().isEmpty()) {
             confirm_password.setError("Confirm Password is required");
-            return false;
+            isValid = false;
+        } else if (!password.getText().toString().equals(confirm_password.getText().toString())) {
+            confirm_password.setError("Passwords do not match");
+            isValid = false;
         }
-        return true;
+
+        return isValid;
     }
 }

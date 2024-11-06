@@ -11,7 +11,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class TeacherOrStudentSignUp extends AppCompatActivity {
+public class Teacher_or_Student_SignUp extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,19 +33,19 @@ public class TeacherOrStudentSignUp extends AppCompatActivity {
 
         // Back button click listener
         navback.setOnClickListener(v -> {
-            Intent intent = new Intent(TeacherOrStudentSignUp.this, Login_SignUp.class);
+            Intent intent = new Intent(Teacher_or_Student_SignUp.this, Login_SignUp.class);
             startActivity(intent);
         });
 
         student.setOnClickListener(v -> {
-            Intent intent = new Intent(TeacherOrStudentSignUp.this, Student_SignUp.class);
-            Toast.makeText(TeacherOrStudentSignUp.this, "Welcome, student!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(Teacher_or_Student_SignUp.this, Student_SignUp.class);
+            Toast.makeText(Teacher_or_Student_SignUp.this, "Welcome, student!", Toast.LENGTH_SHORT).show();
             startActivity(intent);
         });
 
         teacher.setOnClickListener(v -> {
-            Intent intent = new Intent(TeacherOrStudentSignUp.this, Teacher_SignUp.class);
-            Toast.makeText(TeacherOrStudentSignUp.this, "Welcome, teacher!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(Teacher_or_Student_SignUp.this, Teacher_SignUp.class);
+            Toast.makeText(Teacher_or_Student_SignUp.this, "Welcome, teacher!", Toast.LENGTH_SHORT).show();
             startActivity(intent);
         });
 

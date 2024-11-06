@@ -61,4 +61,6 @@
     <string name="server_notification">server notification</string>
     <string name="join_button">Join Button</string>
     <string name="favorite_button">Favorite Button</string>
+    <string name="create_server_button">Create server button</string>
+    <string name="join_server_button">Join server button</string>
 </resources>

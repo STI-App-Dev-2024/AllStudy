@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:background="#F0F5F9"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Student_HomePage">
-
+    tools:context=".Teacher_HomePage">
 
     <!-- Main title -->
     <TextView
@@ -141,10 +140,9 @@
         android:layout_width="150dp"
         android:layout_height="60dp"
         android:layout_below="@+id/more_active_server"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="158dp"
-        android:layout_marginEnd="105dp"
         android:backgroundTint="#F0EFEF"
+        android:layout_marginTop="120dp"
+        android:layout_centerHorizontal="true"
         android:text="@string/see_more"
         android:textSize="18sp"
         android:fontFamily="@font/product_sans_bold"
@@ -164,8 +162,8 @@
     <!-- Taskbar Notification Button -->
     <ImageButton
         android:id="@+id/notification"
-        android:layout_width="67dp"
-        android:layout_height="67dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_alignTop="@id/tab_below_image"
         android:layout_alignParentStart="true"
         android:layout_marginStart="45dp"
@@ -178,15 +176,15 @@
 
     <!-- Taskbar Join Button -->
     <ImageButton
-        android:id="@+id/join_button"
+        android:id="@+id/create_button"
         android:layout_width="85dp"
         android:layout_height="85dp"
         android:layout_alignTop="@id/tab_below_image"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="123dp"
         android:layout_marginTop="-4dp"
-        android:contentDescription="@string/join_button"
-        android:src="@drawable/join_button"
+        android:contentDescription="@string/create_server_button"
+        android:src="@drawable/create_button"
         android:background="@android:color/transparent"
         android:backgroundTint="#313231" />
 
@@ -194,8 +192,8 @@
     <!-- Taskbar Favorite Button -->
     <ImageButton
         android:id="@+id/favorite_button"
-        android:layout_width="67dp"
-        android:layout_height="67dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_alignTop="@id/tab_below_image"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="54dp"

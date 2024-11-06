@@ -25,10 +25,10 @@ public class Login_SignUp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_03_login_sign_up);
+        setContentView(R.layout.activity_02_login_sign_up);
 
-        Button signup = findViewById(R.id.sign_up);
         Button login = findViewById(R.id.log_in);
+        Button signup = findViewById(R.id.sign_up);
         agree_box = findViewById(R.id.agree_box);
 
         // Set up insets for the main view
@@ -38,20 +38,20 @@ public class Login_SignUp extends AppCompatActivity {
             return insets;
         });
 
-        signup.setOnClickListener(v -> {
+        login.setOnClickListener(v -> {
             if (agree_box.isChecked()) {
-                // Logic for Sign Up button
-                Intent intent = new Intent(Login_SignUp.this, TeacherOrStudentSignUp.class);
+                // Logic for Log In button
+                Intent intent = new Intent(Login_SignUp.this, Login.class);
                 startActivity(intent);
             } else {
                 Toast.makeText(Login_SignUp.this, "Please agree to the terms & condition first.", Toast.LENGTH_SHORT).show();
             }
         });
 
-        login.setOnClickListener(v -> {
+        signup.setOnClickListener(v -> {
             if (agree_box.isChecked()) {
-                // Logic for Log In button
-                Intent intent = new Intent(Login_SignUp.this, Login.class);
+                // Logic for Sign Up button
+                Intent intent = new Intent(Login_SignUp.this, Teacher_or_Student_SignUp.class);
                 startActivity(intent);
             } else {
                 Toast.makeText(Login_SignUp.this, "Please agree to the terms & condition first.", Toast.LENGTH_SHORT).show();

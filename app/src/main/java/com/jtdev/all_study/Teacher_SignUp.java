@@ -21,12 +21,13 @@ public class Teacher_SignUp extends AppCompatActivity {
     private EditText password;
     private EditText confirm_password;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_06_teacher_sign_up);
+
+
 
         ImageButton backbutton = findViewById(R.id.backbutton);
         first_name = findViewById(R.id.first_name);
@@ -51,36 +52,42 @@ public class Teacher_SignUp extends AppCompatActivity {
         });
 
         backbutton.setOnClickListener(v -> {
-            Intent intent = new Intent(Teacher_SignUp.this, TeacherOrStudentSignUp.class);
+            Intent intent = new Intent(Teacher_SignUp.this, Teacher_or_Student_SignUp.class);
             startActivity(intent);
         });
 
     }
     private boolean areAllFieldsValid() {
+        boolean isValid = true;
+
         if (first_name.getText().toString().isEmpty()) {
             first_name.setError("First name is required");
-            return false;
+            isValid = false;
         }
 
         if (last_name.getText().toString().isEmpty()) {
             last_name.setError("Last name is required");
-            return false;
+            isValid = false;
         }
 
         if (teacher_id.getText().toString().isEmpty()) {
             teacher_id.setError("Teacher ID is required");
-            return false;
+            isValid = false;
         }
 
         if (password.getText().toString().isEmpty()) {
             password.setError("Password is required");
-            return false;
+            isValid = false;
         }
 
         if (confirm_password.getText().toString().isEmpty()) {
             confirm_password.setError("Confirm Password is required");
-            return false;
+            isValid = false;
+        } else if (!password.getText().toString().equals(confirm_password.getText().toString())) {
+            confirm_password.setError("Passwords do not match");
+            isValid = false;
         }
-        return true;
+
+        return isValid;
     }
 }
