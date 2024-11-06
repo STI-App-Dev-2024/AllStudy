@@ -41,7 +41,7 @@ public class Login_SignUp extends AppCompatActivity {
         login.setOnClickListener(v -> {
             if (agree_box.isChecked()) {
                 // Logic for Log In button
-                Intent intent = new Intent(Login_SignUp.this, Login.class);
+                Intent intent = new Intent(Login_SignUp.this, Teacher_or_Student_LogIn.class);
                 startActivity(intent);
             } else {
                 Toast.makeText(Login_SignUp.this, "Please agree to the terms & condition first.", Toast.LENGTH_SHORT).show();

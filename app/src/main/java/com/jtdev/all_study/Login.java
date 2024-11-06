@@ -22,7 +22,7 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_07_log_in);
+        setContentView(R.layout.activity_student_log_in);
 
         // Initialize UI elements
         email = findViewById(R.id.email);
