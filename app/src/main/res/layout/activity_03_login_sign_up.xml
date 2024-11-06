@@ -58,14 +58,14 @@
         android:fontFamily="@font/product_sans_regular"/>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/terms_conditions"
+            android:layout_width="125dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
             android:clickable="true"
             android:focusable="true"
             android:fontFamily="@font/product_sans_bold"
-            android:padding="5dp"
-            android:textColor="#26198F"/>
+            android:text="@string/terms_conditions"
+            android:textColor="#26198F" />
 
     </LinearLayout>
 
