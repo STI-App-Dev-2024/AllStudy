@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_01_main);
 
-
+//this is the first splash screen when opening
         // 3 seconds
         int SPLASH_TIME_OUT = 3000;
         new Handler().postDelayed(() -> {

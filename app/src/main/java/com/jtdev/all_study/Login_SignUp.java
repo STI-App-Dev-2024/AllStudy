@@ -45,6 +45,7 @@ public class Login_SignUp extends AppCompatActivity {
                 startActivity(intent);
             } else {
                 Toast.makeText(Login_SignUp.this, "Please agree to the terms & condition first.", Toast.LENGTH_SHORT).show();
+
             }
         });
 
