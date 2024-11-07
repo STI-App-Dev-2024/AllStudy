@@ -230,7 +230,7 @@
         android:layout_alignTop="@id/tab_below_image"
         android:layout_alignParentStart="true"
         android:layout_marginStart="45dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="5dp"
         android:contentDescription="@string/server_notification"
         android:src="@drawable/notification_button"
         android:background="@android:color/transparent"
@@ -260,7 +260,8 @@
         android:layout_alignTop="@id/tab_below_image"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="45dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="5dp"
+        android:background="transparent"
         android:contentDescription="@string/favorite_button"
         android:src="@drawable/favorite_button"
         android:backgroundTint="#313231" />
