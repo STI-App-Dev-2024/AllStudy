@@ -135,6 +135,8 @@
         android:textSize="23sp"
         android:fontFamily="@font/product_sans_bold" />
 
+    <!--Sliders-->
+
 
     <!-- See More Button -->
     <Button
