@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OTP_AllStudy">
+
+    <ImageView
+        android:id="@+id/splashforotp"
+        android:layout_width="360dp"
+        android:layout_height="385dp"
+        android:src="@drawable/halfsplash"
+        android:layout_centerHorizontal="true"
+        />
+
+    <ImageView
+        android:id="@+id/rectangles"
+        android:layout_width="360dp"
+        android:layout_height="424dp"
+        android:src="@drawable/custom_rectangle"
+        android:layout_below="@+id/splashforotp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/verification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/splashforotp"
+        android:layout_centerInParent="true"
+        android:layout_margin="16dp"
+        android:textSize="35sp"
+        android:text="@string/verification"/>
+
+    <LinearLayout
+        android:id="@+id/circlesLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/verification"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/circle1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="10dp"
+        android:inputType="number"
+        android:maxLength="1"
+        android:gravity="center"
+        android:background="@drawable/circle_background"
+        android:nextFocusForward="@id/circle2"/>
+
+    <EditText
+        android:id="@+id/circle2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="10dp"
+        android:inputType="number"
+        android:maxLength="1"
+        android:gravity="center"
+        android:background="@drawable/circle_background"
+        android:nextFocusForward="@id/circle3"/>
+
+    <EditText
+        android:id="@+id/circle3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="10dp"
+        android:inputType="number"
+        android:maxLength="1"
+        android:gravity="center"
+        android:background="@drawable/circle_background"
+        android:nextFocusForward="@id/circle4"/>
+
+    <EditText
+        android:id="@+id/circle4"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="10dp"
+        android:inputType="number"
+        android:maxLength="1"
+        android:gravity="center"
+        android:background="@drawable/circle_background"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="294dp"
+        android:layout_height="49dp"
+        android:layout_below="@id/circlesLayout"
+        android:layout_margin="20dp"
+        android:text="@string/send"
+        android:layout_centerInParent="true"
+        android:backgroundTint="#313231" />
+
+    <ImageButton
+        android:id="@+id/Tnavback"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:background="@drawable/navigate_next"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/navigate_next" />
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/send"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dont_have_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/didn_t_receive_a_code" />
+
+        <TextView
+            android:id="@+id/signmeup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/resend"
+            android:textColor="#26198F"
+            android:paddingStart="5dp"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
