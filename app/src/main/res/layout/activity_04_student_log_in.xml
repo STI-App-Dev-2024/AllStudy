@@ -8,7 +8,7 @@
     tools:context=".Student_LogIn">
 
     <ImageView
-        android:id="@+id/comp"
+        android:id="@+id/halfsplash"
         android:layout_width="441dp"
         android:layout_height="363dp"
         android:layout_alignParentTop="true"
@@ -16,14 +16,13 @@
         android:src="@drawable/allstudyhalf" />
 
     <ImageButton
-        android:id="@+id/backbutton"
+        android:id="@+id/back_button"
         android:layout_width="55dp"
         android:layout_height="50dp"
         android:layout_marginTop="35dp"
         android:contentDescription="@string/back_button"
         android:src="@drawable/back_button"
-        android:background="@android:color/transparent"
-        />
+        android:background="@android:color/transparent" />
 
     <ImageView
         android:id="@+id/rectangle"
@@ -74,7 +73,7 @@
         android:fontFamily="@font/product_sans_regular" />
 
     <Button
-        android:id="@+id/buttonsign"
+        android:id="@+id/signin_button"
         android:layout_width="280dp"
         android:layout_height="49dp"
         android:layout_below="@id/password"
@@ -87,10 +86,10 @@
         android:fontFamily="@font/product_sans_bold"/>
 
     <TextView
-        android:id="@+id/forgot_password"
+        android:id="@+id/forgot_pass_click"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/buttonsign"
+        android:layout_below="@id/signin_button"
         android:clickable="true"
         android:focusable="true"
         android:text="@string/forgot_passwords"
@@ -104,7 +103,7 @@
         android:id="@+id/layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/forgot_password"
+        android:layout_below="@id/forgot_pass_Click"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="35dp"
         android:orientation="horizontal">
@@ -117,7 +116,7 @@
             android:fontFamily="@font/product_sans_regular"/>
 
         <TextView
-            android:id="@+id/signmeup"
+            android:id="@+id/signup_click"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="true"

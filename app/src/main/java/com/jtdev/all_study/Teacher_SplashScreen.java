@@ -18,7 +18,7 @@ public class Teacher_SplashScreen extends AppCompatActivity {
         setContentView(R.layout.activity_01_main);
 
         // 3 seconds
-        int SPLASH_TIME_OUT = 3000;
+        int SPLASH_TIME_OUT = 1000;
         new Handler().postDelayed(() -> {
             // Start MainActivity after the timer ends
             Intent intent = new Intent(Teacher_SplashScreen.this, Teacher_HomePage.class);

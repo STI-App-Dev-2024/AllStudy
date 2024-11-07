@@ -26,12 +26,15 @@ public class Student_LogIn extends AppCompatActivity {
         setContentView(R.layout.activity_04_student_log_in);
 
         // Initialize UI elements
+        ImageButton back_button = findViewById(R.id.back_button);
+
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
-        Button buttonsign = findViewById(R.id.buttonsign);
-        ImageButton backbutton = findViewById(R.id.backbutton);
-        TextView forgotPassword = findViewById(R.id.forgot_password);
-        TextView signUp = findViewById(R.id.signmeup);
+
+        Button signIn_button = findViewById(R.id.signin_button);
+
+        TextView forgotPass_click = findViewById(R.id.forgot_pass_click);
+        TextView signUp_click = findViewById(R.id.signup_click);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -39,7 +42,7 @@ public class Student_LogIn extends AppCompatActivity {
             return insets;
         });
 
-        buttonsign.setOnClickListener(v -> {
+        signIn_button.setOnClickListener(v -> {
             String emailInput = email.getText().toString();
             String passwordInput = password.getText().toString();
 
@@ -52,20 +55,20 @@ public class Student_LogIn extends AppCompatActivity {
             }
         });
 
-        backbutton.setOnClickListener(v -> {
+        back_button.setOnClickListener(v -> {
             Intent intent = new Intent(Student_LogIn.this, Student_or_Teacher_LogIn.class);
             startActivity(intent);
         });
 
         // Set up forgot password listener
-        forgotPassword.setOnClickListener(v -> {
+        forgotPass_click.setOnClickListener(v -> {
             // Navigate to Forgot Password Activity
             Intent intent = new Intent(Student_LogIn.this, Forgot_Password.class);
             startActivity(intent);
         });
 
         // Set up sign up listener
-        signUp.setOnClickListener(v -> {
+        signUp_click.setOnClickListener(v -> {
             // Navigate to Sign Up Activity
             Intent intent = new Intent(Student_LogIn.this, Teacher_SplashScreen.class);
             startActivity(intent);
@@ -80,7 +83,7 @@ public class Student_LogIn extends AppCompatActivity {
         if (emailInput.equals(correctEmail) && passwordInput.equals(correctPassword)) {
             // Login successful
             Toast.makeText(Student_LogIn.this, "Welcome back!", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(Student_LogIn.this, Student_HomePage.class);
+            Intent intent = new Intent(Student_LogIn.this, Student_SplashScreen.class);
             startActivity(intent);
             finish();
         } else {

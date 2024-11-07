@@ -7,9 +7,6 @@ import android.os.Handler;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 @SuppressLint("CustomSplashScreen")
 public class Student_SplashScreen extends AppCompatActivity {
@@ -19,7 +16,7 @@ public class Student_SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_student_splash_screen);
-        int SPLASH_TIME_OUT = 3000;
+        int SPLASH_TIME_OUT = 1000;
         new Handler().postDelayed(() -> {
             // Start MainActivity after the timer ends
             Intent intent = new Intent(Student_SplashScreen.this, Student_HomePage.class);

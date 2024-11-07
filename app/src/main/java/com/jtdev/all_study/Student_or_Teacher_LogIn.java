@@ -20,9 +20,9 @@ public class Student_or_Teacher_LogIn extends AppCompatActivity {
         setContentView(R.layout.activity_03_student_or_teacher_log_in);
 
         // Initialize buttons
-        ImageButton navback = findViewById(R.id.navback);
-        ImageButton student = findViewById(R.id.student);
-        ImageButton teacher = findViewById(R.id.teacher);
+        ImageButton back_button = findViewById(R.id.back_button);
+        ImageButton student_button = findViewById(R.id.student_button);
+        ImageButton teacher_button = findViewById(R.id.teacher_button);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -30,18 +30,18 @@ public class Student_or_Teacher_LogIn extends AppCompatActivity {
             return insets;
         });
 
-        navback.setOnClickListener(v -> {
-            Intent intent = new Intent(Student_or_Teacher_LogIn.this, Login_SignUp.class);
+        back_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Student_or_Teacher_LogIn.this, LogIn_or_SignUp.class);
             startActivity(intent);
         });
 
-        student.setOnClickListener(v -> {
+        student_button.setOnClickListener(v -> {
             Intent intent = new Intent(Student_or_Teacher_LogIn.this, Student_LogIn.class);
             Toast.makeText(Student_or_Teacher_LogIn.this, "Welcome, Student!", Toast.LENGTH_SHORT).show();
             startActivity(intent);
         });
 
-        teacher.setOnClickListener(v -> {
+        teacher_button.setOnClickListener(v -> {
             Intent intent = new Intent(Student_or_Teacher_LogIn.this, Teacher_LogIn.class);
             Toast.makeText(Student_or_Teacher_LogIn.this, "Welcome, Teacher!", Toast.LENGTH_SHORT).show();
             startActivity(intent);

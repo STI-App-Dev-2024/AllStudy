@@ -42,8 +42,13 @@ public class Student_SignUp extends AppCompatActivity {
         });
 
         sign_up_button.setOnClickListener(view -> {
+
+            if (full_name.getText().toString().isEmpty() || email.getText().toString().isEmpty() || student_id.getText().toString().isEmpty()|| password.getText().toString().isEmpty() || confirm_password.getText().toString().isEmpty()) {
+                Toast.makeText(Student_SignUp.this, "All fields are required", Toast.LENGTH_SHORT).show();
+            }
+
             if (areAllFieldsValid()) {
-                Intent intent = new Intent(Student_SignUp.this, Login.class);
+                Intent intent = new Intent(Student_SignUp.this, Student_LogIn.class);
                 Toast.makeText(Student_SignUp.this, "Sign Up Successful", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }

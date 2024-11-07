@@ -11,7 +11,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Login_SignUp extends AppCompatActivity {
+public class LogIn_or_SignUp extends AppCompatActivity {
 
     private CheckBox agree_box;
 
@@ -27,8 +27,8 @@ public class Login_SignUp extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_02_login_sign_up);
 
-        Button login = findViewById(R.id.log_in);
-        Button signup = findViewById(R.id.sign_up);
+        Button login = findViewById(R.id.login);
+        Button signup = findViewById(R.id.signup);
         agree_box = findViewById(R.id.agree_box);
 
         // Set up insets for the main view
@@ -41,10 +41,10 @@ public class Login_SignUp extends AppCompatActivity {
         login.setOnClickListener(v -> {
             if (agree_box.isChecked()) {
                 // Logic for Log In button
-                Intent intent = new Intent(Login_SignUp.this, Student_or_Teacher_LogIn.class);
+                Intent intent = new Intent(LogIn_or_SignUp.this, Student_or_Teacher_LogIn.class);
                 startActivity(intent);
             } else {
-                Toast.makeText(Login_SignUp.this, "Please agree to the terms & condition first.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LogIn_or_SignUp.this, "Please agree to the terms & condition first.", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -52,10 +52,10 @@ public class Login_SignUp extends AppCompatActivity {
         signup.setOnClickListener(v -> {
             if (agree_box.isChecked()) {
                 // Logic for Sign Up button
-                Intent intent = new Intent(Login_SignUp.this, Student_or_Teacher_SignUp.class);
+                Intent intent = new Intent(LogIn_or_SignUp.this, Student_or_Teacher_SignUp.class);
                 startActivity(intent);
             } else {
-                Toast.makeText(Login_SignUp.this, "Please agree to the terms & condition first.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LogIn_or_SignUp.this, "Please agree to the terms & condition first.", Toast.LENGTH_SHORT).show();
             }
         });
 

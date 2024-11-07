@@ -29,7 +29,7 @@ public class New_Password extends AppCompatActivity {
 
         confirm_button.setOnClickListener(v -> {
             Toast.makeText(this, "Password Changed!", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(New_Password.this, Login.class);
+            Intent intent = new Intent(New_Password.this, LogIn_or_SignUp.class);
             startActivity(intent);
         });
     }

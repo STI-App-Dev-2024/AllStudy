@@ -27,8 +27,6 @@ public class Teacher_SignUp extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_08_teacher_sign_up);
 
-
-
         ImageButton backbutton = findViewById(R.id.backbutton);
         full_name = findViewById(R.id.full_name);
         email = findViewById(R.id.email);
@@ -44,8 +42,12 @@ public class Teacher_SignUp extends AppCompatActivity {
         });
 
         sign_up_button.setOnClickListener(v -> {
+            if (full_name.getText().toString().isEmpty() || email.getText().toString().isEmpty() || teacher_id.getText().toString().isEmpty() || password.getText().toString().isEmpty() || confirm_password.getText().toString().isEmpty()) {
+                Toast.makeText(Teacher_SignUp.this, "All fields are required", Toast.LENGTH_SHORT).show();
+            }
+
             if (areAllFieldsValid()) {
-                Intent intent = new Intent(Teacher_SignUp.this, Login.class);
+                Intent intent = new Intent(Teacher_SignUp.this, Teacher_LogIn.class);
                 Toast.makeText(Teacher_SignUp.this, "Account successfully created!", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }
@@ -83,6 +85,7 @@ public class Teacher_SignUp extends AppCompatActivity {
         if (confirm_password.getText().toString().isEmpty()) {
             confirm_password.setError("Confirm Password is required");
             isValid = false;
+
         } else if (!password.getText().toString().equals(confirm_password.getText().toString())) {
             confirm_password.setError("Passwords do not match");
             isValid = false;

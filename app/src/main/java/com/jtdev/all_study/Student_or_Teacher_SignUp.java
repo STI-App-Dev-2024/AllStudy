@@ -33,7 +33,7 @@ public class Student_or_Teacher_SignUp extends AppCompatActivity {
 
         // Back button click listener
         navback.setOnClickListener(v -> {
-            Intent intent = new Intent(Student_or_Teacher_SignUp.this, Login_SignUp.class);
+            Intent intent = new Intent(Student_or_Teacher_SignUp.this, LogIn_or_SignUp.class);
             startActivity(intent);
         });
 

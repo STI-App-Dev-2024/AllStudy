@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login_SignUp">
+    tools:context=".LogIn_or_SignUp">
 
     <ImageView
         android:id="@+id/splash_screen"
@@ -17,7 +17,7 @@
         tools:ignore="ContentDescription" />
 
     <Button
-        android:id="@+id/log_in"
+        android:id="@+id/login"
         android:layout_width="294dp"
         android:layout_height="55dp"
         android:text="@string/log_in"
@@ -29,14 +29,13 @@
         android:fontFamily="@font/product_sans_bold"/>
 
     <Button
-        android:id="@+id/sign_up"
+        android:id="@+id/signup"
         android:layout_width="294dp"
         android:layout_height="49dp"
         android:text="@string/sign_up"
         android:textSize="20sp"
         android:layout_centerHorizontal="true"
-
-        android:layout_below="@+id/log_in"
+        android:layout_below="@+id/login"
         android:layout_marginTop="13dp"
         android:textColor="#000000"
         android:background="@drawable/circular_stroke"
@@ -46,7 +45,7 @@
         android:id="@+id/terms_and_condition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/sign_up"
+        android:layout_below="@id/signup"
         android:layout_centerHorizontal="true"
         android:orientation="horizontal"
         android:layout_marginTop="8dp">
