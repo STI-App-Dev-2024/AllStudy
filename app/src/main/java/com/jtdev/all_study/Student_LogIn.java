@@ -53,7 +53,7 @@ public class Student_LogIn extends AppCompatActivity {
         });
 
         backbutton.setOnClickListener(v -> {
-            Intent intent = new Intent(Student_LogIn.this, Login_SignUp.class);
+            Intent intent = new Intent(Student_LogIn.this, Student_or_Teacher_LogIn.class);
             startActivity(intent);
         });
 

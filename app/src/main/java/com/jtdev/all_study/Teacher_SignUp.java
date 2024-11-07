@@ -15,8 +15,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class Teacher_SignUp extends AppCompatActivity {
 
-    private EditText first_name;
-    private EditText last_name;
+    private EditText full_name;
+    private EditText email;
     private EditText teacher_id;
     private EditText password;
     private EditText confirm_password;
@@ -30,8 +30,8 @@ public class Teacher_SignUp extends AppCompatActivity {
 
 
         ImageButton backbutton = findViewById(R.id.backbutton);
-        first_name = findViewById(R.id.first_name);
-        last_name = findViewById(R.id.last_name);
+        full_name = findViewById(R.id.full_name);
+        email = findViewById(R.id.email);
         teacher_id = findViewById(R.id.teacher_id);
         password = findViewById(R.id.password);
         confirm_password = findViewById(R.id.confirm_password);
@@ -60,13 +60,13 @@ public class Teacher_SignUp extends AppCompatActivity {
     private boolean areAllFieldsValid() {
         boolean isValid = true;
 
-        if (first_name.getText().toString().isEmpty()) {
-            first_name.setError("First name is required");
+        if (full_name.getText().toString().isEmpty()) {
+            full_name.setError("First name is required");
             isValid = false;
         }
 
-        if (last_name.getText().toString().isEmpty()) {
-            last_name.setError("Last name is required");
+        if (email.getText().toString().isEmpty()) {
+            email.setError("Last name is required");
             isValid = false;
         }
 

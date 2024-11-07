@@ -46,12 +46,12 @@
         />
 
     <EditText
-        android:id="@+id/first_name"
+        android:id="@+id/full_name"
         android:layout_width="325dp"
         android:layout_height="48dp"
         android:layout_below="@+id/signup"
         android:background="@drawable/round_edit_text"
-        android:hint="@string/first_name"
+        android:hint="@string/full_name"
         android:autofillHints="First Name"
         android:inputType="textPersonName"
         android:layout_centerHorizontal="true"
@@ -59,14 +59,14 @@
         android:fontFamily="@font/product_sans_regular"/>
 
     <EditText
-        android:id="@+id/last_name"
+        android:id="@+id/email"
         android:layout_width="325dp"
         android:layout_height="48dp"
-        android:layout_below="@+id/first_name"
+        android:layout_below="@+id/full_name"
         android:layout_centerHorizontal="true"
-        android:hint="@string/last_name"
+        android:hint="@string/email"
         android:autofillHints="Last Name"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         android:padding="10dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/round_edit_text"
@@ -76,7 +76,7 @@
         android:id="@+id/student_id"
         android:layout_width="325dp"
         android:layout_height="48dp"
-        android:layout_below="@+id/last_name"
+        android:layout_below="@+id/email"
         android:layout_centerHorizontal="true"
         android:hint="@string/student_id"
         android:autofillHints="Student ID"

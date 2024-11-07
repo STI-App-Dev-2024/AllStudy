@@ -74,7 +74,7 @@
         android:fontFamily="@font/product_sans_regular" />
 
     <Button
-        android:id="@+id/buttonsign"
+        android:id="@+id/button_sign_in"
         android:layout_width="280dp"
         android:layout_height="49dp"
         android:layout_below="@id/password"
@@ -90,7 +90,7 @@
         android:id="@+id/forgot_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/buttonsign"
+        android:layout_below="@id/button_sign_in"
         android:clickable="true"
         android:focusable="true"
         android:text="@string/forgot_passwords"
