@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,11 +26,12 @@ public class LogIn_or_SignUp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_02_login_sign_up);
+        setContentView(R.layout.activity_02_login_or_sign_up);
 
-        Button login = findViewById(R.id.login);
-        Button signup = findViewById(R.id.signup);
+        Button login = findViewById(R.id.login_button);
+        Button signup = findViewById(R.id.signup_button);
         agree_box = findViewById(R.id.agree_box);
+        TextView terms_and_condition_click = findViewById(R.id.terms_and_condition_click);
 
         // Set up insets for the main view
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -45,7 +47,6 @@ public class LogIn_or_SignUp extends AppCompatActivity {
                 startActivity(intent);
             } else {
                 Toast.makeText(LogIn_or_SignUp.this, "Please agree to the terms & condition first.", Toast.LENGTH_SHORT).show();
-
             }
         });
 
@@ -57,6 +58,11 @@ public class LogIn_or_SignUp extends AppCompatActivity {
             } else {
                 Toast.makeText(LogIn_or_SignUp.this, "Please agree to the terms & condition first.", Toast.LENGTH_SHORT).show();
             }
+        });
+
+        terms_and_condition_click.setOnClickListener(v -> {
+            PopUp_Terms_and_Condition popUp = new PopUp_Terms_and_Condition();
+            popUp.showPopUp(LogIn_or_SignUp.this);
         });
 
     }

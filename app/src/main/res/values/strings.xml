@@ -38,13 +38,13 @@
     <string name="new_password">New Password</string>
     <string name="enter_new_password">Enter New Password</string>
     <string name="confirm_new_password">Confirm New Password</string>
+    <string name ="all_study_terms_conditions_message">By using AllStudy, you agree to the following terms and conditions. Please read them carefully\n\n" + "Some features of the app requires you to create an account. You agree to provide accurate and complete information when creating an account\n\n" + "Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use and protect your personal information"</string>
     <string name="confirm">Confirm</string>
     <string name="allstudy">ALLSTUDY</string>
     <string name="description_squarestroke" />
     <string name="description_image" />
     <string name="description_bar" />
     <string name="description_avatar" />
-    <string name="more_active_serverss">More Active Servers</string>
     <string name="create_an_account">Create an account</string>
     <string name="student_sign_up">Student Sign Up</string>
     <string name="teacher_sign_upp">Teacher Sign Up</string>
@@ -64,4 +64,5 @@
     <string name="create_server_button">Create server button</string>
     <string name="join_server_button">Join server button</string>
     <string name="full_name">Full Name</string>
+    <string name="allstudy_terms_conditions"><![CDATA[AllStudy - Terms & conditions]]></string>
 </resources>
