@@ -25,7 +25,7 @@ public class Student_SignUp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_05_student_sign_up);
+        setContentView(R.layout.activity_07_student_sign_up);
 
         ImageButton backbutton = findViewById(R.id.backbutton);
         first_name = findViewById(R.id.first_name);
@@ -50,7 +50,7 @@ public class Student_SignUp extends AppCompatActivity {
         });
 
         backbutton.setOnClickListener(view -> {
-            Intent intent = new Intent(Student_SignUp.this, Teacher_or_Student_SignUp.class);
+            Intent intent = new Intent(Student_SignUp.this, Student_or_Teacher_SignUp.class);
             startActivity(intent);
         });
 

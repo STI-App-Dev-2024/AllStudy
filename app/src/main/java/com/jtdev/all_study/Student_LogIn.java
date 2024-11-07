@@ -23,7 +23,7 @@ public class Student_LogIn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_student_log_in);
+        setContentView(R.layout.activity_04_student_log_in);
 
         // Initialize UI elements
         email = findViewById(R.id.email);
@@ -31,7 +31,7 @@ public class Student_LogIn extends AppCompatActivity {
         Button buttonsign = findViewById(R.id.buttonsign);
         ImageButton backbutton = findViewById(R.id.backbutton);
         TextView forgotPassword = findViewById(R.id.forgot_password);
-        TextView signMeUp = findViewById(R.id.signmeup);
+        TextView signUp = findViewById(R.id.signmeup);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -65,9 +65,9 @@ public class Student_LogIn extends AppCompatActivity {
         });
 
         // Set up sign up listener
-        signMeUp.setOnClickListener(v -> {
+        signUp.setOnClickListener(v -> {
             // Navigate to Sign Up Activity
-            Intent intent = new Intent(Student_LogIn.this, Teacher_or_Student_SignUp.class);
+            Intent intent = new Intent(Student_LogIn.this, Teacher_SplashScreen.class);
             startActivity(intent);
         });
     }

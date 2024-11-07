@@ -17,7 +17,7 @@ public class OTP_AllStudy extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_09_otp_all_study);
+        setContentView(R.layout.activity_10_otp_all_study);
 
         EditText otp1 = findViewById(R.id.otp1);
         EditText otp2 = findViewById(R.id.otp2);

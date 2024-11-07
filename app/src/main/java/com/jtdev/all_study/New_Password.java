@@ -17,7 +17,7 @@ public class New_Password extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_10_new_password);
+        setContentView(R.layout.activity_11_new_password);
 
         Button confirm_button = findViewById(R.id.confirm_button);
 

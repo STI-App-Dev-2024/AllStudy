@@ -7,7 +7,7 @@ import android.os.Handler;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SplashScreen extends AppCompatActivity {
+public class Teacher_SplashScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,7 @@ public class SplashScreen extends AppCompatActivity {
         int SPLASH_TIME_OUT = 3000;
         new Handler().postDelayed(() -> {
             // Start MainActivity after the timer ends
-            Intent intent = new Intent(SplashScreen.this, Student_HomePage.class);
+            Intent intent = new Intent(Teacher_SplashScreen.this, Teacher_HomePage.class);
             startActivity(intent);
             finish();  // Finish the Splash Activity so the user can't go back to it
         }, SPLASH_TIME_OUT);

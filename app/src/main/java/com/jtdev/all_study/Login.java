@@ -22,7 +22,7 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_student_log_in);
+        setContentView(R.layout.activity_04_student_log_in);
 
         // Initialize UI elements
         email = findViewById(R.id.email);
@@ -68,7 +68,7 @@ public class Login extends AppCompatActivity {
         // Set up sign up listener
         signMeUp.setOnClickListener(v -> {
             // Navigate to Sign Up Activity
-            Intent intent = new Intent(Login.this, Teacher_or_Student_SignUp.class);
+            Intent intent = new Intent(Login.this, Student_or_Teacher_SignUp.class);
             startActivity(intent);
         });
     }

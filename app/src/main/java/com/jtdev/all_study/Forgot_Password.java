@@ -21,7 +21,7 @@ public class Forgot_Password extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_08_forgot_password);
+        setContentView(R.layout.activity_09_forgot_password);
 
         // Initialize UI elements
         Button send = findViewById(R.id.send);
