@@ -3,6 +3,7 @@ package com.jtdev.all_study;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -19,6 +20,11 @@ public class New_Password extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_11_new_password);
 
+        PasswordValidator validator = new PasswordValidator();
+
+        EditText new_password = findViewById(R.id.new_password);
+        String password = new_password.getText().toString();
+        EditText confirm_password = findViewById(R.id.confirm_password);
         Button confirm_button = findViewById(R.id.confirm_button);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -27,10 +33,33 @@ public class New_Password extends AppCompatActivity {
             return insets;
         });
 
+        if (validator.isValidPassword(password)) {
+            confirm_button.setEnabled(true);
+        }
+
+        if(new_password != confirm_password) {
+            confirm_button.setEnabled(false);
+        }
+
+        else {
+            new_password.setError("Invalid password");
+        }
+
         confirm_button.setOnClickListener(v -> {
-            Toast.makeText(this, "Password Changed!", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(New_Password.this, LogIn_or_SignUp.class);
-            startActivity(intent);
-        });
+
+            String passwordInput = new_password.getText().toString().trim();
+
+            if (!passwordInput.isEmpty()) {
+                Intent intent = new Intent(New_Password.this, LogIn_or_SignUp.class);
+                Toast.makeText(this, "Password Changed!", Toast.LENGTH_SHORT).show();
+                startActivity(intent);
+        } else {
+                Toast.makeText(this, "Please enter a password", Toast.LENGTH_SHORT).show();
+            }
+
+            }
+
+            );
+
     }
 }

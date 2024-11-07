@@ -31,8 +31,8 @@ public class Teacher_LogIn extends AppCompatActivity {
         password = findViewById(R.id.password);
 
         Button signIn_button = findViewById(R.id.signin_button);
-        TextView forgotPassword = findViewById(R.id.forgot_password);
-        TextView signUp = findViewById(R.id.signmeup);
+        TextView forgotPass_click = findViewById(R.id.forgot_pass_click);
+        TextView signUp_click = findViewById(R.id.sign_up_click);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -59,14 +59,14 @@ public class Teacher_LogIn extends AppCompatActivity {
         });
 
         // Set up forgot password listener
-        forgotPassword.setOnClickListener(v -> {
+        forgotPass_click.setOnClickListener(v -> {
             // Navigate to Forgot Password Activity
             Intent intent = new Intent(Teacher_LogIn.this, Forgot_Password.class);
             startActivity(intent);
         });
 
         // Set up sign up listener
-        signUp.setOnClickListener(v -> {
+        signUp_click.setOnClickListener(v -> {
             // Navigate to Sign Up Activity
             Intent intent = new Intent(Teacher_LogIn.this, Teacher_LogIn.class);
             startActivity(intent);

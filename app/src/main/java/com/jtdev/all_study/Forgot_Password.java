@@ -2,6 +2,8 @@ package com.jtdev.all_study;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -14,7 +16,6 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class Forgot_Password extends AppCompatActivity {
-    private EditText email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +25,11 @@ public class Forgot_Password extends AppCompatActivity {
         setContentView(R.layout.activity_09_forgot_password);
 
         // Initialize UI elements
-        Button send = findViewById(R.id.send);
-        email = findViewById(R.id.email);
-        TextView signUpText = findViewById(R.id.signmeup);
+
+
+        EditText email_edit_text = findViewById(R.id.email);
+        Button send_button = findViewById(R.id.send_button);
+        TextView signup_click = findViewById(R.id.signup_click);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -34,10 +37,35 @@ public class Forgot_Password extends AppCompatActivity {
             return insets;
         });
 
+        email_edit_text.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged (CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged (CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged (Editable s) {
+                String email = s.toString();
+
+                if (!EmailValidator.isValidEmail(email) || !email.endsWith("@gmail.com")) {
+
+                } else {
+                    email_edit_text.setError(null);
+                }
+            }
+
+        });
+
         // Set up click listener for the Send button
-        send.setOnClickListener(v -> {
+        send_button.setOnClickListener(v -> {
             // Here you should add logic to send the OTP
-            String emailInput = email.getText().toString().trim();
+            String emailInput = email_edit_text.getText().toString().trim();
+
             if (!emailInput.isEmpty()) {
                 // Intent to OTP screen
                 Intent intent = new Intent(Forgot_Password.this, OTP_AllStudy.class);
@@ -49,9 +77,9 @@ public class Forgot_Password extends AppCompatActivity {
         });
 
         // Set up click listener for the Sign Up text
-        signUpText.setOnClickListener(v -> {
+        signup_click.setOnClickListener(v -> {
             // Navigate to Sign Up Activity (Assuming you have a SignUp activity)
-            Intent intent = new Intent(Forgot_Password.this, OTP_AllStudy.class);
+            Intent intent = new Intent(Forgot_Password.this, LogIn_or_SignUp.class);
             startActivity(intent);
         });
     }
