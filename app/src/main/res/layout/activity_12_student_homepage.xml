@@ -18,7 +18,8 @@
         android:layout_marginTop="30dp"
         android:text="@string/all_study"
         android:textSize="40sp"
-        android:fontFamily="@font/product_sans_bold" />
+        android:fontFamily="@font/product_sans_bold"
+        tools:ignore="RelativeOverlap" />
 
 
     <!-- Profile Avatar -->
@@ -114,7 +115,7 @@
             android:layout_height="55dp"
             android:layout_below="@id/computer_science"
             android:layout_marginTop="35dp"
-            android:layout_marginStart="35dp"
+            android:layout_marginStart="30dp"
             android:backgroundTint="@color/white"
             android:fontFamily="@font/product_sans_bold"
             android:text="@string/join_now"
@@ -143,7 +144,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/more_active_server"
         android:layout_marginTop="8dp"
-        android:scrollbars="none">
+        android:contentDescription="Scroll horizontally to view more items"
+        android:scrollbars="none"
+        tools:ignore="HardcodedText"
+        >
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -152,7 +156,7 @@
             android:orientation="horizontal">
 
             <!-- Placeholder views for the items -->
-            <!-- DAPAT DITO ANO IMAGEBUTTON-->
+
             <View
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -260,7 +264,7 @@
         android:layout_height="75dp"
         android:layout_alignTop="@id/tab_below_image"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="54dp"
+        android:layout_marginEnd="45dp"
         android:layout_marginTop="6dp"
         android:contentDescription="@string/favorite_button"
         android:src="@drawable/favorite_button"

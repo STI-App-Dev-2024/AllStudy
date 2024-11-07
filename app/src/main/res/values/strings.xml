@@ -65,5 +65,9 @@
     <string name="join_server_button">Join server button</string>
     <string name="full_name">Full Name</string>
     <string name="allstudy_terms_conditions"><![CDATA[AllStudy - Terms & conditions]]></string>
+<<<<<<< HEAD
     <string name="agree_to_terms"><![CDATA[Please agree to the terms & condition first.]]></string>
+=======
+    <string name="more_active_servers_description" />
+>>>>>>> 43b23a5ab3e207f99711620891eb868d73db0114
 </resources>
