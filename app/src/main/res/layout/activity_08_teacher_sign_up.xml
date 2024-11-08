@@ -16,7 +16,7 @@
         android:src="@drawable/allstudyhalfbg" />
 
     <ImageButton
-        android:id="@+id/backbutton"
+        android:id="@+id/back_button"
         android:layout_width="55dp"
         android:layout_height="50dp"
         android:layout_marginTop="35dp"
@@ -25,6 +25,7 @@
         android:background="@android:color/transparent" />
 
     <ImageView
+        android:id="@+id/rectangle_view"
         android:layout_width="360dp"
         android:layout_height="555dp"
         android:layout_below="@id/allstudyhalf"
@@ -119,7 +120,7 @@
         android:fontFamily="@font/product_sans_regular"/>
 
     <Button
-        android:id="@+id/sign_up_button"
+        android:id="@+id/signup_button"
         android:layout_width="295dp"
         android:layout_height="50dp"
         android:layout_below="@+id/confirm_password"

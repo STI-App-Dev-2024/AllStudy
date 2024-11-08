@@ -19,7 +19,7 @@ public class Student_or_Teacher_LogIn extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_03_student_or_teacher_log_in);
 
-        // Initialize buttons
+        // Initialize UI buttons by finding them using their IDs
         ImageButton back_button = findViewById(R.id.back_button);
         ImageButton student_button = findViewById(R.id.student_button);
         ImageButton teacher_button = findViewById(R.id.teacher_button);

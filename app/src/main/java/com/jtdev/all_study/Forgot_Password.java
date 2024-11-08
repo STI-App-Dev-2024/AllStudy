@@ -26,7 +26,7 @@ public class Forgot_Password extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_09_forgot_password);
 
-        // Initialize UI elements
+        // Initialize UI elements by finding them using their IDs
         EditText email_edit_text = findViewById(R.id.email);
         Button send_button = findViewById(R.id.send_button);
         TextView signup_click = findViewById(R.id.signup_click);

@@ -28,6 +28,7 @@ public class LogIn_or_SignUp extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_02_login_or_sign_up);
 
+        // Initialize UI elements by finding them using their IDs
         Button login_button = findViewById(R.id.login_button);
         Button signup_button = findViewById(R.id.signup_button);
         agree_box = findViewById(R.id.agree_box);

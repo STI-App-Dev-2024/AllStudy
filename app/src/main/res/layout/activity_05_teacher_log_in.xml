@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -8,7 +7,7 @@
     tools:context=".Teacher_LogIn">
 
     <ImageView
-        android:id="@+id/comp"
+        android:id="@+id/computer_image"
         android:layout_width="441dp"
         android:layout_height="363dp"
         android:layout_alignParentTop="true"
@@ -25,7 +24,7 @@
         android:background="@android:color/transparent" />
 
     <ImageView
-        android:id="@+id/rectangle"
+        android:id="@+id/rectangle_view"
         android:layout_width="360dp"
         android:layout_height="510dp"
         android:layout_centerHorizontal="true"
@@ -34,7 +33,7 @@
         android:src="@drawable/custom_rectangle" />
 
     <TextView
-        android:id="@+id/log_in"
+        android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="386dp"
@@ -47,7 +46,7 @@
         android:id="@+id/email"
         android:layout_width="325dp"
         android:layout_height="48dp"
-        android:layout_below="@+id/log_in"
+        android:layout_below="@+id/login"
         android:layout_centerHorizontal="true"
         android:autofillHints="Email"
         android:background="@drawable/round_edit_text"
@@ -116,7 +115,7 @@
             android:fontFamily="@font/product_sans_regular"/>
 
         <TextView
-            android:id="@+id/sign_up_click"
+            android:id="@+id/signup_click"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="true"

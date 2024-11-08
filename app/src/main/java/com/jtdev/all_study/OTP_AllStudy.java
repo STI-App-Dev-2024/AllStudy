@@ -19,6 +19,8 @@ public class OTP_AllStudy extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_10_otp_all_study);
 
+
+        // Initialize EditText components by finding them using their IDs
         EditText otp1 = findViewById(R.id.otp1);
         EditText otp2 = findViewById(R.id.otp2);
         EditText otp3 = findViewById(R.id.otp3);
