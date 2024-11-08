@@ -16,7 +16,7 @@
         android:src="@drawable/allstudyhalfbg" />
 
     <ImageButton
-        android:id="@+id/backbutton"
+        android:id="@+id/back_button"
         android:layout_width="55dp"
         android:layout_height="50dp"
         android:layout_marginTop="35dp"
@@ -25,6 +25,7 @@
         android:background="@android:color/transparent" />
 
     <ImageView
+        android:id="@+id/rectangle_view"
         android:layout_width="360dp"
         android:layout_height="555dp"
         android:layout_below="@id/allstudyhalf"
@@ -51,6 +52,7 @@
         android:layout_centerHorizontal="true"
         android:autofillHints="Full Name"
         android:hint="@string/full_name"
+        android:textColorHint="#6A5E5E"
         android:inputType="textPersonName"
         android:padding="10dp"
         android:textSize="20sp"
@@ -66,6 +68,7 @@
         android:layout_centerHorizontal="true"
         android:autofillHints="Email Address"
         android:hint="@string/email"
+        android:textColorHint="#6A5E5E"
         android:inputType="textEmailAddress"
         android:padding="10dp"
         android:textSize="20sp"
@@ -81,6 +84,7 @@
         android:layout_centerHorizontal="true"
         android:autofillHints="Teacher ID"
         android:hint="@string/teacher_id"
+        android:textColorHint="#6A5E5E"
         android:inputType="number"
         android:padding="10dp"
         android:layout_marginTop="10dp"
@@ -96,6 +100,7 @@
         android:layout_centerHorizontal="true"
         android:autofillHints="Password"
         android:hint="@string/password"
+        android:textColorHint="#6A5E5E"
         android:padding="10dp"
         android:layout_marginTop="10dp"
         android:textSize="20sp"
@@ -111,6 +116,7 @@
         android:layout_centerHorizontal="true"
         android:autofillHints="Confirm Password"
         android:hint="@string/confirm_password"
+        android:textColorHint="#6A5E5E"
         android:padding="10dp"
         android:layout_marginTop="10dp"
         android:textSize="20sp"
@@ -119,7 +125,7 @@
         android:fontFamily="@font/product_sans_regular"/>
 
     <Button
-        android:id="@+id/sign_up_button"
+        android:id="@+id/signup_button"
         android:layout_width="295dp"
         android:layout_height="50dp"
         android:layout_below="@+id/confirm_password"

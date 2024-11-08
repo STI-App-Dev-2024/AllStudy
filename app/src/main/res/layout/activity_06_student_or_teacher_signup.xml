@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -14,10 +13,10 @@
         android:layout_centerHorizontal="true"
         android:layout_margin="50dp"
         android:importantForAccessibility="no"
-        android:src="@drawable/logonamin" />
+        android:src="@drawable/allstudy_logo" />
 
     <ImageButton
-        android:id="@+id/navback"
+        android:id="@+id/back_button"
         android:layout_width="55dp"
         android:layout_height="50dp"
         android:background="@android:color/transparent"
@@ -46,7 +45,7 @@
         android:layout_marginTop="30dp">
 
         <ImageButton
-            android:id="@+id/student"
+            android:id="@+id/student_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/student_log_in"
@@ -54,7 +53,7 @@
             android:background="@drawable/circle_for_profile"/>
 
         <ImageButton
-            android:id="@+id/teacher"
+            android:id="@+id/teacher_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/teacher_log_in"

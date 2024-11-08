@@ -20,8 +20,10 @@ public class New_Password extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_11_new_password);
 
-        PasswordValidator validator = new PasswordValidator();
+        // Create a PasswordValidator instance for password validation
+        Password_Validator validator = new Password_Validator();
 
+        // Instantiate EditText and UI element button
         EditText new_password = findViewById(R.id.new_password);
         String password = new_password.getText().toString();
         EditText confirm_password = findViewById(R.id.confirm_password);
@@ -35,31 +37,22 @@ public class New_Password extends AppCompatActivity {
 
         if (validator.isValidPassword(password)) {
             confirm_button.setEnabled(true);
-        }
-
-        if(new_password != confirm_password) {
+        } else if (new_password != confirm_password) {
             confirm_button.setEnabled(false);
-        }
-
-        else {
+        } else {
             new_password.setError("Invalid password");
         }
 
         confirm_button.setOnClickListener(v -> {
-
             String passwordInput = new_password.getText().toString().trim();
 
             if (!passwordInput.isEmpty()) {
-                Intent intent = new Intent(New_Password.this, LogIn_or_SignUp.class);
+                Intent intent = new Intent(New_Password.this, Student_or_Teacher_LogIn.class);
                 Toast.makeText(this, "Password Changed!", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
-        } else {
+            } else {
                 Toast.makeText(this, "Please enter a password", Toast.LENGTH_SHORT).show();
             }
-
-            }
-
-            );
-
+        });
     }
 }

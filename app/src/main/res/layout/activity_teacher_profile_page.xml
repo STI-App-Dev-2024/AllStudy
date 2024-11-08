@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Teacher_Profile_Page">
+
+    <TextView
+        android:id="@+id/all_study"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/all_study"
+        android:textSize="40sp"
+        android:fontFamily="@font/product_sans_bold" />
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="55dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="35dp"
+        android:contentDescription="@string/back_button"
+        android:src="@drawable/back_button"
+        android:background="@android:color/transparent" />
+
+
+
+
+</RelativeLayout>

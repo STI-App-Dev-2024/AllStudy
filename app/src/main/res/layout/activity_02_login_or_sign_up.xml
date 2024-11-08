@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/halfsplash_for_signin_signup"
         android:layout_centerHorizontal="true"
-        tools:ignore="ContentDescription" />
+        android:importantForAccessibility="no" />
 
     <Button
         android:id="@+id/login_button"

@@ -27,13 +27,14 @@ public class Teacher_SignUp extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_08_teacher_sign_up);
 
-        ImageButton backbutton = findViewById(R.id.backbutton);
+        // Initialize UI elements by finding them using their IDs
+        ImageButton back_button = findViewById(R.id.back_button);
         full_name = findViewById(R.id.full_name);
         email = findViewById(R.id.email);
         teacher_id = findViewById(R.id.teacher_id);
         password = findViewById(R.id.password);
         confirm_password = findViewById(R.id.confirm_password);
-        Button sign_up_button = findViewById(R.id.sign_up_button);
+        Button signup_button = findViewById(R.id.signup_button);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -41,7 +42,7 @@ public class Teacher_SignUp extends AppCompatActivity {
             return insets;
         });
 
-        sign_up_button.setOnClickListener(v -> {
+        signup_button.setOnClickListener(v -> {
             if (full_name.getText().toString().isEmpty() || email.getText().toString().isEmpty() || teacher_id.getText().toString().isEmpty() || password.getText().toString().isEmpty() || confirm_password.getText().toString().isEmpty()) {
                 Toast.makeText(Teacher_SignUp.this, "All fields are required", Toast.LENGTH_SHORT).show();
             }
@@ -53,7 +54,7 @@ public class Teacher_SignUp extends AppCompatActivity {
             }
         });
 
-        backbutton.setOnClickListener(v -> {
+        back_button.setOnClickListener(v -> {
             Intent intent = new Intent(Teacher_SignUp.this, Student_or_Teacher_SignUp.class);
             startActivity(intent);
         });
@@ -90,7 +91,6 @@ public class Teacher_SignUp extends AppCompatActivity {
             confirm_password.setError("Passwords do not match");
             isValid = false;
         }
-
         return isValid;
     }
 }

@@ -19,7 +19,6 @@
     <string name="student">Student</string>
     <string name="send">Send</string>
     <string name="teacher_sign_up">Teacher Sign Up</string>
-    <string name="teacheridSign_up">Teacher ID</string>
     <string name="active_server">Active Server</string>
     <string name="join_now">Join Now</string>
     <string name="coding">Coding</string>
@@ -66,7 +65,10 @@
     <string name="full_name">Full Name</string>
     <string name="allstudy_terms_conditions"><![CDATA[AllStudy - Terms & conditions]]></string>
     <string name="agree_to_terms"><![CDATA[Please agree to the terms & condition first.]]></string>
-=======
+    =======
     <string name="more_active_servers_description" />
->>>>>>> 43b23a5ab3e207f99711620891eb868d73db0114
+    <string name="_0">0</string>
+    <string name="information_technology">Information Technology</string>
+    <string name="log_out">Log out</string>
+    >>>>>>> 43b23a5ab3e207f99711620891eb868d73db0114
 </resources>

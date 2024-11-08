@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -13,16 +12,7 @@
         android:layout_height="385dp"
         android:src="@drawable/halfsplash"
         android:layout_centerHorizontal="true"
-        tools:ignore="ContentDescription" />
-
-    <ImageButton
-        android:id="@+id/nav_back"
-        android:layout_width="55dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="35dp"
-        android:background="@android:color/transparent"
-        android:src="@drawable/back_button"
-        tools:ignore="ContentDescription" />
+        android:importantForAccessibility="no" />
 
     <ImageView
         android:id="@+id/rectangles"
@@ -31,7 +21,7 @@
         android:src="@drawable/custom_rectangle"
         android:layout_below="@+id/splash_for_otp"
         android:layout_centerHorizontal="true"
-        tools:ignore="ContentDescription" />
+        android:importantForAccessibility="no" />
 
     <TextView
         android:id="@+id/verification"
@@ -42,7 +32,8 @@
         android:layout_margin="16dp"
         android:textSize="35sp"
         android:text="@string/verification"
-        android:fontFamily="@font/product_sans_bold"/>
+        android:fontFamily="@font/product_sans_bold"
+        android:contentDescription="@string/verification"/>
 
     <LinearLayout
         android:id="@+id/circlesLayout"
@@ -63,7 +54,10 @@
         android:maxLength="1"
         android:gravity="center"
         android:background="@drawable/circle_background"
-        android:nextFocusForward="@id/otp2"/>
+        android:nextFocusForward="@id/otp2"
+        android:hint="@string/_0"
+        android:textSize="30sp"
+        android:textColorHint="#6A5E5E" />
 
     <EditText
         android:id="@+id/otp2"
@@ -75,7 +69,10 @@
         android:maxLength="1"
         android:gravity="center"
         android:background="@drawable/circle_background"
-        android:nextFocusForward="@id/otp3"/>
+        android:nextFocusForward="@id/otp3"
+        android:hint="@string/_0"
+        android:textSize="30sp"
+        android:textColorHint="#6A5E5E" />
 
     <EditText
         android:id="@+id/otp3"
@@ -87,7 +84,10 @@
         android:maxLength="1"
         android:gravity="center"
         android:background="@drawable/circle_background"
-        android:nextFocusForward="@id/otp4"/>
+        android:nextFocusForward="@id/otp4"
+        android:hint="@string/_0"
+        android:textSize="30sp"
+        android:textColorHint="#6A5E5E" />
 
     <EditText
         android:id="@+id/otp4"
@@ -98,7 +98,10 @@
         android:inputType="number"
         android:maxLength="1"
         android:gravity="center"
-        android:background="@drawable/circle_background"/>
+        android:background="@drawable/circle_background"
+        android:hint="@string/_0"
+        android:textSize="30sp"
+        android:textColorHint="#6A5E5E" />
 
     </LinearLayout>
 

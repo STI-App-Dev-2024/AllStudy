@@ -25,14 +25,13 @@ public class Teacher_LogIn extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_05_teacher_log_in);
 
+        // Initialize UI elements by finding them using their IDs
         ImageButton back_button = findViewById(R.id.back_button);
-
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
-
-        Button signIn_button = findViewById(R.id.signin_button);
-        TextView forgotPass_click = findViewById(R.id.forgot_pass_click);
-        TextView signUp_click = findViewById(R.id.sign_up_click);
+        Button signin_button = findViewById(R.id.login_button);
+        TextView forgot_pass_click = findViewById(R.id.forgot_pass_click);
+        TextView signup_click = findViewById(R.id.signup_click);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -40,7 +39,7 @@ public class Teacher_LogIn extends AppCompatActivity {
             return insets;
         });
 
-        signIn_button.setOnClickListener(v -> {
+        signin_button.setOnClickListener(v -> {
             String emailInput = email.getText().toString();
             String passwordInput = password.getText().toString();
 
@@ -59,16 +58,16 @@ public class Teacher_LogIn extends AppCompatActivity {
         });
 
         // Set up forgot password listener
-        forgotPass_click.setOnClickListener(v -> {
+        forgot_pass_click.setOnClickListener(v -> {
             // Navigate to Forgot Password Activity
             Intent intent = new Intent(Teacher_LogIn.this, Forgot_Password.class);
             startActivity(intent);
         });
 
         // Set up sign up listener
-        signUp_click.setOnClickListener(v -> {
+        signup_click.setOnClickListener(v -> {
             // Navigate to Sign Up Activity
-            Intent intent = new Intent(Teacher_LogIn.this, Teacher_LogIn.class);
+            Intent intent = new Intent(Teacher_LogIn.this, Teacher_SignUp.class);
             startActivity(intent);
         });
     }
@@ -81,7 +80,7 @@ public class Teacher_LogIn extends AppCompatActivity {
         if (emailInput.equals(correctEmail) && passwordInput.equals(correctPassword)) {
             // Login successful
             Toast.makeText(Teacher_LogIn.this, "Welcome back!", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(Teacher_LogIn.this, Teacher_SplashScreen.class);
+            Intent intent = new Intent(Teacher_LogIn.this, Teacher_Splash_Screen.class);
             startActivity(intent);
             finish();
         } else {

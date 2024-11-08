@@ -19,10 +19,10 @@ public class Student_or_Teacher_SignUp extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_06_student_or_teacher_signup);
 
-        // Initialize buttons
-        ImageButton navback = findViewById(R.id.navback);
-        ImageButton student = findViewById(R.id.student);
-        ImageButton teacher = findViewById(R.id.teacher);
+        // Initialize UI buttons by finding them using their IDs
+        ImageButton back_button = findViewById(R.id.back_button);
+        ImageButton student_button = findViewById(R.id.student_button);
+        ImageButton teacher_button = findViewById(R.id.teacher_button);
 
         // Handle system window insets for proper layout
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -32,18 +32,18 @@ public class Student_or_Teacher_SignUp extends AppCompatActivity {
         });
 
         // Back button click listener
-        navback.setOnClickListener(v -> {
+        back_button.setOnClickListener(v -> {
             Intent intent = new Intent(Student_or_Teacher_SignUp.this, LogIn_or_SignUp.class);
             startActivity(intent);
         });
 
-        student.setOnClickListener(v -> {
+        student_button.setOnClickListener(v -> {
             Intent intent = new Intent(Student_or_Teacher_SignUp.this, Student_SignUp.class);
             Toast.makeText(Student_or_Teacher_SignUp.this, "Welcome, student!", Toast.LENGTH_SHORT).show();
             startActivity(intent);
         });
 
-        teacher.setOnClickListener(v -> {
+        teacher_button.setOnClickListener(v -> {
             Intent intent = new Intent(Student_or_Teacher_SignUp.this, Teacher_SignUp.class);
             Toast.makeText(Student_or_Teacher_SignUp.this, "Welcome, teacher!", Toast.LENGTH_SHORT).show();
             startActivity(intent);

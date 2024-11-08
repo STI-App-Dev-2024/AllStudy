@@ -13,7 +13,16 @@
         android:theme="@style/Theme.AllStudy"
         tools:targetApi="31">
         <activity
-            android:name=".Student_SplashScreen"
+            android:name=".Teacher_Profile_Page"
+            android:exported="false" />
+        <activity
+            android:name=".Student_Profile_Page"
+            android:exported="false" />
+        <activity
+            android:name=".Student_See_More"
+            android:exported="false" />
+        <activity
+            android:name=".Student_Splash_Screen"
             android:exported="false" />
         <activity
             android:name=".Teacher_LogIn"
@@ -25,7 +34,7 @@
             android:name=".Student_or_Teacher_LogIn"
             android:exported="false" />
         <activity
-            android:name=".Teacher_HomePage"
+            android:name=".Teacher_Home_Page"
             android:exported="false" />
         <activity
             android:name=".New_Password"
@@ -34,10 +43,10 @@
             android:name=".OTP_AllStudy"
             android:exported="false" />
         <activity
-            android:name=".Student_HomePage"
+            android:name=".Student_Home_Page"
             android:exported="false" />
         <activity
-            android:name=".Teacher_SplashScreen"
+            android:name=".Teacher_Splash_Screen"
             android:exported="false" />
         <activity
             android:name=".Student_SignUp"

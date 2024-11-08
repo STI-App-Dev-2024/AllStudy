@@ -26,7 +26,7 @@ public class Forgot_Password extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_09_forgot_password);
 
-        // Initialize UI elements
+        // Initialize UI elements by finding them using their IDs
         EditText email_edit_text = findViewById(R.id.email);
         Button send_button = findViewById(R.id.send_button);
         TextView signup_click = findViewById(R.id.signup_click);
@@ -52,7 +52,7 @@ public class Forgot_Password extends AppCompatActivity {
             public void afterTextChanged (Editable s) {
                 String email = s.toString();
 
-                if (EmailValidator.isValidEmail(email) || !email.endsWith("@gmail.com")) {
+                if (Email_Validator.isValidEmail(email) || !email.endsWith("@gmail.com")) {
                     email_edit_text.setError(null);
                     send_button.setEnabled(true);
                 }
@@ -80,7 +80,7 @@ public class Forgot_Password extends AppCompatActivity {
         // Set up click listener for the Sign Up text
         signup_click.setOnClickListener(v -> {
             // Navigate to Sign Up Activity (Assuming you have a SignUp activity)
-            Intent intent = new Intent(Forgot_Password.this, LogIn_or_SignUp.class);
+            Intent intent = new Intent(Forgot_Password.this, Student_or_Teacher_SignUp.class);
             startActivity(intent);
         });
     }

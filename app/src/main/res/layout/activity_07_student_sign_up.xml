@@ -16,14 +16,13 @@
         android:src="@drawable/allstudyhalfbg" />
 
     <ImageButton
-        android:id="@+id/backbutton"
+        android:id="@+id/back_button"
         android:layout_width="55dp"
         android:layout_height="50dp"
         android:layout_marginTop="35dp"
         android:contentDescription="@string/back_button"
         android:src="@drawable/back_button"
-        android:background="@android:color/transparent"
-        />
+        android:background="@android:color/transparent" />
 
     <ImageView
         android:layout_width="360dp"
@@ -42,8 +41,7 @@
         android:padding="20dp"
         android:text="@string/student_sign_up"
         android:textSize="30sp"
-        android:fontFamily="@font/product_sans_bold"
-        />
+        android:fontFamily="@font/product_sans_bold" />
 
     <EditText
         android:id="@+id/full_name"
@@ -52,6 +50,7 @@
         android:layout_below="@+id/signup"
         android:background="@drawable/round_edit_text"
         android:hint="@string/full_name"
+        android:textColorHint="#6A5E5E"
         android:autofillHints="First Name"
         android:inputType="textPersonName"
         android:layout_centerHorizontal="true"
@@ -65,6 +64,7 @@
         android:layout_below="@+id/full_name"
         android:layout_centerHorizontal="true"
         android:hint="@string/email"
+        android:textColorHint="#6A5E5E"
         android:autofillHints="Last Name"
         android:inputType="textEmailAddress"
         android:padding="10dp"
@@ -79,6 +79,7 @@
         android:layout_below="@+id/email"
         android:layout_centerHorizontal="true"
         android:hint="@string/student_id"
+        android:textColorHint="#6A5E5E"
         android:autofillHints="Student ID"
         android:inputType="number"
         android:padding="10dp"
@@ -93,6 +94,7 @@
         android:layout_below="@+id/student_id"
         android:layout_centerHorizontal="true"
         android:hint="@string/password"
+        android:textColorHint="#6A5E5E"
         android:autofillHints="Password"
         android:inputType="textPassword"
         android:padding="10dp"
@@ -107,6 +109,7 @@
         android:layout_below="@+id/password"
         android:layout_centerHorizontal="true"
         android:hint="@string/confirm_password"
+        android:textColorHint="#6A5E5E"
         android:autofillHints="Confirm Password"
         android:inputType="textPassword"
         android:padding="10dp"
@@ -115,7 +118,7 @@
         android:fontFamily="@font/product_sans_regular"/>
 
     <Button
-        android:id="@+id/sign_up_button"
+        android:id="@+id/signup_button"
         android:layout_width="295dp"
         android:layout_height="50dp"
         android:layout_below="@+id/confirm_password"
