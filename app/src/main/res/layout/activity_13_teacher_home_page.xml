@@ -6,7 +6,7 @@
     android:background="#F0F5F9"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Teacher_HomePage">
+    tools:context=".Teacher_Home_Page">
 
     <!-- Main title -->
     <TextView
@@ -176,13 +176,11 @@
                 android:layout_marginEnd="8dp"
                 android:background="@android:color/darker_gray" />
 
-
             <View
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginEnd="8dp"
                 android:background="@android:color/darker_gray" />
-
 
             <View
                 android:layout_width="100dp"
@@ -238,7 +236,7 @@
 
     <!-- Taskbar Join Button -->
     <ImageButton
-        android:id="@+id/create_button"
+        android:id="@+id/create_server_button"
         android:layout_width="85dp"
         android:layout_height="85dp"
         android:layout_alignTop="@id/tab_below_image"

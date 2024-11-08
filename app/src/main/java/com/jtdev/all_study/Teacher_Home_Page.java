@@ -10,7 +10,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Teacher_HomePage extends AppCompatActivity {
+public class Teacher_Home_Page extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,7 @@ public class Teacher_HomePage extends AppCompatActivity {
 
         Button join_now_button = findViewById(R.id.join_now_button);
         Button see_more_button = findViewById(R.id.see_more_button);
+        Button create_server_button = findViewById(R.id.create_server_button);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -28,7 +29,7 @@ public class Teacher_HomePage extends AppCompatActivity {
         });
 
         see_more_button.setOnClickListener(v ->{
-            Intent intent = new Intent(Teacher_HomePage.this, Student_See_More.class);
+            Intent intent = new Intent(Teacher_Home_Page.this, Student_See_More.class);
             startActivity(intent);
         });
 

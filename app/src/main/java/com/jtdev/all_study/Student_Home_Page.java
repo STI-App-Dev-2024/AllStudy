@@ -17,7 +17,7 @@ public class Student_Home_Page extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_12_student_homepage);
+        setContentView(R.layout.activity_12_student_home_page);
 
         // Instantiated all buttons by getting their IDs from student_homepage.xml
         Button join_now_button = findViewById(R.id.join_now_button);
