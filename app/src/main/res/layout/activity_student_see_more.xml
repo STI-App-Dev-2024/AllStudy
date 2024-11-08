@@ -17,7 +17,8 @@
         android:layout_marginTop="30dp"
         android:text="@string/all_study"
         android:textSize="40sp"
-        android:fontFamily="@font/product_sans_bold" />
+        android:fontFamily="@font/product_sans_bold"
+        tools:ignore="RelativeOverlap" />
 
     <!-- Profile Avatar -->
     <ImageButton
@@ -132,7 +133,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:importantForAccessibility="no"
-            android:src="@drawable/rectangle_blue" />
+            android:src="@drawable/rectangle_black" />
 
         <!-- Active Server Label -->
 
@@ -145,23 +146,25 @@
             android:layout_marginTop="30dp"
             android:fontFamily="@font/product_sans_bold"
             android:text="@string/active_server"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="20sp" />
 
         <!-- Section Bar -->
+
+        <!-- Server Image Placeholder -->
+
         <TextView
             android:id="@+id/information_technology"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/active_server_title_2"
-            android:layout_marginStart="1dp"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="30dp"
             android:fontFamily="@font/product_sans_regular"
-            android:text="@string/information_technology"
-            android:textColor="@color/black"
+            android:text="@string/quantitative_analysis"
+            android:textColor="@color/white"
             android:textSize="20sp" />
 
-        <!-- Server Image Placeholder -->
         <ImageView
             android:id="@+id/server_picture_2"
             android:layout_width="126dp"
