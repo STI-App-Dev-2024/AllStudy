@@ -52,9 +52,6 @@
             android:name=".Student_or_Teacher_SignUp"
             android:exported="false" />
         <activity
-            android:name=".Login"
-            android:exported="false" />
-        <activity
             android:name=".LogIn_or_SignUp"
             android:exported="false" />
         <activity
