@@ -29,7 +29,7 @@ public class Student_LogIn extends AppCompatActivity {
         ImageButton back_button = findViewById(R.id.back_button);
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
-        Button signin_button = findViewById(R.id.signin_button);
+        Button login_button = findViewById(R.id.login_button);
         TextView forgot_pass_click = findViewById(R.id.forgot_pass_click);
         TextView signup_click = findViewById(R.id.signup_click);
 
@@ -39,7 +39,7 @@ public class Student_LogIn extends AppCompatActivity {
             return insets;
         });
 
-        signin_button.setOnClickListener(v -> {
+        login_button.setOnClickListener(v -> {
             String emailInput = email.getText().toString();
             String passwordInput = password.getText().toString();
 

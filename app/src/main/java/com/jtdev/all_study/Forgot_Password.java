@@ -80,7 +80,7 @@ public class Forgot_Password extends AppCompatActivity {
         // Set up click listener for the Sign Up text
         signup_click.setOnClickListener(v -> {
             // Navigate to Sign Up Activity (Assuming you have a SignUp activity)
-            Intent intent = new Intent(Forgot_Password.this, LogIn_or_SignUp.class);
+            Intent intent = new Intent(Forgot_Password.this, Student_or_Teacher_SignUp.class);
             startActivity(intent);
         });
     }

@@ -23,12 +23,10 @@ public class New_Password extends AppCompatActivity {
         // Create a PasswordValidator instance for password validation
         PasswordValidator validator = new PasswordValidator();
 
-        // Getting the input fields
+        // Instantiate EditText and UI element button
         EditText new_password = findViewById(R.id.new_password);
-        String password = new_password.getText().toString(); // Get the new password as a string
+        String password = new_password.getText().toString();
         EditText confirm_password = findViewById(R.id.confirm_password);
-
-        // Get the button
         Button confirm_button = findViewById(R.id.confirm_button);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -49,7 +47,7 @@ public class New_Password extends AppCompatActivity {
             String passwordInput = new_password.getText().toString().trim();
 
             if (!passwordInput.isEmpty()) {
-                Intent intent = new Intent(New_Password.this, LogIn_or_SignUp.class);
+                Intent intent = new Intent(New_Password.this, Student_or_Teacher_LogIn.class);
                 Toast.makeText(this, "Password Changed!", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             } else {
