@@ -9,7 +9,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 @SuppressLint("CustomSplashScreen")
-public class Student_SplashScreen extends AppCompatActivity {
+public class Student_Splash_Screen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,7 @@ public class Student_SplashScreen extends AppCompatActivity {
         int SPLASH_TIME_OUT = 1000;
         new Handler().postDelayed(() -> {
             // Start MainActivity after the timer ends
-            Intent intent = new Intent(Student_SplashScreen.this, Student_HomePage.class);
+            Intent intent = new Intent(Student_Splash_Screen.this, Student_Home_Page.class);
             startActivity(intent);
             finish();  // Finish the Splash Activity so the user can't go back to it
         }, SPLASH_TIME_OUT);

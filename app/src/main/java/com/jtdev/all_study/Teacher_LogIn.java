@@ -80,7 +80,7 @@ public class Teacher_LogIn extends AppCompatActivity {
         if (emailInput.equals(correctEmail) && passwordInput.equals(correctPassword)) {
             // Login successful
             Toast.makeText(Teacher_LogIn.this, "Welcome back!", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(Teacher_LogIn.this, Teacher_SplashScreen.class);
+            Intent intent = new Intent(Teacher_LogIn.this, Teacher_Splash_Screen.class);
             startActivity(intent);
             finish();
         } else {

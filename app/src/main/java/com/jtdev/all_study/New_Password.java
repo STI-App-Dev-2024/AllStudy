@@ -21,7 +21,7 @@ public class New_Password extends AppCompatActivity {
         setContentView(R.layout.activity_11_new_password);
 
         // Create a PasswordValidator instance for password validation
-        PasswordValidator validator = new PasswordValidator();
+        Password_Validator validator = new Password_Validator();
 
         // Instantiate EditText and UI element button
         EditText new_password = findViewById(R.id.new_password);

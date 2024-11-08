@@ -52,7 +52,7 @@ public class Forgot_Password extends AppCompatActivity {
             public void afterTextChanged (Editable s) {
                 String email = s.toString();
 
-                if (EmailValidator.isValidEmail(email) || !email.endsWith("@gmail.com")) {
+                if (Email_Validator.isValidEmail(email) || !email.endsWith("@gmail.com")) {
                     email_edit_text.setError(null);
                     send_button.setEnabled(true);
                 }

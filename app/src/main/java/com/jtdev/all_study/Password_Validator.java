@@ -1,6 +1,6 @@
 package com.jtdev.all_study;
 
-public class PasswordValidator {
+public class Password_Validator {
 
     public boolean isValidPassword(String password) {
         if (password == null || password.length() < 8) {
