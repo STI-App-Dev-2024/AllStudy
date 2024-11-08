@@ -64,7 +64,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:importantForAccessibility="no"
-            android:src="@drawable/rectangle_6" />
+            android:src="@drawable/rectangle_black" />
 
         <!-- Active Server Label -->
 
@@ -247,7 +247,7 @@
         android:layout_marginStart="123dp"
         android:layout_marginTop="-4dp"
         android:contentDescription="@string/create_server_button"
-        android:src="@drawable/create_button"
+        android:src="@drawable/create_server_button"
         android:background="@android:color/transparent"
         android:backgroundTint="#313231" />
 

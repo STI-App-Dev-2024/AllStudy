@@ -14,7 +14,7 @@
         android:layout_centerHorizontal="true"
         android:layout_margin="50dp"
         android:importantForAccessibility="no"
-        android:src="@drawable/logonamin" />
+        android:src="@drawable/allstudy_logo" />
 
     <ImageButton
         android:id="@+id/back_button"
