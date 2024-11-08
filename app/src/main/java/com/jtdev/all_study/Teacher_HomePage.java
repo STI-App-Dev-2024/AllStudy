@@ -28,7 +28,7 @@ public class Teacher_HomePage extends AppCompatActivity {
         });
 
         see_more_button.setOnClickListener(v ->{
-            Intent intent = new Intent(Teacher_HomePage.this, Teacher_SeeMore.class);
+            Intent intent = new Intent(Teacher_HomePage.this, Student_SeeMore.class);
             startActivity(intent);
         });
 
