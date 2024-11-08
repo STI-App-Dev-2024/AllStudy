@@ -15,6 +15,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class Forgot_Password extends AppCompatActivity {
 
     @Override
@@ -25,8 +27,6 @@ public class Forgot_Password extends AppCompatActivity {
         setContentView(R.layout.activity_09_forgot_password);
 
         // Initialize UI elements
-
-
         EditText email_edit_text = findViewById(R.id.email);
         Button send_button = findViewById(R.id.send_button);
         TextView signup_click = findViewById(R.id.signup_click);
@@ -52,10 +52,9 @@ public class Forgot_Password extends AppCompatActivity {
             public void afterTextChanged (Editable s) {
                 String email = s.toString();
 
-                if (!EmailValidator.isValidEmail(email) || !email.endsWith("@gmail.com")) {
-
-                } else {
+                if (EmailValidator.isValidEmail(email) || !email.endsWith("@gmail.com")) {
                     email_edit_text.setError(null);
+                    send_button.setEnabled(true);
                 }
             }
 
@@ -66,13 +65,15 @@ public class Forgot_Password extends AppCompatActivity {
             // Here you should add logic to send the OTP
             String emailInput = email_edit_text.getText().toString().trim();
 
-            if (!emailInput.isEmpty()) {
+            if (emailInput.isEmpty()) {
                 // Intent to OTP screen
+                Toast.makeText(Forgot_Password.this, "Please enter your email", Toast.LENGTH_SHORT).show();
+            } else if (!emailInput.endsWith("@gmail.com")) {
+                Snackbar.make(v, "Invalid email address", Snackbar.LENGTH_SHORT).show();
+            } else {
                 Intent intent = new Intent(Forgot_Password.this, OTP_AllStudy.class);
                 Toast.makeText(Forgot_Password.this, "OTP Sent!", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
-            } else {
-                Toast.makeText(Forgot_Password.this, "Please enter your email", Toast.LENGTH_SHORT).show();
             }
         });
 
