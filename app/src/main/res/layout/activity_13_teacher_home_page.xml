@@ -108,7 +108,7 @@
 
         <!-- Join Now Button -->
         <Button
-            android:id="@+id/join_now"
+            android:id="@+id/join_now_button"
             android:layout_width="150dp"
             android:layout_height="55dp"
             android:layout_below="@id/computer_science"
@@ -196,10 +196,9 @@
     </HorizontalScrollView>
 
 
-
     <!-- See More Button -->
     <Button
-        android:id="@+id/see_more"
+        android:id="@+id/see_more_button"
         android:layout_width="150dp"
         android:layout_height="60dp"
         android:layout_below="@+id/more_active_server"
