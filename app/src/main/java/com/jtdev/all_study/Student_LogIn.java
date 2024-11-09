@@ -67,7 +67,7 @@ public class Student_LogIn extends AppCompatActivity {
         // Set up sign up listener
         signup_click.setOnClickListener(v -> {
             // Navigate to Sign Up Activity
-            Intent intent = new Intent(Student_LogIn.this, Teacher_Splash_Screen.class);
+            Intent intent = new Intent(Student_LogIn.this, Student_SignUp.class);
             startActivity(intent);
         });
     }

@@ -165,17 +165,17 @@
             android:textColor="@color/white"
             android:textSize="20sp" />
 
+        <!-- Join Now Button -->
         <ImageView
             android:id="@+id/server_picture_2"
             android:layout_width="126dp"
             android:layout_height="127dp"
             android:layout_below="@id/active_server_title_2"
-            android:layout_marginTop="0dp"
             android:layout_marginStart="210dp"
+            android:layout_marginTop="0dp"
             android:contentDescription="@string/server_picture"
             android:src="@drawable/squarestroke" />
 
-        <!-- Join Now Button -->
         <Button
             android:id="@+id/join_now_button_2"
             android:layout_width="150dp"
