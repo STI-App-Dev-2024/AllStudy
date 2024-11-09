@@ -16,7 +16,9 @@ public class Student_Splash_Screen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_student_splash_screen);
-        int SPLASH_TIME_OUT = 1000;
+
+        
+        int SPLASH_TIME_OUT = 2000;
         new Handler().postDelayed(() -> {
             // Start MainActivity after the timer ends
             Intent intent = new Intent(Student_Splash_Screen.this, Student_Home_Page.class);

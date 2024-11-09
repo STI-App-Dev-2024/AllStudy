@@ -120,13 +120,13 @@
         <TextView
             android:id="@+id/signup_click"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
             android:clickable="true"
             android:focusable="true"
+            android:fontFamily="@font/product_sans_bold"
             android:text="@string/sign_up"
-            android:textColor="#26198F"
-            android:layout_marginStart="5dp"
-            android:fontFamily="@font/product_sans_bold"/>
+            android:textColor="#26198F" />
 
     </LinearLayout>
 
