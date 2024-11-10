@@ -45,6 +45,7 @@
         android:text="@string/log_out"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true" />
+    
 
 
 

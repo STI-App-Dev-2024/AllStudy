@@ -66,6 +66,9 @@
         <activity
             android:name=".Main_Activity"
             android:exported="true">
+
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
