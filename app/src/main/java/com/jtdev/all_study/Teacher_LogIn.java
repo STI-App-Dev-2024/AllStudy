@@ -14,16 +14,23 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class Teacher_LogIn extends AppCompatActivity {
 
     private EditText email;
     private EditText password;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_05_teacher_log_in);
+
+        // Initialize Firebase Auth
+        mAuth = FirebaseAuth.getInstance();
 
         // Initialize UI elements by finding them using their IDs
         ImageButton back_button = findViewById(R.id.back_button);
@@ -47,7 +54,7 @@ public class Teacher_LogIn extends AppCompatActivity {
             if (emailInput.isEmpty() || passwordInput.isEmpty()) {
                 Toast.makeText(Teacher_LogIn.this, "Please enter email and password", Toast.LENGTH_SHORT).show();
             } else {
-                // Perform login logic
+                // Perform Firebase login
                 performLogin(emailInput, passwordInput);
             }
         });
@@ -73,20 +80,20 @@ public class Teacher_LogIn extends AppCompatActivity {
     }
 
     private void performLogin(String emailInput, String passwordInput) {
-        // Placeholder login logic
-        String correctEmail = "user@example.com";  // Replace with your testing email
-        String correctPassword = "password123";    // Replace with your testing password
-
-        if (emailInput.equals(correctEmail) && passwordInput.equals(correctPassword)) {
-            // Login successful
-            Toast.makeText(Teacher_LogIn.this, "Welcome back!", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(Teacher_LogIn.this, Teacher_Splash_Screen.class);
-            startActivity(intent);
-            finish();
-        } else {
-            // Login failed
-            Toast.makeText(Teacher_LogIn.this, "Invalid email or password", Toast.LENGTH_SHORT).show();
-        }
-
+        // Firebase Authentication
+        mAuth.signInWithEmailAndPassword(emailInput, passwordInput)
+                .addOnCompleteListener(this, task -> {
+                    if (task.isSuccessful()) {
+                        // Sign-in success
+                        FirebaseUser user = mAuth.getCurrentUser();
+                        Toast.makeText(Teacher_LogIn.this, "Welcome back, " + user.getEmail(), Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(Teacher_LogIn.this, Teacher_Splash_Screen.class);
+                        startActivity(intent);
+                        finish();
+                    } else {
+                        // If sign in fails, display a message to the user
+                        Toast.makeText(Teacher_LogIn.this, "Authentication failed. Invalid email or password.", Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 }

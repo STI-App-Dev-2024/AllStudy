@@ -13,6 +13,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class Student_SignUp extends AppCompatActivity {
 
     private EditText full_name;
@@ -20,12 +23,16 @@ public class Student_SignUp extends AppCompatActivity {
     private EditText student_id;
     private EditText password;
     private EditText confirm_password;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_07_student_sign_up);
+
+        // Initialize Firebase Auth
+        mAuth = FirebaseAuth.getInstance();
 
         // Initialize UI elements by finding them using their IDs
         ImageButton back_button = findViewById(R.id.back_button);
@@ -43,15 +50,29 @@ public class Student_SignUp extends AppCompatActivity {
         });
 
         signup_button.setOnClickListener(view -> {
-
-            if (full_name.getText().toString().isEmpty() || email.getText().toString().isEmpty() || student_id.getText().toString().isEmpty()|| password.getText().toString().isEmpty() || confirm_password.getText().toString().isEmpty()) {
+            if (full_name.getText().toString().isEmpty() || email.getText().toString().isEmpty() ||
+                    student_id.getText().toString().isEmpty() || password.getText().toString().isEmpty() ||
+                    confirm_password.getText().toString().isEmpty()) {
                 Toast.makeText(Student_SignUp.this, "All fields are required", Toast.LENGTH_SHORT).show();
-            }
+            } else if (areAllFieldsValid()) {
+                String emailText = email.getText().toString();
+                String passwordText = password.getText().toString();
 
-            if (areAllFieldsValid()) {
-                Intent intent = new Intent(Student_SignUp.this, Student_LogIn.class);
-                Toast.makeText(Student_SignUp.this, "Sign Up Successful", Toast.LENGTH_SHORT).show();
-                startActivity(intent);
+                mAuth.createUserWithEmailAndPassword(emailText, passwordText)
+                        .addOnCompleteListener(this, task -> {
+                            if (task.isSuccessful()) {
+                                // Sign up success, navigate to the login activity
+                                FirebaseUser user = mAuth.getCurrentUser();
+                                Toast.makeText(Student_SignUp.this, "Sign Up Successful", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(Student_SignUp.this, Student_LogIn.class);
+                                startActivity(intent);
+                                finish();
+                            } else {
+                                // If sign up fails, display a message to the user
+                                Toast.makeText(Student_SignUp.this, "Authentication failed: " + task.getException().getMessage(),
+                                        Toast.LENGTH_SHORT).show();
+                            }
+                        });
             }
         });
 
@@ -59,24 +80,23 @@ public class Student_SignUp extends AppCompatActivity {
             Intent intent = new Intent(Student_SignUp.this, Student_or_Teacher_SignUp.class);
             startActivity(intent);
         });
-
     }
 
     private boolean areAllFieldsValid() {
         boolean isValid = true;
 
         if (full_name.getText().toString().isEmpty()) {
-            full_name.setError("First name is required");
+            full_name.setError("Full name is required");
             isValid = false;
         }
 
         if (email.getText().toString().isEmpty()) {
-            email.setError("Last name is required");
+            email.setError("Email is required");
             isValid = false;
         }
 
         if (student_id.getText().toString().isEmpty()) {
-            student_id.setError("Teacher ID is required");
+            student_id.setError("Student ID is required");
             isValid = false;
         }
 
