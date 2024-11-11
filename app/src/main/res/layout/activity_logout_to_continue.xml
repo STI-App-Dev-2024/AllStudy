@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Student_Profile_Page">
-
+    <!-- All Study -->
     <TextView
         android:id="@+id/all_study_title"
         android:layout_width="wrap_content"
@@ -17,16 +17,17 @@
         android:textSize="40sp"
         android:fontFamily="@font/product_sans_bold" />
 
+    <!-- Back Button -->
     <ImageButton
         android:id="@+id/back_button"
         android:layout_width="55dp"
         android:layout_height="50dp"
-        android:layout_marginTop="35dp"
+        android:background="@android:color/transparent"
         android:contentDescription="@string/back_button"
         android:src="@drawable/back_button"
-        android:background="@android:color/transparent" />
+        android:layout_marginTop="30dp"/>
 
-
+        <!-- Profile Picture -->
     <ImageButton
         android:id="@+id/change_profile_button"
         android:layout_width="90dp"
@@ -37,15 +38,78 @@
         android:background="@android:color/transparent"
         android:backgroundTint="#313231"
         android:src="@drawable/circle_for_profile" />
-
+    <!-- Username -->
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username123"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="120dp"
+        android:textSize="30dp"
+        android:inputType="text"/>
+    <!-- Logout Button -->
     <Button
         android:id="@+id/logout_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/log_out"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true" />
-    
+        android:layout_marginTop="650dp"
+        android:backgroundTint="#f23535"/>
+
+    <!-- Bottom Taskbar -->
+    <ImageView
+        android:id="@+id/tab_below_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@string/task_bar"
+        android:src="@drawable/tab_below" />
+
+
+    <!-- Taskbar Notification Button -->
+    <ImageButton
+        android:id="@+id/notification_button"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignTop="@id/tab_below_image"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@string/server_notification"
+        android:src="@drawable/notification_button"
+        android:background="@android:color/transparent"
+        android:backgroundTint="#313231" />
+
+
+    <!-- Taskbar Join Button -->
+    <ImageButton
+        android:id="@+id/join_server_button"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_alignTop="@id/tab_below_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="123dp"
+        android:layout_marginTop="-4dp"
+        android:contentDescription="@string/join_server_button"
+        android:src="@drawable/join_server_button"
+        android:background="@android:color/transparent"
+        android:backgroundTint="#313231" />
+
+
+    <!-- Taskbar Favorite Button -->
+    <ImageButton
+        android:id="@+id/favorite_button"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignTop="@id/tab_below_image"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="45dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/favorite_button"
+        android:src="@drawable/favorite_button"
+        android:backgroundTint="#313231" />
 
 
 

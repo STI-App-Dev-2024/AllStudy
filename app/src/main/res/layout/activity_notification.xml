@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="#F0F5F9"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Student_Profile_Page">
-    <!-- All Study -->
+    tools:context=".Notification">
+
+    <!-- ALLSTUDY Title -->
     <TextView
-        android:id="@+id/all_study_title"
+        android:id="@+id/all_study"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -16,60 +18,47 @@
         android:text="@string/all_study"
         android:textSize="40sp"
         android:fontFamily="@font/product_sans_bold" />
-    <!-- About me -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="About me"
-        android:textSize="30dp"
-        android:layout_marginTop="225dp"
-        android:layout_marginLeft="20dp"
-        android:textStyle="bold"
-        />
 
-    
-    <!-- Back Button -->
+    <!-- Profile -->
     <ImageButton
-        android:id="@+id/back_button"
-        android:layout_width="55dp"
+        android:id="@+id/generic_avatar"
+        android:layout_width="50dp"
         android:layout_height="50dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/back_button"
-        android:src="@drawable/back_button"
-        android:layout_marginTop="30dp"/>
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/user_profile"
+        android:src="@drawable/generic_avatar"
+        android:background="#F0F5F9" />
 
-    <!-- Profile Picture -->
-    <ImageButton
-        android:id="@+id/change_profile_button"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:layout_below="@id/back_button"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="40dp"
-        android:background="@android:color/transparent"
-        android:backgroundTint="#313231"
-        android:src="@drawable/circle_for_profile" />
-    <!-- Username -->
-    <EditText
-        android:id="@+id/Username"
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="username"
-        android:layout_marginLeft="120dp"
-        android:layout_marginTop="120dp"
-        android:textSize="30dp"
-        android:inputType="text"
-        tools:ignore="RtlHardcoded" />
-    <!-- Logout Button -->
-    <Button
-        android:id="@+id/logout_btn"
+        android:src="@drawable/rectangle_30"
+        android:layout_marginTop="270dp"
+        android:layout_marginLeft="10dp"/>
+
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/log_out"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="650dp"
-        android:backgroundTint="#f23535"/>
+        android:src="@drawable/rectangle_30"
+        android:layout_marginTop="390dp"
+        android:layout_marginLeft="10dp"/>
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rectangle_30"
+        android:layout_marginTop="510dp"
+        android:layout_marginLeft="10dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rectangle_30"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="10dp"/>
     <!-- Bottom Taskbar -->
     <ImageView
         android:id="@+id/tab_below_image"
@@ -88,14 +77,14 @@
         android:layout_alignTop="@id/tab_below_image"
         android:layout_alignParentStart="true"
         android:layout_marginStart="45dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="3dp"
         android:contentDescription="@string/server_notification"
         android:src="@drawable/notification_button"
         android:background="@android:color/transparent"
-        android:backgroundTint="#313231" />
+        android:backgroundTint="#35216b" />
 
 
-    <!-- Taskbar Join Button -->
+    <!-- Home Button -->
     <ImageButton
         android:id="@+id/join_server_button"
         android:layout_width="85dp"
@@ -123,6 +112,8 @@
         android:contentDescription="@string/favorite_button"
         android:src="@drawable/favorite_button"
         android:backgroundTint="#313231" />
+
+
 
 
 

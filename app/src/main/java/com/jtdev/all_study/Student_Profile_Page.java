@@ -3,7 +3,10 @@ package com.jtdev.all_study;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +27,26 @@ public class Student_Profile_Page extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        EditText editText = findViewById(R.id.Username);
+        String enteredText = editText.getText().toString();
+
+        editText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
         });
 
         // Set the logout button click listener
@@ -48,4 +71,5 @@ public class Student_Profile_Page extends AppCompatActivity {
         startActivity(intent);
         finish();  // Close the current activity
     }
+
 }
