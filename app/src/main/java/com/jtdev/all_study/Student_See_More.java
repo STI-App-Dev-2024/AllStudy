@@ -16,7 +16,7 @@ public class Student_See_More extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_student_see_more);
+        setContentView(R.layout.activity_student_see_more_student);
 
         Button join_now_button = findViewById(R.id.join_now_button);
         Button join_now_button_2 = findViewById(R.id.join_now_button_2);
