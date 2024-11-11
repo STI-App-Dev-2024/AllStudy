@@ -3,6 +3,7 @@ package com.jtdev.all_study;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,7 +21,7 @@ public class Teacher_Home_Page extends AppCompatActivity {
 
         Button join_now_button = findViewById(R.id.join_now_button);
         Button see_more_button = findViewById(R.id.see_more_button);
-        Button create_server_button = findViewById(R.id.create_server_button);
+        ImageButton create_server_button = findViewById(R.id.create_server_button);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
