@@ -14,6 +14,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Student_Profile_Page extends AppCompatActivity {
 
     @Override
@@ -22,6 +24,11 @@ public class Student_Profile_Page extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_student_profile_page);
 
+        FirebaseAuth.getInstance().getCurrentUser();
+        EditText username = findViewById(R.id.username);
+        String fullName = username.getText().toString();
+
+
         // Apply window insets for edge-to-edge layout
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -29,7 +36,7 @@ public class Student_Profile_Page extends AppCompatActivity {
             return insets;
         });
 
-        EditText editText = findViewById(R.id.Username);
+        EditText editText = findViewById(R.id.username);
         String enteredText = editText.getText().toString();
 
         editText.addTextChangedListener(new TextWatcher() {
