@@ -47,7 +47,8 @@
         android:layout_height="wrap_content"
         android:text="@string/application_development"
         android:layout_below="@+id/computer_science_title"
-        android:textSize="20sp"
+        android:textSize="18sp"
+        android:layout_marginStart="16sp"
         android:fontFamily="@font/product_sans_regular" />
 
     <ImageView
@@ -56,6 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/app_dev_title"
         android:src="@drawable/rectangle_server"
+        android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -80,6 +82,7 @@
         android:layout_marginTop="28dp" />
 
     <ImageButton
+        android:id="@+id/logout_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/logout_button"
