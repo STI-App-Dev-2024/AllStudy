@@ -20,10 +20,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="About me"
-        android:textSize="30dp"
+        android:text="@string/about_me"
+        android:textSize="30sp"
         android:layout_marginTop="225dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:textStyle="bold"
         />
 
@@ -48,16 +48,18 @@
         android:layout_marginTop="40dp"
         android:background="@android:color/transparent"
         android:backgroundTint="#313231"
+        android:contentDescription="TODO"
         android:src="@drawable/circle_for_profile" />
     <!-- Username -->
     <EditText
         android:id="@+id/Username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="username"
+        android:autofillHints=""
+        android:hint="@string/username"
         android:layout_marginLeft="120dp"
         android:layout_marginTop="120dp"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:inputType="text"
         tools:ignore="RtlHardcoded" />
     <!-- Logout Button -->

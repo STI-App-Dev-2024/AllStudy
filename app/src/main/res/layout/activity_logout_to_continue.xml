@@ -16,6 +16,41 @@
         android:text="@string/all_study"
         android:textSize="40sp"
         android:fontFamily="@font/product_sans_bold" />
+    <!-- Rectangle-->
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:src="@drawable/white_rectangle"
+        android:layout_marginTop="300dp"
+        android:layout_centerInParent="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Are you sure?"
+        android:layout_marginTop="310dp"
+        android:textSize="40dp"
+        android:layout_marginLeft="55dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:id="@+id/yes_btn"
+        android:text="Yes"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="50dp"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:id="@+id/no_btn"
+        android:text="No"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="200dp"/>
 
     <!-- Back Button -->
     <ImageButton
