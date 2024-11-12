@@ -9,14 +9,12 @@ import androidx.annotation.Nullable;
 
 public class DatabaseConnectStudent extends SQLiteOpenHelper {
 
-    private static String dbName = "studentLoginRegister";
-    private static String dbTable = "studentusers";
-    private static int dbVersion = 1;
-
-    private static String StudentID = "studentid";
-    private static String fullName = "fullname";
-    private static String emailAddress = "emailAddress";
-    private static String Password = "password";
+    private static final String dbName = "studentLoginRegister";
+    private static final String dbTable = "studentusers";
+    private static final int dbVersion = 1;
+    private static final String fullName = "fullname";
+    private static final String emailAddress = "emailAddress";
+    private static final String Password = "password";
 
     public DatabaseConnectStudent(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, dbName, null, dbVersion);
@@ -24,8 +22,9 @@ public class DatabaseConnectStudent extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
+        String studentID = "studentid";
         String query = "CREATE TABLE " + dbTable + " ("
-                + StudentID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + studentID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + fullName + " TEXT, "
                 + emailAddress + " TEXT, "
                 + Password + " TEXT);";

@@ -41,7 +41,7 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.media3.common)
 
-    //firebse
+    //firebase
     implementation(platform("com.google.firebase:firebase-bom:33.5.1"))
     implementation("com.google.firebase:firebase-analytics")
     implementation(libs.firebase.auth)

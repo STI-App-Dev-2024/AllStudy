@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Teacher_See_More">
+    tools:context=".Teacher_See_More"
+    android:background="#F0F5F9" >
 
 
     <!-- ALLSTUDY Title -->

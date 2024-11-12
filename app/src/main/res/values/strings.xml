@@ -73,6 +73,14 @@
     <string name="quantitative_analysis">Quantitative Analysis</string>
     <string name="usename">Usename</string>
     <string name="about_me">About me</string>
+<<<<<<< HEAD
     <string name="username">username</string>
+=======
+    <string name="username">Username</string>
+    <string name="application_development">Application Development</string>
+    <string name="see_activities">See Activities</string>
+    <string name="see_classroom_rules">See classroom rules</string>
+    <string name="are_you_sure">Are you sure?</string>
+>>>>>>> b7be4084048529bca1d59a87143de44761eda04e
     >>>>>>> 43b23a5ab3e207f99711620891eb868d73db0114
 </resources>
