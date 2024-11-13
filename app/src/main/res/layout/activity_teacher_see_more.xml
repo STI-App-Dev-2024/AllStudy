@@ -45,7 +45,7 @@
 
     <!-- Server Information Box -->
     <RelativeLayout
-        android:id="@+id/server_box_first"
+        android:id="@+id/server_box_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/list_of_servers"
@@ -62,7 +62,7 @@
             android:src="@drawable/rectangle_black" />
 
         <TextView
-            android:id="@+id/active_server_first"
+            android:id="@+id/active_server_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
@@ -74,10 +74,10 @@
 
         <!-- Section Bar -->
         <TextView
-            android:id="@+id/section_name_first"
+            android:id="@+id/section_name_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/active_server_first"
+            android:layout_below="@+id/active_server_1"
             android:layout_marginStart="28dp"
             android:layout_marginTop="30dp"
             android:fontFamily="@font/product_sans_regular"
@@ -87,10 +87,10 @@
 
         <!-- Server Image Placeholder -->
         <ImageView
-            android:id="@+id/server_picture_first"
+            android:id="@+id/server_picture_1"
             android:layout_width="126dp"
             android:layout_height="127dp"
-            android:layout_below="@id/active_server_first"
+            android:layout_below="@id/active_server_1"
             android:layout_marginTop="0dp"
             android:layout_marginStart="210dp"
             android:contentDescription="@string/server_picture"
@@ -101,7 +101,7 @@
             android:id="@+id/join_now_button_1"
             android:layout_width="150dp"
             android:layout_height="55dp"
-            android:layout_below="@id/section_name_first"
+            android:layout_below="@id/section_name_1"
             android:layout_marginTop="35dp"
             android:layout_marginStart="30dp"
             android:backgroundTint="@color/white"
@@ -113,10 +113,10 @@
 
     <!-- Server Information Box -->
     <RelativeLayout
-        android:id="@+id/server_box_second"
+        android:id="@+id/server_box_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/server_box_first"
+        android:layout_below="@id/server_box_1"
         android:layout_centerHorizontal="true">
 
         <!-- Background Image for Server Box -->
@@ -130,7 +130,7 @@
             android:src="@drawable/rectangle_blue" />
 
         <TextView
-            android:id="@+id/active_server_second"
+            android:id="@+id/active_server_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
@@ -142,10 +142,10 @@
 
         <!-- Section Bar -->
         <TextView
-            android:id="@+id/subject_name_second"
+            android:id="@+id/subject_name_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/active_server_second"
+            android:layout_below="@+id/active_server_2"
             android:layout_marginStart="8dp"
             android:layout_marginTop="30dp"
             android:fontFamily="@font/product_sans_bold"
@@ -155,10 +155,10 @@
 
         <!-- Server Image Placeholder -->
         <ImageView
-            android:id="@+id/server_picture_second"
+            android:id="@+id/server_picture_2"
             android:layout_width="126dp"
             android:layout_height="127dp"
-            android:layout_below="@id/active_server_second"
+            android:layout_below="@id/active_server_2"
             android:layout_marginTop="0dp"
             android:layout_marginStart="210dp"
             android:contentDescription="@string/server_picture"
@@ -169,7 +169,7 @@
             android:id="@+id/join_now_button_2"
             android:layout_width="150dp"
             android:layout_height="55dp"
-            android:layout_below="@id/subject_name_second"
+            android:layout_below="@id/subject_name_2"
             android:layout_marginTop="35dp"
             android:layout_marginStart="30dp"
             android:backgroundTint="@color/white"

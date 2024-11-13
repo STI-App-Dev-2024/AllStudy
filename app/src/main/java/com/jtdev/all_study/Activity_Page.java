@@ -10,16 +10,17 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Student_Classroom_Rules extends AppCompatActivity {
+
+public class Activity_Page extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_student_classroom_rules);
+        setContentView(R.layout.activity_activity_page);
 
         ImageButton edit_profile_button = findViewById(R.id.edit_profile_button);
-        Button see_activities_button = findViewById(R.id.see_activities_button);
+        Button see_participants_button = findViewById(R.id.see_participants_button);
         ImageButton logout_button = findViewById(R.id.logout_button);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

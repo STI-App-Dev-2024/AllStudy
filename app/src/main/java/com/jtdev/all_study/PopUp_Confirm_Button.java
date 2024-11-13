@@ -3,8 +3,7 @@ package com.jtdev.all_study;
 import android.app.AlertDialog;
 import android.content.Context;
 
-
-public class Confirm_Button {
+public class PopUp_Confirm_Button {
 
     public void showConfirmButton(Context context) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);

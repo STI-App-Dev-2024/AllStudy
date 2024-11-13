@@ -11,7 +11,7 @@
 
     <!-- ALLSTUDY Title -->
     <TextView
-        android:id="@+id/title_all_study"
+        android:id="@+id/all_study_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -36,7 +36,7 @@
         android:id="@+id/list_of_servers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/title_all_study"
+        android:layout_below="@id/all_study_title"
         android:layout_marginStart="10dp"
         android:layout_marginTop="25dp"
         android:text="@string/list_of_servers"
@@ -53,7 +53,7 @@
 
         <!-- Background Image for Server Box -->
         <ImageView
-            android:id="@+id/rectangle_black_first"
+            android:id="@+id/rectangle_black_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -65,7 +65,7 @@
 
         <!-- Computer Science Label -->
         <TextView
-            android:id="@+id/active_server_first"
+            android:id="@+id/active_server_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
@@ -77,10 +77,10 @@
 
         <!-- Section Bar -->
         <TextView
-            android:id="@+id/section_name_first"
+            android:id="@+id/section_name_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/active_server_first"
+            android:layout_below="@+id/active_server_1"
             android:layout_marginStart="20dp"
             android:layout_marginTop="30dp"
             android:fontFamily="@font/product_sans_regular"
@@ -93,7 +93,7 @@
             android:id="@+id/server_picture_1"
             android:layout_width="126dp"
             android:layout_height="127dp"
-            android:layout_below="@id/active_server_first"
+            android:layout_below="@id/active_server_1"
             android:layout_marginTop="0dp"
             android:layout_marginStart="210dp"
             android:contentDescription="@string/server_picture"
@@ -104,7 +104,7 @@
             android:id="@+id/join_now_button_1"
             android:layout_width="150dp"
             android:layout_height="55dp"
-            android:layout_below="@id/section_name_first"
+            android:layout_below="@id/section_name_1"
             android:layout_marginTop="35dp"
             android:layout_marginStart="30dp"
             android:backgroundTint="@color/white"
@@ -136,7 +136,7 @@
 
         <!-- Computer Science Label -->
         <TextView
-            android:id="@+id/active_server_second"
+            android:id="@+id/active_server_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
@@ -151,10 +151,10 @@
         <!-- Server Image Placeholder -->
 
         <TextView
-            android:id="@+id/section_name_second"
+            android:id="@+id/section_name_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/active_server_second"
+            android:layout_below="@+id/active_server_2"
             android:layout_marginStart="6dp"
             android:layout_marginTop="30dp"
             android:fontFamily="@font/product_sans_regular"
@@ -167,7 +167,7 @@
             android:id="@+id/server_picture_2"
             android:layout_width="126dp"
             android:layout_height="127dp"
-            android:layout_below="@id/active_server_second"
+            android:layout_below="@id/active_server_2"
             android:layout_marginStart="215dp"
             android:layout_marginTop="0dp"
             android:contentDescription="@string/server_picture"
@@ -177,7 +177,7 @@
             android:id="@+id/join_now_button_2"
             android:layout_width="150dp"
             android:layout_height="55dp"
-            android:layout_below="@id/section_name_second"
+            android:layout_below="@id/section_name_2"
             android:layout_marginTop="35dp"
             android:layout_marginStart="30dp"
             android:backgroundTint="@color/white"

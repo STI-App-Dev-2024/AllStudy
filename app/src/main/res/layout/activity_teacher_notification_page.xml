@@ -30,7 +30,7 @@
         android:background="#F0F5F9" />
 
     <ImageView
-        android:id="@+id/rectangle_1"
+        android:id="@+id/rectangle_notification_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/rectangle_30"
@@ -40,32 +40,31 @@
         android:layout_centerHorizontal="true" />
 
     <ImageView
-        android:id="@+id/rectangle_2"
+        android:id="@+id/rectangle_notification_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/rectangle_30"
         android:layout_marginBottom="5dp"
-        android:layout_below="@+id/rectangle_1"
+        android:layout_below="@+id/rectangle_notification_1"
         android:layout_centerHorizontal="true" />
 
     <ImageView
-        android:id="@+id/rectangle_3"
+        android:id="@+id/rectangle_notification_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/rectangle_30"
         android:layout_marginBottom="5dp"
-        android:layout_below="@+id/rectangle_2"
+        android:layout_below="@+id/rectangle_notification_2"
         android:layout_centerHorizontal="true" />
 
     <ImageView
-        android:id="@+id/rectangle_4"
+        android:id="@+id/rectangle_notification_4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/rectangle_30"
         android:layout_marginBottom="5dp"
-        android:layout_below="@+id/rectangle_3"
+        android:layout_below="@+id/rectangle_notification_3"
         android:layout_centerHorizontal="true" />
-
 
     <!-- Bottom Taskbar -->
     <ImageView
