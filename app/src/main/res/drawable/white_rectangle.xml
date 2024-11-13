@@ -1,0 +1,13 @@
+<!-- res/drawable/rectangle.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#d4bc37" /> <!-- Background color of the rectangle -->
+    <corners android:radius="8dp" /> <!-- Corner radius for rounded edges -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/black" /> <!-- Border color and thickness -->
+    <padding
+        android:left="8dp"
+        android:top="8dp"
+        android:right="8dp"
+        android:bottom="8dp" /> <!-- Padding inside the rectangle -->
+</shape>

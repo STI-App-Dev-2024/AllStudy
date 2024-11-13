@@ -33,6 +33,7 @@
         android:background="#F0F5F9" />
 
     <ImageView
+        android:contentDescription="Notification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/rectangle_30"
@@ -96,7 +97,7 @@
         android:contentDescription="@string/join_server_button"
         android:src="@drawable/home"
         android:background="@android:color/transparent"
-        android:backgroundTint="#313231" />
+         />
 
 
     <!-- Taskbar Favorite Button -->

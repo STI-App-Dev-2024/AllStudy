@@ -1,5 +1,6 @@
 package com.jtdev.all_study;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -9,12 +10,12 @@ import android.view.View;
 import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.google.firebase.auth.FirebaseAuth;
 
 public class Student_Profile_Page extends AppCompatActivity {
 
@@ -24,9 +25,10 @@ public class Student_Profile_Page extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_student_profile_page);
 
-        FirebaseAuth.getInstance().getCurrentUser();
         EditText username = findViewById(R.id.username);
         String fullName = username.getText().toString();
+        EditText editText = findViewById(R.id.username);
+        String enteredText = editText.getText().toString();
 
 
         // Apply window insets for edge-to-edge layout
@@ -36,33 +38,41 @@ public class Student_Profile_Page extends AppCompatActivity {
             return insets;
         });
 
-        EditText editText = findViewById(R.id.username);
-        String enteredText = editText.getText().toString();
+
 
         editText.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
 
             @Override
-            public void afterTextChanged(Editable s) {
-
-            }
+            public void afterTextChanged(Editable s) {}
         });
 
         // Set the logout button click listener
         findViewById(R.id.logout_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                logout();
+                showLogoutConfirmationDialog(); // Show confirmation dialog on logout
             }
         });
+    }
+
+    private void showLogoutConfirmationDialog() {
+        // Create an AlertDialog to confirm logout action
+        new AlertDialog.Builder(this)
+                .setTitle("Confirm Logout")
+                .setMessage("Do you want to continue?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        logout(); // Proceed with logout
+                    }
+                })
+                .setNegativeButton("No", null) // Dismiss dialog if "No" is clicked
+                .show();
     }
 
     private void logout() {
@@ -78,5 +88,4 @@ public class Student_Profile_Page extends AppCompatActivity {
         startActivity(intent);
         finish();  // Close the current activity
     }
-
 }
