@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Teacher_Enable_Apps_Page"
+    tools:context=".Teacher_Add_Activities_Server_Page"
     android:background="#F0F5F9">
 
     <TextView
@@ -28,7 +28,7 @@
         android:src="@drawable/back_button" />
 
     <TextView
-        android:id="@+id/enable_apps_title"
+        android:id="@+id/add_activities_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/enable_apps"
@@ -42,7 +42,7 @@
         android:id="@+id/enable_apps_rectangle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/enable_apps_title"
+        android:layout_below="@+id/add_activities_title"
         android:src="@drawable/enable_apps_rectangle"
         android:layout_marginTop="25dp"
         android:layout_centerHorizontal="true" />
@@ -66,5 +66,9 @@
         android:layout_centerHorizontal="true"
         android:backgroundTint="#313231"
         android:layout_marginTop="25dp" />
+
+
+
+
 
 </RelativeLayout>
