@@ -19,14 +19,14 @@
         android:fontFamily="@font/product_sans_bold" />
 
     <ImageButton
-        android:id="@+id/generic_avatar"
+        android:id="@+id/edit_profile_button"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="8dp"
         android:contentDescription="@string/user_profile"
-        android:src="@drawable/generic_avatar"
+        android:src="@drawable/edit_profile_button"
         android:background="#F0F5F9" />
 
     <TextView

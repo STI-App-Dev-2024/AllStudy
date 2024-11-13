@@ -9,9 +9,11 @@
     android:background="#F0F5F9" >
 
 
+    <!-- TITLE MEANS PRE-DEFINED (INDEPENDENT NAME) -->
+
     <!-- ALLSTUDY Title -->
     <TextView
-        android:id="@+id/all_study_title"
+        android:id="@+id/title_all_study"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -21,34 +23,35 @@
         android:fontFamily="@font/product_sans_bold" />
 
     <ImageButton
-        android:id="@+id/generic_avatar"
+        android:id="@+id/edit_profile_button"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="8dp"
         android:contentDescription="@string/user_profile"
-        android:src="@drawable/generic_avatar"
+        android:src="@drawable/edit_profile_button"
         android:background="#F0F5F9" />
 
-    <!-- Subtitle for list of servers -->
     <TextView
-        android:id="@+id/list_of_servers_title"
+        android:id="@+id/list_of_servers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/all_study_title"
+        android:layout_below="@id/title_all_study"
         android:layout_marginStart="10dp"
         android:layout_marginTop="25dp"
         android:text="@string/list_of_servers"
         android:textSize="25sp"
         android:fontFamily="@font/product_sans_bold" />
 
+    <!-- Subtitle for list of servers -->
+
     <!-- Server Information Box -->
     <RelativeLayout
-        android:id="@+id/server_box_1"
+        android:id="@+id/server_box_first"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/list_of_servers_title"
+        android:layout_below="@id/list_of_servers"
         android:layout_centerHorizontal="true">
 
         <!-- Background Image for Server Box -->
@@ -61,11 +64,8 @@
             android:importantForAccessibility="no"
             android:src="@drawable/rectangle_black" />
 
-        <!-- Active Server Label -->
-
-        <!-- Computer Science Label -->
         <TextView
-            android:id="@+id/active_server_title"
+            android:id="@+id/active_server_first"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
@@ -77,35 +77,34 @@
 
         <!-- Section Bar -->
         <TextView
-            android:id="@+id/computer_science_2"
+            android:id="@+id/section_name_first"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/active_server_title"
-            android:layout_marginStart="20dp"
+            android:layout_below="@+id/active_server_first"
+            android:layout_marginStart="28dp"
             android:layout_marginTop="30dp"
             android:fontFamily="@font/product_sans_regular"
             android:text="@string/computer_science"
             android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <!-- Server Image Placeholder -->
         <ImageView
-            android:id="@+id/server_picture_1"
+            android:id="@+id/server_picture_first"
             android:layout_width="126dp"
             android:layout_height="127dp"
-            android:layout_below="@id/active_server_title"
+            android:layout_below="@id/active_server_first"
             android:layout_marginTop="0dp"
             android:layout_marginStart="210dp"
             android:contentDescription="@string/server_picture"
             android:src="@drawable/squarestroke" />
 
-
         <!-- Join Now Button -->
         <Button
-            android:id="@+id/join_now_button"
+            android:id="@+id/join_now_button_first"
             android:layout_width="150dp"
             android:layout_height="55dp"
-            android:layout_below="@id/computer_science_2"
+            android:layout_below="@id/section_name_first"
             android:layout_marginTop="35dp"
             android:layout_marginStart="30dp"
             android:backgroundTint="@color/white"
@@ -117,10 +116,10 @@
 
     <!-- Server Information Box -->
     <RelativeLayout
-        android:id="@+id/server_box_2"
+        android:id="@+id/server_box_second"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/server_box_1"
+        android:layout_below="@id/server_box_first"
         android:layout_centerHorizontal="true">
 
         <!-- Background Image for Server Box -->
@@ -133,11 +132,8 @@
             android:importantForAccessibility="no"
             android:src="@drawable/rectangle_blue" />
 
-        <!-- Active Server Label -->
-
-        <!-- Computer Science Label -->
         <TextView
-            android:id="@+id/active_server_title_2"
+            android:id="@+id/active_server_second"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
@@ -149,23 +145,23 @@
 
         <!-- Section Bar -->
         <TextView
-            android:id="@+id/information_technology"
+            android:id="@+id/subject_name_second"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/active_server_title_2"
-            android:layout_marginStart="1dp"
+            android:layout_below="@+id/active_server_second"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="30dp"
-            android:fontFamily="@font/product_sans_regular"
+            android:fontFamily="@font/product_sans_bold"
             android:text="@string/information_technology"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <!-- Server Image Placeholder -->
         <ImageView
-            android:id="@+id/server_picture_2"
+            android:id="@+id/server_picture_second"
             android:layout_width="126dp"
             android:layout_height="127dp"
-            android:layout_below="@id/active_server_title_2"
+            android:layout_below="@id/active_server_second"
             android:layout_marginTop="0dp"
             android:layout_marginStart="210dp"
             android:contentDescription="@string/server_picture"
@@ -173,10 +169,10 @@
 
         <!-- Join Now Button -->
         <Button
-            android:id="@+id/join_now_button_2"
+            android:id="@+id/join_now_button_second"
             android:layout_width="150dp"
             android:layout_height="55dp"
-            android:layout_below="@id/information_technology"
+            android:layout_below="@id/subject_name_second"
             android:layout_marginTop="35dp"
             android:layout_marginStart="30dp"
             android:backgroundTint="@color/white"

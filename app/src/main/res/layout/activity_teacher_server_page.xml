@@ -19,18 +19,18 @@
         android:fontFamily="@font/product_sans_bold" />
 
     <ImageButton
-        android:id="@+id/generic_avatar"
+        android:id="@+id/edit_profile_button"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="8dp"
         android:contentDescription="@string/user_profile"
-        android:src="@drawable/generic_avatar"
+        android:src="@drawable/edit_profile_button"
         android:background="#F0F5F9" />
 
     <TextView
-        android:id="@+id/computer_science_title"
+        android:id="@+id/section_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/all_study_title"
@@ -41,26 +41,26 @@
         android:fontFamily="@font/product_sans_bold" />
     
     <TextView
-        android:id="@+id/app_dev_title"
+        android:id="@+id/subject_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/application_development"
-        android:layout_below="@+id/computer_science_title"
+        android:layout_below="@+id/section_title"
         android:textSize="18sp"
         android:layout_marginStart="16sp"
-        android:fontFamily="@font/product_sans_regular" />
+        android:fontFamily="@font/product_sans_bold" />
 
     <ImageView
         android:id="@+id/rectangle_server"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/app_dev_title"
+        android:layout_below="@+id/subject_title"
         android:src="@drawable/rectangle_server"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:id="@+id/see_more_button"
+        android:id="@+id/see_activities_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/see_activities"
@@ -75,7 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/see_classroom_rules"
-        android:layout_below="@+id/see_more_button"
+        android:layout_below="@+id/see_activities_button"
         android:textColor="#582AD9"
         android:layout_marginStart="15dp"
         android:layout_marginTop="28dp" />
@@ -86,6 +86,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/see_classroom_rules_click"
+        android:contentDescription="@string/log_out_button"
         android:src="@drawable/logout_button"
         android:background="@android:color/transparent"
         android:layout_alignParentBottom="true" />
