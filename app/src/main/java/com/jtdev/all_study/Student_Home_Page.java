@@ -26,7 +26,7 @@ public class Student_Home_Page extends AppCompatActivity {
         ImageButton notification_button = findViewById(R.id.notification_button);
         ImageButton join_server_button = findViewById(R.id.join_server_button);
         ImageButton favorite_button = findViewById(R.id.favorite_button);
-        ImageButton generic_avatar = findViewById(R.id.generic_avatar);
+        ImageButton profile_button = findViewById(R.id.edit_profile_button);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -38,7 +38,7 @@ public class Student_Home_Page extends AppCompatActivity {
             Intent intent = new Intent(Student_Home_Page.this, Student_See_More.class);
             startActivity(intent);
         });
-        generic_avatar.setOnClickListener(v -> {
+        profile_button.setOnClickListener(v -> {
             Intent intent = new Intent(Student_Home_Page.this, Student_Profile_Page.class);
             startActivity(intent);
 
