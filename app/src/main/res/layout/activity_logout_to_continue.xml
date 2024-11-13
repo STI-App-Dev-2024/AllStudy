@@ -21,6 +21,7 @@
     <ImageView
         android:layout_width="300dp"
         android:layout_height="200dp"
+        android:background="white"
         android:src="@drawable/white_rectangle"
         android:layout_marginTop="300dp"
         android:layout_centerInParent="true"/>

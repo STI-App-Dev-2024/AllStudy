@@ -27,6 +27,8 @@ public class Student_Profile_Page extends AppCompatActivity {
 
         EditText username = findViewById(R.id.username);
         String fullName = username.getText().toString();
+        EditText editText = findViewById(R.id.username);
+        String enteredText = editText.getText().toString();
 
 
         // Apply window insets for edge-to-edge layout
@@ -36,8 +38,7 @@ public class Student_Profile_Page extends AppCompatActivity {
             return insets;
         });
 
-        EditText editText = findViewById(R.id.username);
-        String enteredText = editText.getText().toString();
+
 
         editText.addTextChangedListener(new TextWatcher() {
             @Override

@@ -28,13 +28,9 @@
         android:textSize="30sp"
         android:layout_marginTop="225dp"
         android:layout_marginStart="20dp"
-<<<<<<< HEAD
         android:textStyle="bold"
         />
 
-=======
-        android:textStyle="bold" />
->>>>>>> b7be4084048529bca1d59a87143de44761eda04e
     
     <!-- Back Button -->
     <ImageButton
@@ -64,16 +60,10 @@
         android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
-        android:autofillHints=""
-=======
->>>>>>> b7be4084048529bca1d59a87143de44761eda04e
-        android:hint="@string/username"
-        android:layout_marginLeft="120dp"
-        android:layout_marginTop="120dp"
-        android:textSize="30sp"
-        android:inputType="text"
-        tools:ignore="RtlHardcoded" />
+
+
+
+        />
 
     <!-- Logout Button -->
     <Button
