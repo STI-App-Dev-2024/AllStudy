@@ -152,39 +152,38 @@
 
             <!-- Placeholder views for the items -->
 
-            <View
+            <ImageButton
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginEnd="8dp"
                 android:background="@android:color/darker_gray" />
 
-            <View
+            <ImageButton
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginEnd="8dp"
                 android:background="@android:color/darker_gray" />
 
-            <View
+            <ImageButton
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginEnd="8dp"
                 android:background="@android:color/darker_gray" />
 
-            <View
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/darker_gray" />
+
+            <ImageButton
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginEnd="8dp"
                 android:background="@android:color/darker_gray" />
 
 
-            <View
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginEnd="8dp"
-                android:background="@android:color/darker_gray" />
-
-
-            <View
+            <ImageButton
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginEnd="8dp"

@@ -1,8 +1,6 @@
 package com.jtdev.all_study;
 
 import android.os.Bundle;
-import android.widget.Button;
-import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,18 +8,15 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-
-public class Activity_Page extends AppCompatActivity {
+public class Teacher_Classroom_Rules extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_activity_page);
+        setContentView(R.layout.activity_teacher_classroom_rules);
 
-        ImageButton edit_profile_button = findViewById(R.id.edit_profile_button);
-        Button see_participants_button = findViewById(R.id.see_participants_button);
-        ImageButton logout_button = findViewById(R.id.logout_button);
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

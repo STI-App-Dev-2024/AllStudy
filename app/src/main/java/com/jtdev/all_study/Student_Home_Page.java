@@ -35,13 +35,30 @@ public class Student_Home_Page extends AppCompatActivity {
         });
 
         see_more_button.setOnClickListener(v -> {
-            Intent intent = new Intent(Student_Home_Page.this, Student_See_More.class);
+            Intent intent = new Intent(Student_Home_Page.this, Student_See_More_Page.class);
             startActivity(intent);
         });
+
+        join_now_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Student_Home_Page.this, Student_Inside_Server_Page.class);
+            startActivity(intent);
+        });
+
+        notification_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Student_Home_Page.this, Student_Notification_Page.class);
+            startActivity(intent);
+        });
+
         profile_button.setOnClickListener(v -> {
             Intent intent = new Intent(Student_Home_Page.this, Student_Profile_Page.class);
             startActivity(intent);
 
         });
+
+        join_server_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Student_Home_Page.this, Student_See_More_Page.class);
+            startActivity(intent);
+        });
+
         }
     }

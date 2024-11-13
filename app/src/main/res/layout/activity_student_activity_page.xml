@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Classroom_Rules"
-    android:background="#F0F5F9">
+    tools:context=".Student_Activity_Page"
+    android:background="#F0F5F9" >
 
     <TextView
         android:id="@+id/all_study_title"
@@ -30,7 +30,7 @@
         android:background="#F0F5F9" />
 
     <TextView
-        android:id="@+id/section_name"
+        android:id="@+id/computer_science_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/all_study_title"
@@ -41,74 +41,63 @@
         android:fontFamily="@font/product_sans_bold" />
 
     <TextView
-        android:id="@+id/subject_name"
+        android:id="@+id/app_dev_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/application_development"
-        android:layout_below="@+id/section_name"
+        android:layout_below="@+id/computer_science_title"
         android:textSize="18sp"
         android:layout_marginStart="16sp"
         android:fontFamily="@font/product_sans_bold" />
 
     <ImageView
+
         android:id="@+id/rectangle_server"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/subject_name"
+        android:layout_below="@+id/app_dev_title"
         android:src="@drawable/rectangle_server"
         android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"
-        android:importantForAccessibility="no"/>
+        android:layout_centerHorizontal="true" />
 
     <TextView
-        android:id="@+id/classroom_rules_title"
+        android:id="@+id/activities_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/classroom_rules"
-        android:layout_below="@+id/subject_name"
+        android:text="@string/activities"
+        android:layout_below="@+id/app_dev_title"
         android:layout_marginTop="20dp"
         android:layout_marginStart="25dp"
         android:textSize="25sp"
         android:fontFamily="@font/product_sans_bold" />
 
-    <TextView
-        android:id="@+id/classroom_rule_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/no_eating_inside_class"
-        android:layout_below="@+id/classroom_rules_title"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="25dp"
-        android:fontFamily="@font/product_sans_bold"
-        android:textSize="16sp" />
+        <TextView
+            android:id="@+id/due_today_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/due_today"
+            android:layout_below="@+id/activities_list"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:textSize="18sp"
+            android:fontFamily="@font/product_sans_bold" />
 
     <TextView
-        android:id="@+id/classroom_rule_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/more_than_10_minutes_is_absent"
-        android:layout_below="@+id/classroom_rule_1"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="25dp"
+        android:text="@string/due_this_month"
+        android:layout_below="@+id/due_today_list"
+        android:layout_marginTop="14dp"
+        android:layout_marginStart="20dp"
         android:fontFamily="@font/product_sans_bold"
-        android:textSize="16sp" />
+        android:textSize="18sp"/>
 
-    <TextView
-        android:id="@+id/classroom_rule_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/strictly_no_copying"
-        android:layout_below="@+id/classroom_rule_2"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="25dp"
-        android:fontFamily="@font/product_sans_bold"
-        android:textSize="16sp" />
 
     <Button
-        android:id="@+id/see_activities_button"
+        android:id="@+id/see_participants_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/see_activities"
+        android:text="@string/see_participants"
         android:layout_below="@+id/rectangle_server"
         android:layout_centerHorizontal="true"
         android:backgroundTint="@color/white"
@@ -120,10 +109,11 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/see_activities_button"
-        android:contentDescription="@string/log_out_button"
         android:src="@drawable/logout_button"
         android:background="@android:color/transparent"
         android:layout_alignParentBottom="true" />
+
+
 
 
 </RelativeLayout>

@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     tools:context=".Teacher_Home_Page">
 
-    <!-- Main title --><TextView
+    <!-- Main title -->
+    <TextView
     android:id="@+id/all_study_title"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -75,7 +76,6 @@
             android:textColor="@color/white"
             android:textSize="20sp" />
 
-
         <!-- Section Bar -->
         <TextView
             android:id="@+id/computer_science"
@@ -88,7 +88,6 @@
             android:text="@string/computer_science"
             android:textColor="@color/white"
             android:textSize="20sp" />
-
 
         <!-- Server Image Placeholder -->
         <ImageView
@@ -147,37 +146,37 @@
 
             <!-- Placeholder views for the items -->
 
-            <View
+            <ImageButton
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginEnd="8dp"
                 android:background="@android:color/darker_gray" />
 
-            <View
+            <ImageButton
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginEnd="8dp"
                 android:background="@android:color/darker_gray" />
 
-            <View
+            <ImageButton
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginEnd="8dp"
                 android:background="@android:color/darker_gray" />
 
-            <View
+            <ImageButton
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginEnd="8dp"
                 android:background="@android:color/darker_gray" />
 
-            <View
+            <ImageButton
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginEnd="8dp"
                 android:background="@android:color/darker_gray" />
 
-            <View
+            <ImageButton
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginEnd="8dp"
