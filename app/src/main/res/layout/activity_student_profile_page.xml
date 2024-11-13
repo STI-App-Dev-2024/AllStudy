@@ -20,15 +20,6 @@
         android:textSize="40sp"
         android:fontFamily="@font/product_sans_bold" />
 
-    <!-- About me -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/about_me"
-        android:textSize="30sp"
-        android:layout_marginTop="225dp"
-        android:layout_marginStart="20dp"/>
-
     <!-- Back Button -->
     <ImageButton
         android:id="@+id/back_button"
@@ -49,12 +40,22 @@
         android:layout_marginTop="40dp"
         android:background="@android:color/transparent"
         android:backgroundTint="#313231"
-        android:contentDescription="TODO"
+        android:contentDescription="@string/change_picture_button"
         android:src="@drawable/circle_for_profile" />
+
+    <TextView
+        android:id="@+id/about_me_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/about_me"
+        android:textSize="30sp"
+        android:layout_marginTop="225dp"
+        android:layout_marginStart="12dp"
+        android:textStyle="bold" />
 
     <!-- Logout Button -->
     <Button
-        android:id="@+id/logout_btn"
+        android:id="@+id/logout_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/log_out"
@@ -85,8 +86,6 @@
         android:background="@android:color/transparent"
         android:backgroundTint="#313231" />
 
-
-    <!-- Taskbar Join Button -->
     <ImageButton
         android:id="@+id/join_server_button"
         android:layout_width="85dp"
@@ -95,11 +94,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="123dp"
         android:layout_marginTop="-4dp"
-        android:contentDescription="@string/join_server_button"
-        android:src="@drawable/home"
+        android:contentDescription="@string/create_server_button"
+        android:src="@drawable/join_server_button"
         android:background="@android:color/transparent"
         android:backgroundTint="#313231" />
-
 
     <!-- Taskbar Favorite Button -->
     <ImageButton
