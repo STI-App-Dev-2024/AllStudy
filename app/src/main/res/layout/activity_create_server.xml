@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Create_Server"
+    android:background="#F0F5F9">
+
+
+    <!-- All Study -->
+    <TextView
+        android:id="@+id/all_study_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/all_study"
+        android:textSize="40sp"
+        android:fontFamily="@font/product_sans_bold" />
+
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="55dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/back_button"
+        android:src="@drawable/back_button" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Server"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="25dp"
+        />
+
+
+    <!-- Name -->
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:src="@drawable/rounded_rectangle"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true"/>
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Name:"
+        android:backgroundTint="#D3D3D3"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="30dp"/>
+
+    <!-- Password -->
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:src="@drawable/rounded_rectangle"
+        android:layout_marginTop="280dp"
+        android:layout_centerHorizontal="true"/>
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Password:"
+        android:backgroundTint="#D3D3D3"
+        android:layout_marginTop="280dp"
+        android:layout_marginLeft="30dp"/>
+
+    <!-- Section -->
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:src="@drawable/rounded_rectangle"
+        android:layout_marginTop="360dp"
+        android:layout_centerHorizontal="true"/>
+    <EditText
+        android:id="@+id/editTextSection"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Section:"
+        android:backgroundTint="#D3D3D3"
+        android:layout_marginTop="360dp"
+        android:layout_marginLeft="30dp"/>
+
+    <!-- Date and Time Spinner -->
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:src="@drawable/rounded_rectangle"
+        android:layout_marginTop="450dp"
+        android:layout_centerHorizontal="true"/>
+    <Spinner
+        android:id="@+id/spinnerDateTime"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Date and Time"
+        android:layout_marginTop="462dp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/enable_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enable apps"
+        android:backgroundTint="#313231"
+        android:textColor="@color/white"
+        android:layout_marginTop="600dp"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>
