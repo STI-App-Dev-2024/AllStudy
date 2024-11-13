@@ -4,8 +4,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Student_Splash_Screen"
-    android:background="#F0F5F9" >
+    tools:context=".Student_Splash_Screen" >
 
     <ImageView
         android:id="@+id/splash_screen"

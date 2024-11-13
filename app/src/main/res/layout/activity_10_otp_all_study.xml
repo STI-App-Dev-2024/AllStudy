@@ -4,7 +4,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OTP_AllStudy">
+    tools:context=".OTP_AllStudy"
+    android:background="#F0F5F9">
 
     <ImageView
         android:id="@+id/splash_for_otp"

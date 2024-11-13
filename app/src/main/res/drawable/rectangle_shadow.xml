@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Shadow Layer -->
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="4dp"
+                android:left="4dp"
+                android:right="4dp"
+                android:top="4dp" />
+            <solid android:color="#00000000" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+    <!-- Rectangle Layer -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/black" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+</layer-list>

@@ -8,6 +8,15 @@
     tools:context=".Teacher_Add_Activities_Server_Page"
     android:background="#F0F5F9">
 
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="55dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/back_button"
+        android:src="@drawable/back_button" />
+
     <TextView
         android:id="@+id/all_study_title"
         android:layout_width="wrap_content"
@@ -17,15 +26,6 @@
         android:text="@string/all_study"
         android:textSize="40sp"
         android:fontFamily="@font/product_sans_bold"/>
-
-    <ImageButton
-        android:id="@+id/back_button"
-        android:layout_width="55dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="28dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/back_button"
-        android:src="@drawable/back_button" />
 
     <TextView
         android:id="@+id/add_activities_title"

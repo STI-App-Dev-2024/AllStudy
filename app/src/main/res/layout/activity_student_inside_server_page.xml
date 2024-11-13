@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Student_Inside_Server_Page">
+    tools:context=".Student_Inside_Server_Page"
+    android:background="#F0F5F9">
 
     <TextView
         android:id="@+id/all_study_title"
