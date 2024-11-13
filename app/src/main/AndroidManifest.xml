@@ -14,6 +14,12 @@
         android:theme="@style/Theme.AllStudy"
         tools:targetApi="31">
         <activity
+            android:name=".Student_Classroom_Rules"
+            android:exported="false" />
+        <activity
+            android:name=".Student_Activity_Page"
+            android:exported="false" />
+        <activity
             android:name=".Teacher_Server_Page"
             android:exported="false" />
         <activity
