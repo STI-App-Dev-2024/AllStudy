@@ -3,10 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="#F0F5F9"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Teacher_Notification_Page" >
+    tools:context=".Teacher_Notification_Page"
+    android:background="#F0F5F9">
 
     <TextView
         android:id="@+id/all_study_title"

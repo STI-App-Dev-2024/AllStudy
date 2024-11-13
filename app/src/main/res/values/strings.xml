@@ -87,6 +87,13 @@
     <string name="see_participants">See participants</string>
     <string name="log_out_button">Log out Button</string>
     <string name="change_picture_button">Change picture button</string>
+    <string name="create_server">Create Server:</string>
+    <string name="name">Name:</string>
+    <string name="password_">Password:</string>
+    <string name="section">Section:</string>
+    <string name="date">Date:</string>
+    <string name="time">Time:</string>
+    <string name="enable_apps">Enable Apps</string>
     =======
     >>>>>>> b7be4084048529bca1d59a87143de44761eda04e
     >>>>>>> 47b24891f1b51626e36c9d7d2cfc0891703c6617
