@@ -6,9 +6,8 @@
     android:background="#F0F5F9"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Notification" >
+    tools:context=".Teacher_Notification_Page" >
 
-    <!-- ALLSTUDY Title -->
     <TextView
         android:id="@+id/all_study_title"
         android:layout_width="wrap_content"
@@ -25,39 +24,49 @@
         android:layout_height="50dp"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="2dp"
         android:contentDescription="@string/user_profile"
         android:src="@drawable/edit_profile_button"
         android:background="#F0F5F9" />
 
     <ImageView
-        android:contentDescription="Notification"
+        android:id="@+id/rectangle_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/rectangle_30"
-        android:layout_marginTop="270dp"
-        android:layout_marginLeft="10dp"/>
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/all_study_title"
+        android:layout_centerHorizontal="true" />
 
     <ImageView
+        android:id="@+id/rectangle_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/rectangle_30"
-        android:layout_marginTop="390dp"
-        android:layout_marginLeft="10dp"/>
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/rectangle_1"
+        android:layout_centerHorizontal="true" />
 
     <ImageView
+        android:id="@+id/rectangle_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/rectangle_30"
-        android:layout_marginTop="510dp"
-        android:layout_marginLeft="10dp"/>
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/rectangle_2"
+        android:layout_centerHorizontal="true" />
 
     <ImageView
+        android:id="@+id/rectangle_4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/rectangle_30"
-        android:layout_marginTop="150dp"
-        android:layout_marginLeft="10dp"/>
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/rectangle_3"
+        android:layout_centerHorizontal="true" />
+
+
     <!-- Bottom Taskbar -->
     <ImageView
         android:id="@+id/tab_below_image"
@@ -66,7 +75,6 @@
         android:layout_alignParentBottom="true"
         android:contentDescription="@string/task_bar"
         android:src="@drawable/tab_below" />
-
 
     <!-- Taskbar Notification Button -->
     <ImageButton
@@ -82,20 +90,20 @@
         android:background="@android:color/transparent"
         android:backgroundTint="#35216b" />
 
-
     <!-- Home Button -->
+
     <ImageButton
-        android:id="@+id/join_server_button"
+        android:id="@+id/create_server_button"
         android:layout_width="85dp"
         android:layout_height="85dp"
         android:layout_alignTop="@id/tab_below_image"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="123dp"
         android:layout_marginTop="-4dp"
-        android:contentDescription="@string/join_server_button"
-        android:src="@drawable/home"
+        android:contentDescription="@string/create_server_button"
+        android:src="@drawable/create_server_button"
         android:background="@android:color/transparent"
-         />
+        android:backgroundTint="#313231" />
 
 
     <!-- Taskbar Favorite Button -->
@@ -111,9 +119,6 @@
         android:contentDescription="@string/favorite_button"
         android:src="@drawable/favorite_button"
         android:backgroundTint="#313231" />
-
-
-
 
 
 </RelativeLayout>

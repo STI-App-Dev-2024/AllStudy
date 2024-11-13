@@ -8,9 +8,6 @@
     tools:context=".Teacher_See_More"
     android:background="#F0F5F9" >
 
-
-    <!-- TITLE MEANS PRE-DEFINED (INDEPENDENT NAME) -->
-
     <!-- ALLSTUDY Title -->
     <TextView
         android:id="@+id/title_all_study"

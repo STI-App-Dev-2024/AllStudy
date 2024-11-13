@@ -50,14 +50,14 @@
         android:fontFamily="@font/product_sans_bold" />
 
     <ImageView
-
         android:id="@+id/rectangle_server"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/app_dev_title"
         android:src="@drawable/rectangle_server"
         android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:importantForAccessibility="no"/>
 
     <TextView
         android:id="@+id/classroom_rules_list"
@@ -119,6 +119,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/see_activities_button"
+        android:contentDescription="@string/log_out_button"
         android:src="@drawable/logout_button"
         android:background="@android:color/transparent"
         android:layout_alignParentBottom="true" />

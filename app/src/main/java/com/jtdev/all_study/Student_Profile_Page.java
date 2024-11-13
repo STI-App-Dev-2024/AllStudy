@@ -8,6 +8,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
@@ -25,10 +26,11 @@ public class Student_Profile_Page extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_student_profile_page);
 
-        EditText username = findViewById(R.id.username);
-        String fullName = username.getText().toString();
-        EditText editText = findViewById(R.id.username);
-        String enteredText = editText.getText().toString();
+        ImageButton back_button = findViewById(R.id.back_button);
+        ImageButton change_profile_button = findViewById(R.id.change_profile_button);
+        ImageButton notification_button = findViewById(R.id.notification_button);
+        ImageButton home_button = findViewById(R.id.home_button);
+        ImageButton favorite_button = findViewById(R.id.favorite_button);
 
 
         // Apply window insets for edge-to-edge layout
@@ -38,26 +40,6 @@ public class Student_Profile_Page extends AppCompatActivity {
             return insets;
         });
 
-
-
-        editText.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {}
-
-            @Override
-            public void afterTextChanged(Editable s) {}
-        });
-
-        // Set the logout button click listener
-        findViewById(R.id.logout_btn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showLogoutConfirmationDialog(); // Show confirmation dialog on logout
-            }
-        });
     }
 
     private void showLogoutConfirmationDialog() {
