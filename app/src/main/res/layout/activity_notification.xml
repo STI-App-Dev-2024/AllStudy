@@ -10,7 +10,7 @@
 
     <!-- ALLSTUDY Title -->
     <TextView
-        android:id="@+id/all_study"
+        android:id="@+id/all_study_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -19,19 +19,16 @@
         android:textSize="40sp"
         android:fontFamily="@font/product_sans_bold" />
 
-    <!-- Profile -->
     <ImageButton
         android:id="@+id/generic_avatar"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="8dp"
         android:contentDescription="@string/user_profile"
         android:src="@drawable/generic_avatar"
         android:background="#F0F5F9" />
-
     <ImageView
         android:contentDescription="Notification"
         android:layout_width="wrap_content"
