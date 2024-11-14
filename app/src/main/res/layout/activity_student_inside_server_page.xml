@@ -59,6 +59,8 @@
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true" />
 
+
+
     <Button
         android:id="@+id/see_activities_button"
         android:layout_width="wrap_content"
@@ -83,8 +85,8 @@
 
     <ImageButton
         android:id="@+id/logout_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/see_classroom_rules_click"
         android:contentDescription="@string/log_out_button"
