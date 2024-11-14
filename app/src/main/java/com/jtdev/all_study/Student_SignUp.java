@@ -43,18 +43,16 @@ public class Student_SignUp extends AppCompatActivity {
         confirm_password = findViewById(R.id.confirm_password);
         Button signup_button = findViewById(R.id.signup_button);
 
+        // Handle the insets (safe area) on devices with notches or system bars
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
+        // Set up the sign-up button click listener
         signup_button.setOnClickListener(view -> {
-            if (full_name.getText().toString().isEmpty() || email.getText().toString().isEmpty() ||
-                    student_id.getText().toString().isEmpty() || password.getText().toString().isEmpty() ||
-                    confirm_password.getText().toString().isEmpty()) {
-                Toast.makeText(Student_SignUp.this, "All fields are required", Toast.LENGTH_SHORT).show();
-            } else if (areAllFieldsValid()) {
+            if (areAllFieldsValid()) {
                 String emailText = email.getText().toString();
                 String passwordText = password.getText().toString();
 
@@ -76,6 +74,7 @@ public class Student_SignUp extends AppCompatActivity {
             }
         });
 
+        // Set up the back button click listener
         back_button.setOnClickListener(view -> {
             Intent intent = new Intent(Student_SignUp.this, Student_or_Teacher_SignUp.class);
             startActivity(intent);
@@ -85,32 +84,47 @@ public class Student_SignUp extends AppCompatActivity {
     private boolean areAllFieldsValid() {
         boolean isValid = true;
 
-        if (full_name.getText().toString().isEmpty()) {
+        // Validate full name
+        if (full_name.getText().toString().trim().isEmpty()) {
             full_name.setError("Full name is required");
             isValid = false;
+        } else {
+            full_name.setError(null);
         }
 
-        if (email.getText().toString().isEmpty()) {
+        // Validate email
+        if (email.getText().toString().trim().isEmpty()) {
             email.setError("Email is required");
             isValid = false;
+        } else {
+            email.setError(null);
         }
 
-        if (student_id.getText().toString().isEmpty()) {
+        // Validate student ID
+        if (student_id.getText().toString().trim().isEmpty()) {
             student_id.setError("Student ID is required");
             isValid = false;
+        } else {
+            student_id.setError(null);
         }
 
-        if (password.getText().toString().isEmpty()) {
+        // Validate password
+        if (password.getText().toString().trim().isEmpty()) {
             password.setError("Password is required");
             isValid = false;
+        } else {
+            password.setError(null);
         }
 
-        if (confirm_password.getText().toString().isEmpty()) {
+        // Validate confirm password
+        if (confirm_password.getText().toString().trim().isEmpty()) {
             confirm_password.setError("Confirm Password is required");
             isValid = false;
         } else if (!password.getText().toString().equals(confirm_password.getText().toString())) {
             confirm_password.setError("Passwords do not match");
             isValid = false;
+        } else {
+            confirm_password.setError(null);
         }
 
         return isValid;

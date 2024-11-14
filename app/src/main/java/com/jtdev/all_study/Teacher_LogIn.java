@@ -47,15 +47,28 @@ public class Teacher_LogIn extends AppCompatActivity {
         });
 
         signin_button.setOnClickListener(v -> {
-            String emailInput = email.getText().toString();
-            String passwordInput = password.getText().toString();
+            String emailInput = email.getText().toString().trim();
+            String passwordInput = password.getText().toString().trim();
 
-            // Check for empty fields
-            if (emailInput.isEmpty() || passwordInput.isEmpty()) {
-                Toast.makeText(Teacher_LogIn.this, "Please enter email and password", Toast.LENGTH_SHORT).show();
-            } else {
-                // Perform Firebase login
+            boolean hasError = false;
+
+            // Check if email field is empty
+            if (emailInput.isEmpty()) {
+                email.setError("Email is required!");
+                hasError = true;
+            }
+
+            // Check if password field is empty
+            if (passwordInput.isEmpty()) {
+                password.setError("Password is required!");
+                hasError = true;
+            }
+
+            // If no errors, perform Firebase login
+            if (!hasError) {
                 performLogin(emailInput, passwordInput);
+            } else {
+                Toast.makeText(Teacher_LogIn.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
             }
         });
 
