@@ -127,7 +127,7 @@
         android:fontFamily="@font/product_sans_regular" />
 
     <Button
-        android:id="@+id/enable_apps"
+        android:id="@+id/enable_apps_button"
         android:layout_width="175dp"
         android:layout_height="55dp"
         android:text="@string/enable_apps"

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Student_Join_Host_Page"
+    android:background="#F0F5F9">
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="55dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/back_button"
+        android:src="@drawable/back_button" />
+
+    <TextView
+        android:id="@+id/all_study_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/all_study"
+        android:textSize="40sp"
+        android:fontFamily="@font/product_sans_bold" />
+
+    <ImageButton
+        android:id="@+id/edit_profile_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="2dp"
+        android:contentDescription="@string/user_profile"
+        android:src="@drawable/edit_profile_button"
+        android:background="#F0F5F9" />
+
+    <TextView
+        android:id="@+id/section_name_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/all_study_title"
+        android:text="@string/computer_science"
+        android:textSize="30sp"
+        android:fontFamily="@font/product_sans_bold"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/sort_by_server_button"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:text="@string/servers"
+        android:layout_below="@id/section_name_title"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"/>
+
+    <Button
+        android:id="@+id/sort_by_host_button"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:text="@string/host"
+        android:layout_below="@id/section_name_title"
+        android:backgroundTint="#222202"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="200dp"/>
+
+    <TextView
+        android:id="@+id/host_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/host"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/sort_by_host_button"
+        android:fontFamily="@font/product_sans_bold"
+        android:textSize="40sp"
+        android:layout_marginTop="8dp" />
+
+    <RelativeLayout
+        android:id="@+id/server_box_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/host_list"
+        android:layout_centerHorizontal="true">
+
+
+        <!-- Background Image for Server Box -->
+        <ImageView
+            android:id="@+id/rectangle_server_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/rectangle_black" />
+
+        <ImageView
+            android:id="@+id/teacher_profile_1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/teacher_profile_icon_white" />
+
+        <TextView
+            android:id="@+id/teacher_name_server_creator_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/product_sans_bold"
+            android:text="@string/reignier_dahunog"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/server_profile_1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/squarestroke" />
+
+
+        <!-- Section Bar -->
+        <TextView
+            android:id="@+id/section_name_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/teacher_name_server_creator_1"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/product_sans_bold"
+            android:text="@string/bscs_3_1a"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <!-- Server Image Placeholder -->
+
+        <!-- Join Now Button -->
+        <Button
+            android:id="@+id/join_now_button_1"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:layout_below="@id/section_name_1"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="190dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/product_sans_bold"
+            android:text="@string/join_now"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/server_box_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/server_box_1"
+        android:layout_centerHorizontal="true">
+
+
+        <!-- Background Image for Server Box -->
+        <ImageView
+            android:id="@+id/rectangle_server_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/rectangle_blue" />
+
+        <ImageView
+            android:id="@+id/teacher_profile_2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/teacher_profile_icon_white" />
+
+        <TextView
+            android:id="@+id/teacher_name_server_creator_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/product_sans_bold"
+            android:text="@string/camron_bernat"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/server_profile_2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/squarestroke" />
+
+
+        <!-- Section Bar -->
+        <TextView
+            android:id="@+id/section_name_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/teacher_name_server_creator_2"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/product_sans_bold"
+            android:text="@string/bscs_2_1a"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <!-- Server Image Placeholder -->
+
+        <!-- Join Now Button -->
+        <Button
+            android:id="@+id/join_now_button_2"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:layout_below="@id/section_name_2"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="190dp"
+            android:backgroundTint="@color/black"
+            android:fontFamily="@font/product_sans_bold"
+            android:text="@string/join_now"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/see_more"
+        android:layout_below="@id/server_box_2"
+        android:layout_centerHorizontal="true"
+        android:drawableEnd="@drawable/drop_down_menu"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"/>
+
+
+
+
+</RelativeLayout>

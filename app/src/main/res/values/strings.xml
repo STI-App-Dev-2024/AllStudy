@@ -37,7 +37,7 @@
     <string name="new_password">New Password</string>
     <string name="enter_new_password">Enter New Password</string>
     <string name="confirm_new_password">Confirm New Password</string>
-    <string name="all_study_terms_conditions_message">By using AllStudy, you agree to the following terms and conditions. Please read them carefully\n\n" + "Some features of the app requires you to create an account. You agree to provide accurate and complete information when creating an account\n\n" + "Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use and protect your personal information"</string>
+    <string name="all_study_terms_conditions_message">By using AllStudy, you agree to the following terms and conditions. Please read them carefully\n\n" "Some features of the app requires you to create an account. You agree to provide accurate and complete information when creating an account\n\n" "Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use and protect your personal information"</string>
     <string name="confirm">Confirm</string>
     <string name="allstudy">ALLSTUDY</string>
     <string name="description_squarestroke" />
@@ -94,6 +94,15 @@
     <string name="date">Date:</string>
     <string name="time">Time:</string>
     <string name="enable_apps">Enable Apps</string>
+    <string name="favorite_server">Favorite Server</string>
+    <string name="servers">Servers</string>
+    <string name="host">Host</string>
+    <string name="bscs_3_1a">BSCS 3.1A</string>
+    <string name="reignier_dahunog">Reignier Dahunog</string>
+    <string name="camron_bernat">Camron Bernat</string>
+    <string name="bscs_2_1a">BSCS 2.1A</string>
+    <string name="upload_files">Upload Files</string>
+    <string name="add_apps">Add apps</string>
     =======
     >>>>>>> b7be4084048529bca1d59a87143de44761eda04e
     >>>>>>> 47b24891f1b51626e36c9d7d2cfc0891703c6617

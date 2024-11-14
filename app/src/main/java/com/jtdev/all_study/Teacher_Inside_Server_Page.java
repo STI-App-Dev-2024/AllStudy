@@ -32,7 +32,7 @@ public class Teacher_Inside_Server_Page extends AppCompatActivity {
         });
 
         edit_profile_button.setOnClickListener(v -> {
-            Intent intent = new Intent (Teacher_Inside_Server_Page.this, Teacher_Profile_Page.class);
+            Intent intent = new Intent (Teacher_Inside_Server_Page.this, Teacher_Edit_Profile_Page.class);
             startActivity(intent);
         });
 
@@ -42,8 +42,13 @@ public class Teacher_Inside_Server_Page extends AppCompatActivity {
             });
 
         see_classroom_rules_click.setOnClickListener(v -> {
-            Intent intent = new Intent(Teacher_Inside_Server_Page.this, Teacher_Classroom_Rules.class);
+            Intent intent = new Intent(Teacher_Inside_Server_Page.this, Teacher_Classroom_Rules_Page.class);
             startActivity(intent);
+        });
+
+        logout_button.setOnClickListener(v -> {
+            PopUp_Confirm_Button popUp = new PopUp_Confirm_Button();
+            popUp.showConfirmButton(Teacher_Inside_Server_Page.this);
         });
 
     }

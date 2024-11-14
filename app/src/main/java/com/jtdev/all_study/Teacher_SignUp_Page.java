@@ -15,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-public class Teacher_SignUp extends AppCompatActivity {
+public class Teacher_SignUp_Page extends AppCompatActivity {
 
     private EditText full_name;
     private EditText email;
@@ -52,7 +52,7 @@ public class Teacher_SignUp extends AppCompatActivity {
         signup_button.setOnClickListener(v -> {
             // Check if any fields are empty
             if (full_name.getText().toString().isEmpty() || email.getText().toString().isEmpty() || teacher_id.getText().toString().isEmpty() || password.getText().toString().isEmpty() || confirm_password.getText().toString().isEmpty()) {
-                Toast.makeText(Teacher_SignUp.this, "All fields are required", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Teacher_SignUp_Page.this, "All fields are required", Toast.LENGTH_SHORT).show();
             }
 
             // Check if all fields are valid
@@ -65,20 +65,20 @@ public class Teacher_SignUp extends AppCompatActivity {
                         .addOnCompleteListener(this, task -> {
                             if (task.isSuccessful()) {
                                 // Sign-up successful
-                                Toast.makeText(Teacher_SignUp.this, "Account successfully created!", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(Teacher_SignUp.this, Teacher_LogIn.class);
+                                Toast.makeText(Teacher_SignUp_Page.this, "Account successfully created!", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(Teacher_SignUp_Page.this, Teacher_LogIn_Page.class);
                                 startActivity(intent);
                                 finish(); // Close the sign-up activity
                             } else {
                                 // Sign-up failed
-                                Toast.makeText(Teacher_SignUp.this, "Authentication failed. Please try again.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Teacher_SignUp_Page.this, "Authentication failed. Please try again.", Toast.LENGTH_SHORT).show();
                             }
                         });
             }
         });
 
         back_button.setOnClickListener(v -> {
-            Intent intent = new Intent(Teacher_SignUp.this, Student_or_Teacher_SignUp.class);
+            Intent intent = new Intent(Teacher_SignUp_Page.this, Student_or_Teacher_SignUp.class);
             startActivity(intent);
         });
     }

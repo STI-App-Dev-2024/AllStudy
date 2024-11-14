@@ -17,7 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class Teacher_LogIn extends AppCompatActivity {
+public class Teacher_LogIn_Page extends AppCompatActivity {
 
     private EditText email;
     private EditText password;
@@ -47,34 +47,47 @@ public class Teacher_LogIn extends AppCompatActivity {
         });
 
         signin_button.setOnClickListener(v -> {
-            String emailInput = email.getText().toString();
-            String passwordInput = password.getText().toString();
+            String emailInput = email.getText().toString().trim();
+            String passwordInput = password.getText().toString().trim();
 
-            // Check for empty fields
-            if (emailInput.isEmpty() || passwordInput.isEmpty()) {
-                Toast.makeText(Teacher_LogIn.this, "Please enter email and password", Toast.LENGTH_SHORT).show();
-            } else {
-                // Perform Firebase login
+            boolean hasError = false;
+
+            // Check if email field is empty
+            if (emailInput.isEmpty()) {
+                email.setError("Email is required!");
+                hasError = true;
+            }
+
+            // Check if password field is empty
+            if (passwordInput.isEmpty()) {
+                password.setError("Password is required!");
+                hasError = true;
+            }
+
+            // If no errors, perform Firebase login
+            if (!hasError) {
                 performLogin(emailInput, passwordInput);
+            } else {
+                Toast.makeText(Teacher_LogIn_Page.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
             }
         });
 
         back_button.setOnClickListener(v -> {
-            Intent intent = new Intent(Teacher_LogIn.this, Student_or_Teacher_LogIn.class);
+            Intent intent = new Intent(Teacher_LogIn_Page.this, Student_or_Teacher_LogIn.class);
             startActivity(intent);
         });
 
         // Set up forgot password listener
         forgot_pass_click.setOnClickListener(v -> {
             // Navigate to Forgot Password Activity
-            Intent intent = new Intent(Teacher_LogIn.this, Forgot_Password.class);
+            Intent intent = new Intent(Teacher_LogIn_Page.this, Student_Forgot_Password.class);
             startActivity(intent);
         });
 
         // Set up sign up listener
         signup_click.setOnClickListener(v -> {
             // Navigate to Sign Up Activity
-            Intent intent = new Intent(Teacher_LogIn.this, Teacher_SignUp.class);
+            Intent intent = new Intent(Teacher_LogIn_Page.this, Teacher_SignUp_Page.class);
             startActivity(intent);
         });
     }
@@ -86,13 +99,13 @@ public class Teacher_LogIn extends AppCompatActivity {
                     if (task.isSuccessful()) {
                         // Sign-in success
                         FirebaseUser user = mAuth.getCurrentUser();
-                        Toast.makeText(Teacher_LogIn.this, "Welcome back, " + user.getEmail(), Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(Teacher_LogIn.this, Teacher_Splash_Screen.class);
+                        Toast.makeText(Teacher_LogIn_Page.this, "Welcome back, " + user.getEmail(), Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(Teacher_LogIn_Page.this, Teacher_Splash_Screen.class);
                         startActivity(intent);
                         finish();
                     } else {
                         // If sign in fails, display a message to the user
-                        Toast.makeText(Teacher_LogIn.this, "Authentication failed. Invalid email or password.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Teacher_LogIn_Page.this, "Authentication failed. Invalid email or password.", Toast.LENGTH_SHORT).show();
                     }
                 });
     }

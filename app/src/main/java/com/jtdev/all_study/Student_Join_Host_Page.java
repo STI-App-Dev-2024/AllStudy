@@ -1,8 +1,6 @@
 package com.jtdev.all_study;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
@@ -11,30 +9,18 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Student_Activity_Page extends AppCompatActivity {
+public class Student_Join_Host_Page extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_student_activity_page);
-
-        ImageButton edit_profile_button = findViewById(R.id.edit_profile_button);
-        Button see_participants_button = findViewById(R.id.see_participants_button);
-        ImageButton logout_button = findViewById(R.id.logout_button);
+        setContentView(R.layout.activity_student_join_host_page);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
-        });
-
-
-        logout_button.setOnClickListener(v -> {
-            Intent intent = new Intent(Student_Activity_Page.this, Student_Home_Page.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // Clear the activity stack
-            startActivity(intent);
-            finish();
         });
     }
 }

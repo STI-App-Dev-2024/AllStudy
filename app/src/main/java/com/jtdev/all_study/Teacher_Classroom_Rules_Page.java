@@ -11,13 +11,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Student_Classroom_Rules extends AppCompatActivity {
+public class Teacher_Classroom_Rules_Page extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_student_classroom_rules);
+        setContentView(R.layout.activity_teacher_classroom_rules);
 
         ImageButton edit_profile_button = findViewById(R.id.edit_profile_button);
         Button see_activities_button = findViewById(R.id.see_activities_button);
@@ -30,18 +30,18 @@ public class Student_Classroom_Rules extends AppCompatActivity {
         });
 
         edit_profile_button.setOnClickListener(v -> {
-            Intent intent = new Intent(Student_Classroom_Rules.this, Student_Edit_Profile_Page.class);
+            Intent intent = new Intent(Teacher_Classroom_Rules_Page.this, Teacher_Edit_Profile_Page.class);
             startActivity(intent);
         });
 
         see_activities_button.setOnClickListener(v -> {
-            Intent intent = new Intent(Student_Classroom_Rules.this, Student_See_Activities_Page.class);
+            Intent intent = new Intent(Teacher_Classroom_Rules_Page.this, Teacher_See_Activities_Page.class);
             startActivity(intent);
         });
 
         logout_button.setOnClickListener(v -> {
             PopUp_Confirm_Button popUp = new PopUp_Confirm_Button();
-            popUp.showConfirmButton(Student_Classroom_Rules.this);
+            popUp.showConfirmButton(Teacher_Classroom_Rules_Page.this);
         });
 
     }

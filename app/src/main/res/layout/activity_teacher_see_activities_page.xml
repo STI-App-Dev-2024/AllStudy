@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Student_Activity_Page"
-    android:background="#F0F5F9" >
+    tools:context=".Teacher_See_Activities_Page"
+    android:background="#F0F5F9">
 
     <TextView
         android:id="@+id/all_study_title"
@@ -51,7 +51,6 @@
         android:fontFamily="@font/product_sans_bold" />
 
     <ImageView
-
         android:id="@+id/rectangle_server"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -71,16 +70,16 @@
         android:textSize="25sp"
         android:fontFamily="@font/product_sans_bold" />
 
-        <TextView
-            android:id="@+id/due_today_list"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/due_today"
-            android:layout_below="@+id/activities_list"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="20dp"
-            android:textSize="18sp"
-            android:fontFamily="@font/product_sans_bold" />
+    <TextView
+        android:id="@+id/due_today_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/due_today"
+        android:layout_below="@+id/activities_list"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/product_sans_bold" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -91,7 +90,6 @@
         android:layout_marginStart="20dp"
         android:fontFamily="@font/product_sans_bold"
         android:textSize="18sp"/>
-
 
     <Button
         android:id="@+id/see_participants_button"
@@ -105,15 +103,12 @@
 
     <ImageButton
         android:id="@+id/logout_button"
-        android:layout_width="30dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/see_activities_button"
+        android:layout_below="@+id/see_participants_button"
         android:src="@drawable/logout_button"
         android:background="@android:color/transparent"
         android:layout_alignParentBottom="true" />
-
-
-
 
 </RelativeLayout>

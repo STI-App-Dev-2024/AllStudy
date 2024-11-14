@@ -1,5 +1,6 @@
 package com.jtdev.all_study;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -16,8 +17,9 @@ public class Student_See_More_Page extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_student_see_more_student);
+        setContentView(R.layout.activity_student_see_more_page);
 
+        ImageButton back_button = findViewById(R.id.back_button);
         ImageButton edit_profile_button = findViewById(R.id.edit_profile_button);
         Button join_now_button = findViewById(R.id.join_now_button_1);
         Button join_now_button_2 = findViewById(R.id.join_now_button_2);
@@ -29,6 +31,31 @@ public class Student_See_More_Page extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        back_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Student_See_More_Page.this, Student_Home_Page.class);
+            startActivity(intent);
+        });
+
+        edit_profile_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Student_See_More_Page.this, Student_Edit_Profile_Page.class);
+            startActivity(intent);
+        });
+
+        notification_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Student_See_More_Page.this, Student_Notification_Page.class);
+            startActivity(intent);
+        });
+
+        join_server_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Student_See_More_Page.this, Student_Join_Server.class);
+            startActivity(intent);
+        });
+
+        favorite_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Student_See_More_Page.this, Student_Favorite_Server_Page.class);
+            startActivity(intent);
         });
 
     }

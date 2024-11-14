@@ -2,7 +2,6 @@ package com.jtdev.all_study;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
@@ -11,17 +10,18 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Student_Classroom_Rules extends AppCompatActivity {
+public class Student_Favorite_Server_Page extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_student_classroom_rules);
+        setContentView(R.layout.activity_student_favorite_server_page);
 
         ImageButton edit_profile_button = findViewById(R.id.edit_profile_button);
-        Button see_activities_button = findViewById(R.id.see_activities_button);
-        ImageButton logout_button = findViewById(R.id.logout_button);
+        ImageButton notification_button = findViewById(R.id.notification_button);
+        ImageButton join_server_button = findViewById(R.id.join_server_button);
+        ImageButton back_button = findViewById(R.id.back_button);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -29,20 +29,19 @@ public class Student_Classroom_Rules extends AppCompatActivity {
             return insets;
         });
 
-        edit_profile_button.setOnClickListener(v -> {
-            Intent intent = new Intent(Student_Classroom_Rules.this, Student_Edit_Profile_Page.class);
+        edit_profile_button.setOnClickListener(v ->{
+            Intent intent = new Intent(Student_Favorite_Server_Page.this, Student_Edit_Profile_Page.class);
             startActivity(intent);
         });
 
-        see_activities_button.setOnClickListener(v -> {
-            Intent intent = new Intent(Student_Classroom_Rules.this, Student_See_Activities_Page.class);
+        notification_button.setOnClickListener(v ->{
+            Intent intent = new Intent(Student_Favorite_Server_Page.this, Student_Notification_Page.class);
             startActivity(intent);
         });
 
-        logout_button.setOnClickListener(v -> {
-            PopUp_Confirm_Button popUp = new PopUp_Confirm_Button();
-            popUp.showConfirmButton(Student_Classroom_Rules.this);
+        join_server_button.setOnClickListener(v ->{
+            Intent intent = new Intent(Student_Favorite_Server_Page.this, Student_Inside_Server_Page.class);
+            startActivity(intent);
         });
-
     }
 }

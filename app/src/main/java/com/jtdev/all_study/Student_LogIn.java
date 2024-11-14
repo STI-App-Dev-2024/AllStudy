@@ -49,15 +49,13 @@ public class Student_LogIn extends AppCompatActivity {
 
         // Set up login button click listener
         login_button.setOnClickListener(v -> {
-            String emailInput = email.getText().toString();
-            String passwordInput = password.getText().toString();
-
-            // Check for empty fields
-            if (emailInput.isEmpty() || passwordInput.isEmpty()) {
-                Toast.makeText(Student_LogIn.this, "Please enter email and password", Toast.LENGTH_SHORT).show();
-            } else {
+            if (areAllFieldsValid()) {
+                String emailInput = email.getText().toString();
+                String passwordInput = password.getText().toString();
                 // Perform Firebase login
                 performLogin(emailInput, passwordInput);
+            } else {
+                Toast.makeText(Student_LogIn.this, "Invalid Credentials", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -69,7 +67,7 @@ public class Student_LogIn extends AppCompatActivity {
 
         // Set up forgot password listener
         forgot_pass_click.setOnClickListener(v -> {
-            Intent intent = new Intent(Student_LogIn.this, Forgot_Password.class);
+            Intent intent = new Intent(Student_LogIn.this, Student_Forgot_Password.class);
             startActivity(intent);
         });
 
@@ -78,6 +76,26 @@ public class Student_LogIn extends AppCompatActivity {
             Intent intent = new Intent(Student_LogIn.this, Student_SignUp.class);
             startActivity(intent);
         });
+    }
+
+    private boolean areAllFieldsValid() {
+        boolean isValid = true;
+
+        if (email.getText().toString().trim().isEmpty()) {
+            email.setError("Email is required"); // Shows error with a red exclamation mark
+            isValid = false;
+        } else {
+            email.setError(null); // Clears the error if input is valid
+        }
+
+        if (password.getText().toString().trim().isEmpty()) {
+            password.setError("Password is required"); // Shows error with a red exclamation mark
+            isValid = false;
+        } else {
+            password.setError(null); // Clears the error if input is valid
+        }
+
+        return isValid;
     }
 
     private void performLogin(String emailInput, String passwordInput) {
@@ -90,7 +108,7 @@ public class Student_LogIn extends AppCompatActivity {
                         Toast.makeText(Student_LogIn.this, "Welcome back, " + user.getEmail(), Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(Student_LogIn.this, Student_Splash_Screen.class);
                         startActivity(intent);
-                        finish();  // Close the current activity
+                        finish(); // Close the current activity
                     } else {
                         // Login failed
                         Toast.makeText(Student_LogIn.this, "Authentication failed. Please check your credentials.", Toast.LENGTH_SHORT).show();
