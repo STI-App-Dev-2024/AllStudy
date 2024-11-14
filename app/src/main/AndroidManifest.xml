@@ -20,7 +20,7 @@
             android:name=".Student_Join_Server"
             android:exported="false" />
         <activity
-            android:name=".Teacher_Forgot_Password"
+            android:name=".Teacher_Forgot_Password_Page"
             android:exported="false" />
         <activity
             android:name=".Teacher_Add_Activities_Server_Page"
@@ -38,7 +38,7 @@
             android:name=".Student_Inside_Server_Page"
             android:exported="false" />
         <activity
-            android:name=".Teacher_Classroom_Rules"
+            android:name=".Teacher_Classroom_Rules_Page"
             android:exported="false" />
         <activity
             android:name=".Student_Classroom_Rules"
@@ -56,7 +56,7 @@
             android:name=".Student_Splash_Screen"
             android:exported="false" />
         <activity
-            android:name=".Teacher_LogIn"
+            android:name=".Teacher_LogIn_Page"
             android:exported="false" />
         <activity
             android:name=".Student_LogIn"
@@ -83,7 +83,7 @@
             android:name=".Student_SignUp"
             android:exported="false" />
         <activity
-            android:name=".Teacher_SignUp"
+            android:name=".Teacher_SignUp_Page"
             android:exported="false" />
         <activity
             android:name=".Student_Forgot_Password"

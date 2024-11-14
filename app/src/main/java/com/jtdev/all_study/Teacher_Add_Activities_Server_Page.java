@@ -30,6 +30,11 @@ public class Teacher_Add_Activities_Server_Page extends AppCompatActivity {
             return insets;
         });
 
+        back_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Teacher_Add_Activities_Server_Page.this, Teacher_Home_Page.class);
+            startActivity(intent);
+        });
+
         create_server_button.setOnClickListener(v -> {
             Intent intent = new Intent(Teacher_Add_Activities_Server_Page.this, Teacher_Create_Server_Page.class);
             startActivity(intent);

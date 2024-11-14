@@ -3,7 +3,6 @@ package com.jtdev.all_study;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -12,7 +11,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Teacher_Forgot_Password extends AppCompatActivity {
+public class Teacher_Forgot_Password_Page extends AppCompatActivity {
 
     EditText email;
 

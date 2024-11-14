@@ -1,7 +1,6 @@
 package com.jtdev.all_study;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -12,7 +11,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Teacher_Classroom_Rules extends AppCompatActivity {
+public class Teacher_Classroom_Rules_Page extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,12 +30,12 @@ public class Teacher_Classroom_Rules extends AppCompatActivity {
         });
 
         edit_profile_button.setOnClickListener(v -> {
-            Intent intent = new Intent(Teacher_Classroom_Rules.this, Teacher_Edit_Profile_Page.class);
+            Intent intent = new Intent(Teacher_Classroom_Rules_Page.this, Teacher_Edit_Profile_Page.class);
             startActivity(intent);
         });
 
         see_activities_button.setOnClickListener(v -> {
-            Intent intent = new Intent(Teacher_Classroom_Rules.this, Teacher_See_Activities_Page.class);
+            Intent intent = new Intent(Teacher_Classroom_Rules_Page.this, Teacher_See_Activities_Page.class);
             startActivity(intent);
         });
 

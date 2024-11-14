@@ -42,7 +42,7 @@ public class Student_or_Teacher_LogIn extends AppCompatActivity {
         });
 
         teacher_button.setOnClickListener(v -> {
-            Intent intent = new Intent(Student_or_Teacher_LogIn.this, Teacher_LogIn.class);
+            Intent intent = new Intent(Student_or_Teacher_LogIn.this, Teacher_LogIn_Page.class);
             Toast.makeText(Student_or_Teacher_LogIn.this, "Welcome, Teacher!", Toast.LENGTH_SHORT).show();
             startActivity(intent);
         });

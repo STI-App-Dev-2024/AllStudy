@@ -44,7 +44,7 @@ public class Student_or_Teacher_SignUp extends AppCompatActivity {
         });
 
         teacher_button.setOnClickListener(v -> {
-            Intent intent = new Intent(Student_or_Teacher_SignUp.this, Teacher_SignUp.class);
+            Intent intent = new Intent(Student_or_Teacher_SignUp.this, Teacher_SignUp_Page.class);
             Toast.makeText(Student_or_Teacher_SignUp.this, "Welcome, teacher!", Toast.LENGTH_SHORT).show();
             startActivity(intent);
         });

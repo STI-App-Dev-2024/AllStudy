@@ -19,6 +19,7 @@ public class Teacher_See_More_Page extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_teacher_see_more_page);
 
+        ImageButton back_button = findViewById(R.id.back_button);
         ImageButton edit_profile_button = findViewById(R.id.edit_profile_button);
         Button join_now_button_1 = findViewById(R.id.join_now_button_1);
         Button join_now_button_2 = findViewById(R.id.join_now_button_2);
@@ -26,10 +27,16 @@ public class Teacher_See_More_Page extends AppCompatActivity {
         ImageButton create_server_button = findViewById(R.id.create_server_button);
         ImageButton favorite_button = findViewById(R.id.favorite_button);
 
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        back_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Teacher_See_More_Page.this, Teacher_Home_Page.class);
+            startActivity(intent);
         });
 
         edit_profile_button.setOnClickListener(v -> {

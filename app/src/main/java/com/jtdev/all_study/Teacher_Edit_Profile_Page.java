@@ -32,6 +32,11 @@ public class Teacher_Edit_Profile_Page extends AppCompatActivity {
             return insets;
         });
 
+        back_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Teacher_Edit_Profile_Page.this, Teacher_Home_Page.class);
+            startActivity(intent);
+        });
+
         notification_button.setOnClickListener(v -> {
             Intent intent = new Intent(Teacher_Edit_Profile_Page.this, Teacher_Notification_Page.class);
             startActivity(intent);

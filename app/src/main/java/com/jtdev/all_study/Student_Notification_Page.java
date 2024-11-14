@@ -31,6 +31,11 @@ public class Student_Notification_Page extends AppCompatActivity {
             return insets;
         });
 
+        back_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Student_Notification_Page.this, Student_Home_Page.class);
+            startActivity(intent);
+        });
+
         notification_button.setOnClickListener(v -> {
             Intent intent = new Intent(Student_Notification_Page.this, Student_Notification_Page.class);
             startActivity(intent);
