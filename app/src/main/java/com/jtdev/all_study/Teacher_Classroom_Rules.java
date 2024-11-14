@@ -31,7 +31,7 @@ public class Teacher_Classroom_Rules extends AppCompatActivity {
         });
 
         edit_profile_button.setOnClickListener(v -> {
-            Intent intent = new Intent(Teacher_Classroom_Rules.this, Student_See_More_Page.class);
+            Intent intent = new Intent(Teacher_Classroom_Rules.this, Teacher_Edit_Profile_Page.class);
             startActivity(intent);
         });
 

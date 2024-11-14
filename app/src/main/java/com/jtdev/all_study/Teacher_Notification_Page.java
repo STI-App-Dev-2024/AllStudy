@@ -1,5 +1,6 @@
 package com.jtdev.all_study;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageButton;
 
@@ -32,6 +33,24 @@ public class Teacher_Notification_Page extends AppCompatActivity {
             return insets;
         });
 
+        edit_profile_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Teacher_Notification_Page.this, Teacher_Edit_Profile_Page.class);
+            startActivity(intent);
+        });
 
+        notification_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Teacher_Notification_Page.this, Teacher_Notification_Page.class);
+            startActivity(intent);
+        });
+
+        create_server_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Teacher_Notification_Page.this, Teacher_Create_Server_Page.class);
+            startActivity(intent);
+        });
+
+        favorite_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Teacher_Notification_Page.this, Teacher_Favorite_Server_Page.class);
+            startActivity(intent);
+        });
     }
 }
