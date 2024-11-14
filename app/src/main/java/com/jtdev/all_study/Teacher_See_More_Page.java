@@ -43,7 +43,7 @@ public class Teacher_See_More_Page extends AppCompatActivity {
         });
 
         favorite_button.setOnClickListener(v -> {
-            Intent intent = new Intent(Teacher_See_More_Page.this, Teacher_Favorite_Page.class);
+            Intent intent = new Intent(Teacher_See_More_Page.this, Teacher_Favorite_Server_Page.class);
             startActivity(intent);
         });
     }

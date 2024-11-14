@@ -69,7 +69,7 @@ public class Student_LogIn extends AppCompatActivity {
 
         // Set up forgot password listener
         forgot_pass_click.setOnClickListener(v -> {
-            Intent intent = new Intent(Student_LogIn.this, Forgot_Password.class);
+            Intent intent = new Intent(Student_LogIn.this, Student_Forgot_Password.class);
             startActivity(intent);
         });
 

@@ -67,7 +67,7 @@ public class Teacher_LogIn extends AppCompatActivity {
         // Set up forgot password listener
         forgot_pass_click.setOnClickListener(v -> {
             // Navigate to Forgot Password Activity
-            Intent intent = new Intent(Teacher_LogIn.this, Forgot_Password.class);
+            Intent intent = new Intent(Teacher_LogIn.this, Student_Forgot_Password.class);
             startActivity(intent);
         });
 

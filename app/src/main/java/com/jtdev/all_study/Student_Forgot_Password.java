@@ -17,14 +17,14 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.snackbar.Snackbar;
 
-public class Forgot_Password extends AppCompatActivity {
+public class Student_Forgot_Password extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_09_forgot_password);
+        setContentView(R.layout.activity_09_student_forgot_password);
 
         // Initialize UI elements by finding them using their IDs
         EditText email_edit_text = findViewById(R.id.email);
@@ -67,12 +67,12 @@ public class Forgot_Password extends AppCompatActivity {
 
             if (emailInput.isEmpty()) {
                 // Intent to OTP screen
-                Toast.makeText(Forgot_Password.this, "Please enter your email", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Student_Forgot_Password.this, "Please enter your email", Toast.LENGTH_SHORT).show();
             } else if (!emailInput.endsWith("@gmail.com")) {
                 Snackbar.make(v, "Invalid email address", Snackbar.LENGTH_SHORT).show();
             } else {
-                Intent intent = new Intent(Forgot_Password.this, OTP_AllStudy.class);
-                Toast.makeText(Forgot_Password.this, "OTP Sent!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Student_Forgot_Password.this, OTP_AllStudy.class);
+                Toast.makeText(Student_Forgot_Password.this, "OTP Sent!", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }
         });
@@ -80,7 +80,7 @@ public class Forgot_Password extends AppCompatActivity {
         // Set up click listener for the Sign Up text
         signup_click.setOnClickListener(v -> {
             // Navigate to Sign Up Activity (Assuming you have a SignUp activity)
-            Intent intent = new Intent(Forgot_Password.this, Student_or_Teacher_SignUp.class);
+            Intent intent = new Intent(Student_Forgot_Password.this, Student_or_Teacher_SignUp.class);
             startActivity(intent);
         });
     }

@@ -14,6 +14,15 @@
         android:theme="@style/Theme.AllStudy"
         tools:targetApi="31">
         <activity
+            android:name=".activity_student_join_host"
+            android:exported="false" />
+        <activity
+            android:name=".Student_Join_Server"
+            android:exported="false" />
+        <activity
+            android:name=".Teacher_Forgot_Password"
+            android:exported="false" />
+        <activity
             android:name=".Teacher_Add_Activities_Server_Page"
             android:exported="false" />
         <activity
@@ -23,7 +32,7 @@
             android:name=".Teacher_Create_Server_Page"
             android:exported="false" />
         <activity
-            android:name=".Teacher_Favorite_Page"
+            android:name=".Teacher_Favorite_Server_Page"
             android:exported="false" />
         <activity
             android:name=".Student_Inside_Server_Page"
@@ -83,7 +92,7 @@
             android:name=".Teacher_SignUp"
             android:exported="false" />
         <activity
-            android:name=".Forgot_Password"
+            android:name=".Student_Forgot_Password"
             android:exported="false" />
         <activity
             android:name=".Student_or_Teacher_SignUp"
