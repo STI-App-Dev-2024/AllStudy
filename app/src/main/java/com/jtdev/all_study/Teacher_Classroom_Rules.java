@@ -1,6 +1,7 @@
 package com.jtdev.all_study;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -19,6 +20,7 @@ public class Teacher_Classroom_Rules extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_teacher_classroom_rules);
 
+        ImageButton edit_profile_button = findViewById(R.id.edit_profile_button);
         Button see_activities_button = findViewById(R.id.see_activities_button);
         ImageButton logout_button = findViewById(R.id.logout_button);
 
@@ -26,6 +28,11 @@ public class Teacher_Classroom_Rules extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        edit_profile_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Teacher_Classroom_Rules.this, Student_See_More_Page.class);
+            startActivity(intent);
         });
 
         see_activities_button.setOnClickListener(v -> {

@@ -1,5 +1,6 @@
 package com.jtdev.all_study;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -29,6 +30,26 @@ public class Student_See_More_Page extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        edit_profile_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Student_See_More_Page.this, Student_Edit_Profile_Page.class);
+            startActivity(intent);
+        });
+
+        notification_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Student_See_More_Page.this, Student_Notification_Page.class);
+            startActivity(intent);
+        });
+
+        join_server_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Student_See_More_Page.this, Student_Join_Server.class);
+            startActivity(intent);
+        });
+
+        favorite_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Student_See_More_Page.this, Student_Favorite_Server_Page.class);
+            startActivity(intent);
         });
 
     }

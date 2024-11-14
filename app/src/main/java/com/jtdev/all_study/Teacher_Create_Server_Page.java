@@ -1,5 +1,6 @@
 package com.jtdev.all_study;
 
+import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.widget.Button;
@@ -35,5 +36,16 @@ public class Teacher_Create_Server_Page extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        edit_profile_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Teacher_Create_Server_Page.this, Teacher_Edit_Profile_Page.class);
+            startActivity(intent);
+        });
+
+        enable_apps_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Teacher_Create_Server_Page.this, Teacher_Enable_Apps_Page.class);
+            startActivity(intent);
+        });
+
     }
 }

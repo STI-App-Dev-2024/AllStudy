@@ -36,21 +36,22 @@ public class Student_Edit_Profile_Page extends AppCompatActivity {
             return insets;
         });
 
-    }
+        notification_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Student_Edit_Profile_Page.this, Student_Notification_Page.class);
+            startActivity(intent);
+        });
 
-    private void showLogoutConfirmationDialog() {
-        // Create an AlertDialog to confirm logout action
-        new AlertDialog.Builder(this)
-                .setTitle("Confirm Logout")
-                .setMessage("Do you want to continue?")
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        logout(); // Proceed with logout
-                    }
-                })
-                .setNegativeButton("No", null) // Dismiss dialog if "No" is clicked
-                .show();
+        join_server_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Student_Edit_Profile_Page.this, Student_Join_Server.class);
+            startActivity(intent);
+        });
+
+        favorite_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Student_Edit_Profile_Page.this, Student_Favorite_Server_Page.class);
+            startActivity(intent);
+
+        });
+
     }
 
     private void logout() {

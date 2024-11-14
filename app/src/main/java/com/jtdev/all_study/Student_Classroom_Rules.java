@@ -31,10 +31,12 @@ public class Student_Classroom_Rules extends AppCompatActivity {
 
         edit_profile_button.setOnClickListener(v -> {
             Intent intent = new Intent(Student_Classroom_Rules.this, Student_Edit_Profile_Page.class);
+            startActivity(intent);
         });
 
         see_activities_button.setOnClickListener(v -> {
             Intent intent = new Intent(Student_Classroom_Rules.this, Student_See_Activities_Page.class);
+            startActivity(intent);
         });
 
     }
