@@ -50,13 +50,18 @@ public class Student_Home_Page extends AppCompatActivity {
         });
 
         profile_button.setOnClickListener(v -> {
-            Intent intent = new Intent(Student_Home_Page.this, Student_Profile_Page.class);
+            Intent intent = new Intent(Student_Home_Page.this, Student_Edit_Profile_Page.class);
             startActivity(intent);
 
         });
 
         join_server_button.setOnClickListener(v -> {
             Intent intent = new Intent(Student_Home_Page.this, Student_See_More_Page.class);
+            startActivity(intent);
+        });
+
+        favorite_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Student_Home_Page.this, Student_Favorite_Server_Page.class);
             startActivity(intent);
         });
 

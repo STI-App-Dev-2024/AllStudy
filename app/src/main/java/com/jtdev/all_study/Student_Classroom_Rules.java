@@ -1,5 +1,6 @@
 package com.jtdev.all_study;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -27,5 +28,14 @@ public class Student_Classroom_Rules extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        edit_profile_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Student_Classroom_Rules.this, Student_Edit_Profile_Page.class);
+        });
+
+        see_activities_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Student_Classroom_Rules.this, Student_See_Activities_Page.class);
+        });
+
     }
 }

@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_student_join_host"
+    tools:context=".Student_Join_Host_Page"
     android:background="#F0F5F9">
 
     <ImageButton
