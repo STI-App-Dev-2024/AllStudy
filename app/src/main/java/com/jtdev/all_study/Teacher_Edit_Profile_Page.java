@@ -37,6 +37,11 @@ public class Teacher_Edit_Profile_Page extends AppCompatActivity {
             startActivity(intent);
         });
 
+        logout_button.setOnClickListener(v -> {
+            PopUp_Confirm_Button popUp = new PopUp_Confirm_Button();
+            popUp.showConfirmButton(Teacher_Edit_Profile_Page.this);
+        });
+
         notification_button.setOnClickListener(v -> {
             Intent intent = new Intent(Teacher_Edit_Profile_Page.this, Teacher_Notification_Page.class);
             startActivity(intent);

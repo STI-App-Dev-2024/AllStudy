@@ -44,6 +44,16 @@ public class Teacher_See_More_Page extends AppCompatActivity {
             startActivity(intent);
         });
 
+        join_now_button_1.setOnClickListener(v -> {
+            Intent intent = new Intent(Teacher_See_More_Page.this, Teacher_Inside_Server_Page.class);
+            startActivity(intent);
+        });
+
+        join_now_button_2.setOnClickListener(v -> {
+            Intent intent = new Intent(Teacher_See_More_Page.this, Teacher_Inside_Server_Page.class);
+            startActivity(intent);
+        });
+
         notification_button.setOnClickListener(v -> {
             Intent intent = new Intent(Teacher_See_More_Page.this, Teacher_Notification_Page.class);
             startActivity(intent);

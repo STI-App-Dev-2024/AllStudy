@@ -40,5 +40,10 @@ public class Student_See_Activities_Page extends AppCompatActivity {
             startActivity(intent);
         });
 
+        logout_button.setOnClickListener(v -> {
+            PopUp_Confirm_Button popUp = new PopUp_Confirm_Button();
+            popUp.showConfirmButton(Student_See_Activities_Page.this);
+        });
+
     }
 }
