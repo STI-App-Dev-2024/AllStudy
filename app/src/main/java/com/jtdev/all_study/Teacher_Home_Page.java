@@ -34,5 +34,10 @@ public class Teacher_Home_Page extends AppCompatActivity {
             startActivity(intent);
         });
 
+        create_server_button.setOnClickListener(v ->{
+            Intent intent = new Intent(Teacher_Home_Page.this, Teacher_Create_Server_Page.class);
+            startActivity(intent);
+        });
+
     }
 }

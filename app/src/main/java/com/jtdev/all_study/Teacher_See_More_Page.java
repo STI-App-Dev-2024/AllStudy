@@ -42,6 +42,11 @@ public class Teacher_See_More_Page extends AppCompatActivity {
             startActivity(intent);
         });
 
+        create_server_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Teacher_See_More_Page.this, Teacher_Create_Server_Page.class);
+            startActivity(intent);
+        });
+
         favorite_button.setOnClickListener(v -> {
             Intent intent = new Intent(Teacher_See_More_Page.this, Teacher_Favorite_Server_Page.class);
             startActivity(intent);

@@ -1,6 +1,7 @@
 package com.jtdev.all_study;
 
 import android.os.Bundle;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -14,10 +15,23 @@ public class Teacher_Notification_Page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teacher_notification_page);
 
+        ImageButton back_button = findViewById(R.id.back_button);
+        ImageButton edit_profile_button = findViewById(R.id.edit_profile_button);
+        ImageButton rectangle_notification_1 = findViewById(R.id.rectangle_notification_1);
+        ImageButton rectangle_notification_2 = findViewById(R.id.rectangle_notification_2);
+        ImageButton rectangle_notification_3 = findViewById(R.id.rectangle_notification_3);
+        ImageButton rectangle_notification_4 = findViewById(R.id.rectangle_notification_4);
+        ImageButton rectangle_notification_5 = findViewById(R.id.rectangle_notification_5);
+        ImageButton notification_button = findViewById(R.id.notification_button);
+        ImageButton create_server_button = findViewById(R.id.create_server_button);
+        ImageButton favorite_button = findViewById(R.id.favorite_button);
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+
     }
 }
