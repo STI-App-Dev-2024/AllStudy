@@ -32,23 +32,18 @@ public class Teacher_Edit_Profile_Page extends AppCompatActivity {
             return insets;
         });
 
-        change_profile_button.setOnClickListener(v -> {
-            Intent intent = new Intent(Teacher_Profile_Page.this, Teacher_Profile_Page.class);
-            startActivity(intent);
-        });
-
         notification_button.setOnClickListener(v -> {
-            Intent intent = new Intent(Teacher_Profile_Page.this, Teacher_Notification_Page.class);
+            Intent intent = new Intent(Teacher_Edit_Profile_Page.this, Teacher_Notification_Page.class);
             startActivity(intent);
         });
 
         create_server_button.setOnClickListener(v -> {
-            Intent intent = new Intent(Teacher_Profile_Page.this, Teacher_Create_Server_Page.class);
+            Intent intent = new Intent(Teacher_Edit_Profile_Page.this, Teacher_Create_Server_Page.class);
             startActivity(intent);
         });
 
         favorite_button.setOnClickListener(v -> {
-            Intent intent = new Intent(Teacher_Profile_Page.this, Teacher_Favorite_Server_Page.class);
+            Intent intent = new Intent(Teacher_Edit_Profile_Page.this, Teacher_Favorite_Server_Page.class);
             startActivity(intent);
         });
 
