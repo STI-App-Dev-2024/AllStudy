@@ -17,9 +17,6 @@
             android:name=".Teacher_See_Activities_Page"
             android:exported="false" />
         <activity
-            android:name=".activity_student_join_host"
-            android:exported="false" />
-        <activity
             android:name=".Student_Join_Server"
             android:exported="false" />
         <activity
@@ -51,12 +48,6 @@
             android:exported="false" />
         <activity
             android:name=".Teacher_Inside_Server_Page"
-            android:exported="false" />
-        <activity
-            android:name=".Teacher_Profile_Page"
-            android:exported="false" />
-        <activity
-            android:name=".Student_Profile_Page"
             android:exported="false" />
         <activity
             android:name=".Student_See_More_Page"
