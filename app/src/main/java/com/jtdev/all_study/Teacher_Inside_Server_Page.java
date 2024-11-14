@@ -32,7 +32,7 @@ public class Teacher_Inside_Server_Page extends AppCompatActivity {
         });
 
         edit_profile_button.setOnClickListener(v -> {
-            Intent intent = new Intent (Teacher_Inside_Server_Page.this, Teacher_Profile_Page.class);
+            Intent intent = new Intent (Teacher_Inside_Server_Page.this, Teacher_Edit_Profile_Page.class);
             startActivity(intent);
         });
 

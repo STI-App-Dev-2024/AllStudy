@@ -37,7 +37,7 @@
     <string name="new_password">New Password</string>
     <string name="enter_new_password">Enter New Password</string>
     <string name="confirm_new_password">Confirm New Password</string>
-    <string name="all_study_terms_conditions_message">By using AllStudy, you agree to the following terms and conditions. Please read them carefully\n\n" + "Some features of the app requires you to create an account. You agree to provide accurate and complete information when creating an account\n\n" + "Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use and protect your personal information"</string>
+    <string name="all_study_terms_conditions_message">By using AllStudy, you agree to the following terms and conditions. Please read them carefully\n\n" "Some features of the app requires you to create an account. You agree to provide accurate and complete information when creating an account\n\n" "Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use and protect your personal information"</string>
     <string name="confirm">Confirm</string>
     <string name="allstudy">ALLSTUDY</string>
     <string name="description_squarestroke" />
