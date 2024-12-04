@@ -28,8 +28,6 @@ public class Student_Edit_Profile_Page extends AppCompatActivity {
         ImageButton join_server_button = findViewById(R.id.join_server_button);
         ImageButton favorite_button = findViewById(R.id.favorite_button);
 
-
-        // Apply window insets for edge-to-edge layout
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
