@@ -27,7 +27,6 @@ public class Teacher_See_More_Page extends AppCompatActivity {
         ImageButton create_server_button = findViewById(R.id.create_server_button);
         ImageButton favorite_button = findViewById(R.id.favorite_button);
 
-
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -68,5 +67,6 @@ public class Teacher_See_More_Page extends AppCompatActivity {
             Intent intent = new Intent(Teacher_See_More_Page.this, Teacher_Favorite_Server_Page.class);
             startActivity(intent);
         });
+
     }
 }

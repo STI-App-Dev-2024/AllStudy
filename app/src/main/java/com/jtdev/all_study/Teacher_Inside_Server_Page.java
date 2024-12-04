@@ -39,7 +39,7 @@ public class Teacher_Inside_Server_Page extends AppCompatActivity {
         see_activities_button.setOnClickListener(v -> {
             Intent intent = new Intent(Teacher_Inside_Server_Page.this, Teacher_See_More_Page.class);
             startActivity(intent);
-            });
+        });
 
         see_classroom_rules_click.setOnClickListener(v -> {
             Intent intent = new Intent(Teacher_Inside_Server_Page.this, Teacher_Classroom_Rules_Page.class);

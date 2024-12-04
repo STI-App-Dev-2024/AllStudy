@@ -25,7 +25,6 @@ public class Teacher_Favorite_Server_Page extends AppCompatActivity {
         ImageButton favorite_server_button_3 = findViewById(R.id.favorite_server_button_3);
         ImageButton notification_button = findViewById(R.id.notification_button);
         ImageButton create_server_button = findViewById(R.id.create_server_button);
-        ImageButton favorite_button = findViewById(R.id.favorite_button);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -50,11 +49,6 @@ public class Teacher_Favorite_Server_Page extends AppCompatActivity {
 
         create_server_button.setOnClickListener(v -> {
             Intent intent = new Intent(Teacher_Favorite_Server_Page.this, Teacher_Create_Server_Page.class);
-            startActivity(intent);
-        });
-
-        favorite_button.setOnClickListener(v -> {
-            Intent intent = new Intent(Teacher_Favorite_Server_Page.this, Teacher_Favorite_Server_Page.class);
             startActivity(intent);
         });
 

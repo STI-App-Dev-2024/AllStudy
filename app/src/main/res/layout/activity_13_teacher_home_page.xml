@@ -215,7 +215,7 @@
 
     <!-- Taskbar Notification Button -->
     <ImageButton
-        android:id="@+id/notification"
+        android:id="@+id/notification_button"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_alignTop="@id/tab_below_image"
