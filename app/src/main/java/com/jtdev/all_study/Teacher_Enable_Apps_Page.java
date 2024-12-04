@@ -39,6 +39,5 @@ public class Teacher_Enable_Apps_Page extends AppCompatActivity {
             startActivity(intent);
         });
 
-
     }
 }

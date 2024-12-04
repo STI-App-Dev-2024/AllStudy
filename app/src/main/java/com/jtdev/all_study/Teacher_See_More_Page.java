@@ -21,8 +21,6 @@ public class Teacher_See_More_Page extends AppCompatActivity {
 
         ImageButton back_button = findViewById(R.id.back_button);
         ImageButton edit_profile_button = findViewById(R.id.edit_profile_button);
-        Button join_now_button_1 = findViewById(R.id.join_now_button_1);
-        Button join_now_button_2 = findViewById(R.id.join_now_button_2);
         ImageButton notification_button = findViewById(R.id.notification_button);
         ImageButton create_server_button = findViewById(R.id.create_server_button);
         ImageButton favorite_button = findViewById(R.id.favorite_button);
@@ -40,16 +38,6 @@ public class Teacher_See_More_Page extends AppCompatActivity {
 
         edit_profile_button.setOnClickListener(v -> {
             Intent intent = new Intent(Teacher_See_More_Page.this, Teacher_Edit_Profile_Page.class);
-            startActivity(intent);
-        });
-
-        join_now_button_1.setOnClickListener(v -> {
-            Intent intent = new Intent(Teacher_See_More_Page.this, Teacher_Inside_Server_Page.class);
-            startActivity(intent);
-        });
-
-        join_now_button_2.setOnClickListener(v -> {
-            Intent intent = new Intent(Teacher_See_More_Page.this, Teacher_Inside_Server_Page.class);
             startActivity(intent);
         });
 

@@ -20,9 +20,6 @@ public class Teacher_Favorite_Server_Page extends AppCompatActivity {
 
         ImageButton back_button = findViewById(R.id.back_button);
         ImageButton edit_profile_button = findViewById(R.id.edit_profile_button);
-        ImageButton favorite_server_button_1 = findViewById(R.id.favorite_server_button_1);
-        ImageButton favorite_server_button_2 = findViewById(R.id.favorite_server_button_2);
-        ImageButton favorite_server_button_3 = findViewById(R.id.favorite_server_button_3);
         ImageButton notification_button = findViewById(R.id.notification_button);
         ImageButton create_server_button = findViewById(R.id.create_server_button);
 
