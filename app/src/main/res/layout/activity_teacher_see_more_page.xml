@@ -171,6 +171,18 @@
             android:contentDescription="@string/server_picture"
             android:src="@drawable/squarestroke" />
 
+        <Button
+            android:id="@+id/join_now_button_2"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="30dp"
+            android:layout_below="@id/section_name_2"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/black"
+            android:fontFamily="@font/product_sans_bold"
+            android:text="@string/join_now"
+            android:textColor="@color/white" />
+
         <!-- Join Now Button -->
 
     </RelativeLayout>
@@ -226,17 +238,6 @@
             android:contentDescription="@string/favorite_button"
             android:src="@drawable/favorite_button"
             android:backgroundTint="#313231" />
-
-    <Button
-        android:id="@+id/join_now_button_2"
-        android:layout_width="150dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="110dp"
-        android:backgroundTint="@color/black"
-        android:fontFamily="@font/product_sans_bold"
-        android:text="@string/join_now"
-        android:textColor="@color/white" />
 
 
 </RelativeLayout>

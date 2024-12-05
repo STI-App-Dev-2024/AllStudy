@@ -103,6 +103,12 @@
     <string name="bscs_2_1a">BSCS 2.1A</string>
     <string name="upload_files">Upload Files</string>
     <string name="add_apps">Add apps</string>
+    <string name="logout_button">Logout Button</string>
+    <string name="notif_button_1">Notif button 1</string>
+    <string name="notif_button_2">Notif Button 2</string>
+    <string name="notif_button_3">Notif Button 3</string>
+    <string name="notif_button_4">Notif Button 4</string>
+    <string name="notif_button_5">Notif Button 5</string>
     =======
     >>>>>>> b7be4084048529bca1d59a87143de44761eda04e
     >>>>>>> 47b24891f1b51626e36c9d7d2cfc0891703c6617
