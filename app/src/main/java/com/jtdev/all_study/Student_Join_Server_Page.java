@@ -11,7 +11,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Student_Join_Server extends AppCompatActivity {
+public class Student_Join_Server_Page extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,9 @@ public class Student_Join_Server extends AppCompatActivity {
 
         ImageButton back_button = findViewById(R.id.back_button);
         ImageButton edit_profile_button = findViewById(R.id.edit_profile_button);
+        Button sort_by_host_button = findViewById(R.id.sort_by_host_button);
+        Button join_now_button_1 = findViewById(R.id.join_now_button_1);
+        Button join_now_button_2 = findViewById(R.id.join_now_button_2);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -29,16 +32,29 @@ public class Student_Join_Server extends AppCompatActivity {
         });
 
         back_button.setOnClickListener(v -> {
-            Intent intent = new Intent(Student_Join_Server.this, Student_Home_Page.class);
+            Intent intent = new Intent(Student_Join_Server_Page.this, Student_Home_Page.class);
             startActivity(intent);
         });
 
         edit_profile_button.setOnClickListener(v -> {
-            Intent intent = new Intent(Student_Join_Server.this, Student_Edit_Profile_Page.class);
+            Intent intent = new Intent(Student_Join_Server_Page.this, Student_Edit_Profile_Page.class);
             startActivity(intent);
         });
 
+        sort_by_host_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Student_Join_Server_Page.this, Student_Join_Host_Page.class);
+            startActivity(intent);
+        });
 
+        join_now_button_1.setOnClickListener(v -> {
+            Intent intent = new Intent(Student_Join_Server_Page.this, Student_Inside_Server_Page.class);
+            startActivity(intent);
+        });
+
+        join_now_button_2.setOnClickListener(v -> {
+            Intent intent = new Intent(Student_Join_Server_Page.this, Student_Inside_Server_Page.class);
+            startActivity(intent);
+        });
 
     }
 }

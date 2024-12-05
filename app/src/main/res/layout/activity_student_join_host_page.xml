@@ -58,7 +58,8 @@
         android:backgroundTint="@color/white"
         android:textColor="@color/black"
         android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"/>
+        android:layout_marginStart="20dp"
+        android:background="@drawable/circular_stroke" />
 
     <Button
         android:id="@+id/sort_by_host_button"

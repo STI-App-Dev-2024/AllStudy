@@ -24,7 +24,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:text="@string/all_study"
-        android:textSize="40sp"
+        android:textSize="35sp"
         android:fontFamily="@font/product_sans_bold" />
 
     <ImageButton
@@ -98,6 +98,7 @@
         android:contentDescription="@string/task_bar"
         android:src="@drawable/tab_below" />
 
+
     <!-- Taskbar Notification Button -->
     <ImageButton
         android:id="@+id/notification_button"
@@ -106,14 +107,13 @@
         android:layout_alignTop="@id/tab_below_image"
         android:layout_alignParentStart="true"
         android:layout_marginStart="45dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="5dp"
         android:contentDescription="@string/server_notification"
         android:src="@drawable/notification_button"
-        android:background="@android:color/transparent"
-        android:backgroundTint="#35216b" />
+        android:backgroundTint="#313231" />
 
-    <!-- Home Button -->
 
+    <!-- Taskbar Join Button -->
     <ImageButton
         android:id="@+id/join_server_button"
         android:layout_width="85dp"
@@ -124,7 +124,6 @@
         android:layout_marginTop="-4dp"
         android:contentDescription="@string/join_server_button"
         android:src="@drawable/join_server_button"
-        android:background="@android:color/transparent"
         android:backgroundTint="#313231" />
 
 
@@ -137,7 +136,6 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="45dp"
         android:layout_marginTop="5dp"
-        android:background="@android:color/transparent"
         android:contentDescription="@string/favorite_button"
         android:src="@drawable/favorite_button"
         android:backgroundTint="#313231" />

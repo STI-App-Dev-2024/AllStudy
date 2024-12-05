@@ -22,10 +22,10 @@
 
     <ImageButton
         android:id="@+id/edit_profile_button"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="33dp"
         android:layout_marginEnd="8dp"
         android:contentDescription="@string/user_profile"
         android:src="@drawable/edit_profile_button"
@@ -212,7 +212,6 @@
         android:fontFamily="@font/product_sans_bold"
         android:textColor="#1060FF" />
 
-
     <!-- Bottom Taskbar -->
     <ImageView
         android:id="@+id/tab_below_image"
@@ -234,7 +233,6 @@
         android:layout_marginTop="5dp"
         android:contentDescription="@string/server_notification"
         android:src="@drawable/notification_button"
-        android:background="@android:color/transparent"
         android:backgroundTint="#313231" />
 
 
@@ -249,7 +247,6 @@
         android:layout_marginTop="-4dp"
         android:contentDescription="@string/join_server_button"
         android:src="@drawable/join_server_button"
-        android:background="@android:color/transparent"
         android:backgroundTint="#313231" />
 
 
@@ -262,7 +259,6 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="45dp"
         android:layout_marginTop="5dp"
-        android:background="@android:color/transparent"
         android:contentDescription="@string/favorite_button"
         android:src="@drawable/favorite_button"
         android:backgroundTint="#313231" />

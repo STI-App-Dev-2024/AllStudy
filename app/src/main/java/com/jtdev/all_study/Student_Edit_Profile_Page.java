@@ -1,13 +1,11 @@
 package com.jtdev.all_study;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -45,7 +43,7 @@ public class Student_Edit_Profile_Page extends AppCompatActivity {
         });
 
         join_server_button.setOnClickListener(v -> {
-            Intent intent = new Intent(Student_Edit_Profile_Page.this, Student_Join_Server.class);
+            Intent intent = new Intent(Student_Edit_Profile_Page.this, Student_Join_Server_Page.class);
             startActivity(intent);
         });
 

@@ -20,7 +20,7 @@
             android:name=".Teacher_See_Activities_Page"
             android:exported="false" />
         <activity
-            android:name=".Student_Join_Server"
+            android:name=".Student_Join_Server_Page"
             android:exported="false" />
         <activity
             android:name=".Teacher_Forgot_Password_Page"
