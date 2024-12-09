@@ -13,6 +13,14 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class Student_Home_Page extends AppCompatActivity {
 
+    ImageButton edit_profile_button;
+    Button join_now_button;
+    Button see_more_button;
+    ImageButton notification_button;
+    ImageButton join_server_button;
+    ImageButton favorite_button;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,18 +28,24 @@ public class Student_Home_Page extends AppCompatActivity {
         setContentView(R.layout.activity_12_student_home_page);
 
         // Instantiated all buttons by getting their IDs from student_homepage.xml
-        ImageButton edit_profile_button = findViewById(R.id.edit_profile_button);
-        Button join_now_button = findViewById(R.id.join_now_button);
-        Button see_more_button = findViewById(R.id.see_more_button);
-        ImageButton notification_button = findViewById(R.id.notification_button);
-        ImageButton join_server_button = findViewById(R.id.join_server_button);
-        ImageButton favorite_button = findViewById(R.id.favorite_button);
+        edit_profile_button = findViewById(R.id.edit_profile_button);
+        join_now_button = findViewById(R.id.join_now_button);
+        see_more_button = findViewById(R.id.see_more_button);
+        notification_button = findViewById(R.id.notification_button);
+        join_server_button = findViewById(R.id.join_server_button);
+        favorite_button = findViewById(R.id.favorite_button);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
 
         edit_profile_button.setOnClickListener(v -> {
             Intent intent = new Intent(Student_Home_Page.this, Student_Edit_Profile_Page.class);

@@ -51,10 +51,5 @@ public class Student_Join_Server_Page extends AppCompatActivity {
             startActivity(intent);
         });
 
-        join_now_button_2.setOnClickListener(v -> {
-            Intent intent = new Intent(Student_Join_Server_Page.this, Student_Inside_Server_Page.class);
-            startActivity(intent);
-        });
-
     }
 }

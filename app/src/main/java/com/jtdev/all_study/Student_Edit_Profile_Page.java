@@ -21,7 +21,6 @@ public class Student_Edit_Profile_Page extends AppCompatActivity {
         setContentView(R.layout.activity_student_edit_profile_page);
 
         ImageButton back_button = findViewById(R.id.back_button);
-        ImageButton change_profile_button = findViewById(R.id.change_profile_button);
         ImageButton notification_button = findViewById(R.id.notification_button);
         ImageButton join_server_button = findViewById(R.id.join_server_button);
         ImageButton favorite_button = findViewById(R.id.favorite_button);

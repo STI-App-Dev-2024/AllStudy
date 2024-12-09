@@ -18,7 +18,6 @@
         android:contentDescription="@string/back_button"
         android:src="@drawable/back_button" />
 
-
     <!-- All Study -->
     <TextView
         android:id="@+id/all_study_title"
@@ -59,10 +58,11 @@
         android:id="@+id/logout_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/log_out"
+        android:layout_above="@+id/tab_below_image"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="650dp"
-        android:backgroundTint="#f23535"/>
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#f23535"
+        android:text="@string/log_out" />
 
     <!-- Bottom Taskbar -->
     <ImageView

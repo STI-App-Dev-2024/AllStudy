@@ -39,6 +39,16 @@
         android:layout_marginStart="12dp"
         android:textStyle="bold" />
 
+    <Button
+        android:id="@+id/logout_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tab_below_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#f23535"
+        android:text="@string/log_out" />
+
     <!-- Bottom Taskbar -->
     <ImageView
         android:id="@+id/tab_below_image"
