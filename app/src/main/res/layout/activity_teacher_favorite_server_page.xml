@@ -17,7 +17,6 @@
         android:contentDescription="@string/back_button"
         android:src="@drawable/back_button" />
 
-
     <!-- All Study -->
     <TextView
         android:id="@+id/all_study_title"
@@ -123,7 +122,7 @@
         android:layout_marginEnd="45dp"
         android:layout_marginTop="5dp"
         android:contentDescription="@string/favorite_button"
-        android:src="@drawable/favorite_button"
+        android:src="@drawable/heart_blue"
         android:backgroundTint="#313231" />
 
 

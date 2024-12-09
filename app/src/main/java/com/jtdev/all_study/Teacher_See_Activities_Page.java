@@ -19,19 +19,13 @@ public class Teacher_See_Activities_Page extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_teacher_see_activities_page);
 
-        ImageButton edit_profile_button = findViewById(R.id.edit_profile_button);
         Button see_participants_button = findViewById(R.id.see_participants_button);
-        Button logout_button = findViewById(R.id.logout_button);
+        ImageButton logout_button = findViewById(R.id.logout_button);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
-        });
-
-        edit_profile_button.setOnClickListener(v -> {
-            Intent intent = new Intent(Teacher_See_Activities_Page.this, Teacher_Edit_Profile_Page.class);
-            startActivity(intent);
         });
 
         see_participants_button.setOnClickListener(v -> {

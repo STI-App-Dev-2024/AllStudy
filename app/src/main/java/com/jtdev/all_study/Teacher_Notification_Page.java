@@ -18,6 +18,11 @@ public class Teacher_Notification_Page extends AppCompatActivity {
 
         ImageButton back_button = findViewById(R.id.back_button);
         ImageButton edit_profile_button = findViewById(R.id.edit_profile_button);
+        ImageButton rectangle_notification_1 = findViewById(R.id.rectangle_notification_1);
+        ImageButton rectangle_notification_2 = findViewById(R.id.rectangle_notification_2);
+        ImageButton rectangle_notification_3 = findViewById(R.id.rectangle_notification_3);
+        ImageButton rectangle_notification_4 = findViewById(R.id.rectangle_notification_4);
+        ImageButton rectangle_notification_5 = findViewById(R.id.rectangle_notification_5);
         ImageButton create_server_button = findViewById(R.id.create_server_button);
         ImageButton favorite_button = findViewById(R.id.favorite_button);
 

@@ -14,7 +14,12 @@
         android:theme="@style/Theme.AllStudy"
         tools:targetApi="31">
 
-
+        <activity
+            android:name=".Student_Join_Server_Page"
+            android:exported="false" />
+        <activity
+            android:name=".Student_Join_Host_Page"
+            android:exported="false" />
         <activity
             android:name=".Teacher_See_Activities_Page"
             android:exported="false" />
@@ -23,9 +28,6 @@
             android:exported="false" />
         <activity
             android:name=".Student_Edit_Profile_Page"
-            android:exported="false" />
-        <activity
-            android:name=".Student_Join_Server_Page"
             android:exported="false" />
         <activity
             android:name=".Teacher_Forgot_Password_Page"
