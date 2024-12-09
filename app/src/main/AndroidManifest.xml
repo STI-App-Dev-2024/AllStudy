@@ -18,6 +18,12 @@
             android:name=".Student_Join_Server_Page"
             android:exported="false" />
         <activity
+            android:name=".Student_Notification_Page"
+            android:exported="false" />
+        <activity
+            android:name=".Student_Favorite_Server_Page"
+            android:exported="false" />
+        <activity
             android:name=".Student_Join_Host_Page"
             android:exported="false" />
         <activity
