@@ -47,7 +47,7 @@ public class Teacher_Inside_Server_Page extends AppCompatActivity {
         });
 
         logout_button.setOnClickListener(v -> {
-            PopUp_Confirm_Button popUp = new PopUp_Confirm_Button();
+            PopUp_Logout_Confirm_Button popUp = new PopUp_Logout_Confirm_Button();
             popUp.showConfirmButton(Teacher_Inside_Server_Page.this);
         });
 

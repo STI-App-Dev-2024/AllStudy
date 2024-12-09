@@ -48,10 +48,9 @@ public class Student_Inside_Server_Page extends AppCompatActivity {
         });
 
         logout_button.setOnClickListener(v -> {
-            PopUp_Confirm_Button popUp = new PopUp_Confirm_Button();
+            Student_PopUp_Leave_Server popUp = new Student_PopUp_Leave_Server();
             popUp.showConfirmButton(Student_Inside_Server_Page.this);
         });
-
 
     }
 }

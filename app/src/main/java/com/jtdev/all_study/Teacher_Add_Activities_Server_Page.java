@@ -22,7 +22,7 @@ public class Teacher_Add_Activities_Server_Page extends AppCompatActivity {
         ImageButton back_button = findViewById(R.id.back_button);
         Button create_server_button = findViewById(R.id.create_server_button);
         ImageButton add_activity_button = findViewById(R.id.add_files_button);
-
+        ImageButton logout_button = findViewById(R.id.logout_button);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -43,7 +43,12 @@ public class Teacher_Add_Activities_Server_Page extends AppCompatActivity {
         add_activity_button.setOnClickListener(v -> {
             Intent intent = new Intent(Teacher_Add_Activities_Server_Page.this, Teacher_Add_Activities_Server_Page.class);
             startActivity(intent);
-
         });
+
+        logout_button.setOnClickListener(v -> {
+            Teacher_PopUp_Leave_Server popUp = new Teacher_PopUp_Leave_Server();
+            popUp.showConfirmButton(Teacher_Add_Activities_Server_Page.this);
+        });
+
     }
 }

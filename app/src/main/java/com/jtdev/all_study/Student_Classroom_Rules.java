@@ -40,7 +40,7 @@ public class Student_Classroom_Rules extends AppCompatActivity {
         });
 
         logout_button.setOnClickListener(v -> {
-            PopUp_Confirm_Button popUp = new PopUp_Confirm_Button();
+            PopUp_Logout_Confirm_Button popUp = new PopUp_Logout_Confirm_Button();
             popUp.showConfirmButton(Student_Classroom_Rules.this);
         });
 

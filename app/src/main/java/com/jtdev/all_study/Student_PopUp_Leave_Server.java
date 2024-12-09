@@ -6,14 +6,14 @@ import android.content.Intent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class PopUp_Confirm_Button {
+public class Student_PopUp_Leave_Server {
 
     public void showConfirmButton(Context context) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle(R.string.are_you_sure);
+        builder.setTitle("Are you sure you want to leave server?");
 
         builder.setPositiveButton("Yes", (dialog, which) -> {
-            Intent intent = new Intent (context, LogIn_or_SignUp.class);
+            Intent intent = new Intent(context, Student_Home_Page.class);
 
             context.startActivity(intent);
             if (context instanceof AppCompatActivity) {
@@ -26,5 +26,4 @@ public class PopUp_Confirm_Button {
         AlertDialog no = builder.create();
         no.show();
     }
-
 }
