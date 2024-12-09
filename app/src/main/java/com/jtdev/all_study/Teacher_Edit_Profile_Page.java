@@ -17,7 +17,7 @@ public class Teacher_Edit_Profile_Page extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_teacher_profile_page);
+        setContentView(R.layout.activity_teacher_edit_profile_page);
 
         ImageButton back_button = findViewById(R.id.back_button);
         ImageButton change_profile_button = findViewById(R.id.change_profile_button);

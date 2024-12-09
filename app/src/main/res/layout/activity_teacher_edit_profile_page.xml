@@ -30,17 +30,37 @@
         android:fontFamily="@font/product_sans_bold" />
 
     <!-- Profile Picture -->
-    <ImageButton
+    <ImageView
         android:id="@+id/change_profile_button"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_below="@id/all_study_title"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="40dp"
-        android:background="@android:color/transparent"
-        android:backgroundTint="#313231"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        android:clickable="true"
+        android:focusable="true"
         android:contentDescription="@string/change_picture_button"
         android:src="@drawable/circle_for_profile" />
+
+    <EditText
+        android:id="@+id/full_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/full_name"
+        android:layout_below="@id/all_study_title"
+        android:textSize="25sp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="35dp"/>
+
+    <EditText
+        android:id="@+id/bio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/bio"
+        android:layout_below="@id/full_name"
+        android:textSize="18sp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="-10dp"/>
 
     <TextView
         android:id="@+id/about_me_title"
@@ -49,20 +69,29 @@
         android:text="@string/about_me"
         android:textSize="30sp"
         android:layout_below="@id/change_profile_button"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="25dp"
         android:textStyle="bold" />
 
+    <ImageView
+        android:id="@+id/rectangle_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rectangle_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/about_me_title" />
+
+
     <!-- Logout Button -->
-    <Button
+    <ImageButton
         android:id="@+id/logout_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/tab_below_image"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="50dp"
-        android:backgroundTint="#f23535"
-        android:text="@string/log_out" />
+        android:layout_marginBottom="100dp"
+        android:src="@drawable/logout"
+        android:background="@android:color/transparent"
+        android:layout_alignParentBottom="true"/>
 
     <!-- Bottom Taskbar -->
     <ImageView
