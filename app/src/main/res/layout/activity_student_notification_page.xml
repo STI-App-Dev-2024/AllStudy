@@ -110,7 +110,7 @@
         android:layout_marginTop="5dp"
         android:contentDescription="@string/server_notification"
         android:src="@drawable/notification_button"
-        android:backgroundTint="#313231" />
+        android:background="#313231" />
 
 
     <!-- Taskbar Join Button -->
