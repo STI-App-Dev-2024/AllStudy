@@ -1,7 +1,10 @@
 package com.jtdev.all_study;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -10,6 +13,8 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -18,6 +23,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class Teacher_LogIn_Page extends AppCompatActivity {
+
+    private static final String CHANNEL_ID = "simplified_coding";
+    private static final CharSequence CHANNEL_NAME = "Simplified Coding Notifications";
+    private static final String CHANNEL_DESCRIPTION = "This is the description of the channel.";
 
     private EditText email;
     private EditText password;
@@ -45,6 +54,13 @@ public class Teacher_LogIn_Page extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        // Request Notification Permission (Android 13+)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            if (checkSelfPermission(android.Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+                requestPermissions(new String[]{android.Manifest.permission.POST_NOTIFICATIONS}, 101);
+            }
+        }
 
         signin_button.setOnClickListener(v -> {
             String emailInput = email.getText().toString().trim();
@@ -101,6 +117,10 @@ public class Teacher_LogIn_Page extends AppCompatActivity {
                         FirebaseUser user = mAuth.getCurrentUser();
                         Toast.makeText(Teacher_LogIn_Page.this, "Welcome back, " + user.getEmail(), Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(Teacher_LogIn_Page.this, Teacher_Splash_Screen.class);
+
+                        // Display the notification after login
+                        displayNotification();
+
                         startActivity(intent);
                         finish();
                     } else {
@@ -108,5 +128,22 @@ public class Teacher_LogIn_Page extends AppCompatActivity {
                         Toast.makeText(Teacher_LogIn_Page.this, "Authentication failed. Invalid email or password.", Toast.LENGTH_SHORT).show();
                     }
                 });
+    }
+
+    private void displayNotification() {
+        Log.d("NotificationDebug", "Displaying notification...");
+
+        // Build the notification
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this, CHANNEL_ID)
+                .setSmallIcon(R.drawable.teachericon)  // Use your teacher icon here
+                .setContentTitle("Welcome Teacher!")
+                .setContentText("AllStudy Server is Online!")
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setDefaults(NotificationCompat.DEFAULT_ALL)
+                .setAutoCancel(true);
+
+        // NotificationManagerCompat to display the notification
+        NotificationManagerCompat mNotificationMgr = NotificationManagerCompat.from(this);
+        mNotificationMgr.notify(1, mBuilder.build());
     }
 }

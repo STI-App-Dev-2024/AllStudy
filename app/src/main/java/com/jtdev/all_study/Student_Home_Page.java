@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,7 +20,10 @@ public class Student_Home_Page extends AppCompatActivity {
     ImageButton notification_button;
     ImageButton join_server_button;
     ImageButton favorite_button;
+    TextView notificationBadge;    // Reference for the notification badge
 
+    // Variable to hold the number of notifications
+    private int notificationCount = 0;  // Start with 0 notifications
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,19 +38,23 @@ public class Student_Home_Page extends AppCompatActivity {
         notification_button = findViewById(R.id.notification_button);
         join_server_button = findViewById(R.id.join_server_button);
         favorite_button = findViewById(R.id.favorite_button);
+        notificationBadge = findViewById(R.id.notification_badge);  // Find the notification badge TextView
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-    }
 
+        // Show the notification badge with the initial count
+        setNotificationBadge(notificationCount);
+    }
 
     @Override
     protected void onStart() {
         super.onStart();
 
+        // Set up button actions
         edit_profile_button.setOnClickListener(v -> {
             Intent intent = new Intent(Student_Home_Page.this, Student_Edit_Profile_Page.class);
             startActivity(intent);
@@ -62,19 +70,51 @@ public class Student_Home_Page extends AppCompatActivity {
             startActivity(intent);
         });
 
-        notification_button.setOnClickListener(v ->{
+        notification_button.setOnClickListener(v -> {
+            // Navigate to the notifications page
             Intent intent = new Intent(Student_Home_Page.this, Student_Notification_Page.class);
             startActivity(intent);
+
+            // Show the notification badge with 1 notification count (indicating unread notifications)
+            notificationCount = 1;  // Set 1 notification to be displayed
+            setNotificationBadge(notificationCount);  // Update badge visibility and count
         });
 
-        join_server_button.setOnClickListener(v ->{
+        join_server_button.setOnClickListener(v -> {
             Intent intent = new Intent(Student_Home_Page.this, Student_Inside_Server_Page.class);
             startActivity(intent);
         });
 
-        favorite_button.setOnClickListener(v ->{
+        favorite_button.setOnClickListener(v -> {
             Intent intent = new Intent(Student_Home_Page.this, Student_Favorite_Server_Page.class);
             startActivity(intent);
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        // If there are still notifications, show the badge
+        setNotificationBadge(notificationCount);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        // Reset the notification count and hide the badge when navigating back from the notifications page
+        notificationCount = 0;  // No more notifications after viewing
+        setNotificationBadge(notificationCount);  // Hide the badge
+    }
+
+    // Method to dynamically set the notification badge count
+    private void setNotificationBadge(int notificationCount) {
+        if (notificationCount > 0) {
+            notificationBadge.setText(String.valueOf(notificationCount));  // Display the count
+            notificationBadge.setVisibility(TextView.VISIBLE);  // Show the badge
+        } else {
+            notificationBadge.setVisibility(TextView.GONE);  // Hide the badge if there are no notifications
+        }
     }
 }

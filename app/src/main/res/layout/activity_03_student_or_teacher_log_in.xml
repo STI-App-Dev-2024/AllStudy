@@ -52,7 +52,7 @@
             android:contentDescription="@string/student_log_in"
             android:clickable="true"
             android:focusable="true"
-            android:src="@drawable/student_login"/>
+            android:src="@drawable/studenticon"/>
 
         <ImageView
             android:id="@+id/teacher_button"
@@ -61,7 +61,7 @@
             android:contentDescription="@string/teacher_log_in"
             android:clickable="true"
             android:focusable="true"
-            android:src="@drawable/teacher_login"
+            android:src="@drawable/teachericon"
             android:layout_marginStart="100dp" />
 
     </LinearLayout>

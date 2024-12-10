@@ -155,35 +155,35 @@
             <!-- Placeholder views for the items -->
 
             <ImageButton
+
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginEnd="8dp"
-                android:background="@android:color/darker_gray" />
+                android:background="@drawable/code" />
 
             <ImageButton
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginEnd="8dp"
-                android:background="@android:color/darker_gray" />
+                android:background="@drawable/laptop" />
 
             <ImageButton
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginEnd="8dp"
-                android:background="@android:color/darker_gray" />
+                android:background="@drawable/mech" />
 
             <ImageButton
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginEnd="8dp"
-                android:background="@android:color/darker_gray" />
+                android:background="@drawable/art" />
 
             <ImageButton
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginEnd="8dp"
-                android:background="@android:color/darker_gray" />
-
+                android:background="@drawable/books" />
 
             <ImageButton
                 android:layout_width="100dp"
@@ -203,14 +203,13 @@
         android:layout_width="150dp"
         android:layout_height="60dp"
         android:layout_below="@+id/more_active_server"
-        android:layout_alignParentEnd="true"
+        android:backgroundTint="#302E2E"
         android:layout_marginTop="160dp"
-        android:layout_marginEnd="105dp"
-        android:backgroundTint="#F0EFEF"
+        android:layout_centerHorizontal="true"
         android:text="@string/see_more"
         android:textSize="18sp"
         android:fontFamily="@font/product_sans_bold"
-        android:textColor="#1060FF" />
+        android:textColor="#FFFF" />
 
     <!-- Bottom Taskbar -->
     <ImageView
@@ -234,6 +233,19 @@
         android:contentDescription="@string/server_notification"
         android:src="@drawable/notification_button"
         android:backgroundTint="#313231" />
+
+    <TextView
+        android:id="@+id/notification_badge"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginVertical="690dp"
+        android:layout_marginHorizontal="45dp"
+        android:background="@drawable/circle_red"
+        android:fontFamily="@font/product_sans_bold"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"/>
 
 
     <!-- Taskbar Join Button -->

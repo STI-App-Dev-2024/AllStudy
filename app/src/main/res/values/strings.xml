@@ -22,7 +22,7 @@
     <string name="active_server">Active Server</string>
     <string name="join_now">Join Now</string>
     <string name="coding">Coding</string>
-    <string name="more_active_servers">More active Servers</string>
+    <string name="more_active_servers">More Active Servers</string>
     <string name="list_of_servers">List of Servers</string>
     <string name="verification">Verification</string>
     <string name="don_t_have_an_account">Don\'t have an account?</string>
@@ -47,7 +47,7 @@
     <string name="create_an_account">Create an account</string>
     <string name="student_sign_up">Student Sign Up</string>
     <string name="teacher_sign_upp">Teacher Sign Up</string>
-    <string name="see_more">See more</string>
+    <string name="see_more">see more</string>
     <string name="i_agree_to_the">I agree to the</string>
     <string name="terms_conditions"><![CDATA[terms & conditions]]></string>
     <string name="student_log_in">Student Log In</string>
