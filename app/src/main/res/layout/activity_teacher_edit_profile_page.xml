@@ -40,7 +40,7 @@
         android:clickable="true"
         android:focusable="true"
         android:contentDescription="@string/change_picture_button"
-        android:src="@drawable/circle_for_profile" />
+        android:src="@drawable/teacher_profile" />
 
     <EditText
         android:id="@+id/full_name"
@@ -89,6 +89,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="100dp"
+        android:contentDescription="@string/log_out_button"
         android:src="@drawable/logout"
         android:background="@android:color/transparent"
         android:layout_alignParentBottom="true"/>

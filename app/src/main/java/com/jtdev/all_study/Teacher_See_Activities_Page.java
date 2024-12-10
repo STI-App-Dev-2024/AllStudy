@@ -34,7 +34,7 @@ public class Teacher_See_Activities_Page extends AppCompatActivity {
         });
 
         leave_server_button.setOnClickListener(v -> {
-            PopUp_Logout_Confirm_Button popUp = new PopUp_Logout_Confirm_Button();
+            Teacher_PopUp_Leave_Server popUp = new Teacher_PopUp_Leave_Server();
             popUp.showConfirmButton(Teacher_See_Activities_Page.this);
         });
 

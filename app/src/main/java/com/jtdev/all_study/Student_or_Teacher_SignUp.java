@@ -3,6 +3,7 @@ package com.jtdev.all_study;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -21,8 +22,8 @@ public class Student_or_Teacher_SignUp extends AppCompatActivity {
 
         // Initialize UI buttons by finding them using their IDs
         ImageButton back_button = findViewById(R.id.back_button);
-        ImageButton student_button = findViewById(R.id.student_button);
-        ImageButton teacher_button = findViewById(R.id.teacher_button);
+        ImageView student_button = findViewById(R.id.student_button);
+        ImageView teacher_button = findViewById(R.id.teacher_button);
 
         // Handle system window insets for proper layout
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

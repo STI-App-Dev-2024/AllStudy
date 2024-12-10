@@ -30,13 +30,13 @@
 
     <ImageButton
         android:id="@+id/edit_profile_button"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="8dp"
         android:contentDescription="@string/user_profile"
-        android:src="@drawable/edit_profile_button"
+        android:src="@drawable/teacher_profile"
         android:background="#F0F5F9" />
 
     <TextView

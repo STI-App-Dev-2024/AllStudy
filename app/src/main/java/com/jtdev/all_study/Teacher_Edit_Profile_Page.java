@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,8 +21,8 @@ public class Teacher_Edit_Profile_Page extends AppCompatActivity {
         setContentView(R.layout.activity_teacher_edit_profile_page);
 
         ImageButton back_button = findViewById(R.id.back_button);
-        ImageButton change_profile_button = findViewById(R.id.change_profile_button);
-        Button logout_button = findViewById(R.id.logout_button);
+        ImageView change_profile_button = findViewById(R.id.change_profile_button);
+        ImageButton logout_button = findViewById(R.id.logout_button);
         ImageButton notification_button = findViewById(R.id.notification_button);
         ImageButton create_server_button = findViewById(R.id.create_server_button);
         ImageButton favorite_button = findViewById(R.id.favorite_button);
@@ -56,7 +57,6 @@ public class Teacher_Edit_Profile_Page extends AppCompatActivity {
             Intent intent = new Intent(Teacher_Edit_Profile_Page.this, Teacher_Favorite_Server_Page.class);
             startActivity(intent);
         });
-
 
     }
 }

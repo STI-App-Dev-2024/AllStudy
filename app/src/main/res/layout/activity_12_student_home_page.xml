@@ -28,7 +28,7 @@
         android:layout_marginTop="33dp"
         android:layout_marginEnd="8dp"
         android:contentDescription="@string/user_profile"
-        android:src="@drawable/edit_profile_button"
+        android:src="@drawable/student_profile"
         android:background="#F0F5F9" />
 
     <!-- Subtitle for list of servers -->
