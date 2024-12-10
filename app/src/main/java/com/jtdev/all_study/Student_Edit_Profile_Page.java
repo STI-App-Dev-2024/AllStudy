@@ -53,7 +53,8 @@ public class Student_Edit_Profile_Page extends AppCompatActivity {
         });
 
         logout_button.setOnClickListener(v -> {
-            logout();
+            PopUp_Logout_Confirm_Button popUp = new PopUp_Logout_Confirm_Button();
+            popUp.showConfirmButton(Student_Edit_Profile_Page.this);
         });
 
     }

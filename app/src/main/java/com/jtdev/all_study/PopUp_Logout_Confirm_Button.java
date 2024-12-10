@@ -10,7 +10,7 @@ public class PopUp_Logout_Confirm_Button {
 
     public void showConfirmButton(Context context) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle(R.string.are_you_sure);
+        builder.setTitle("Are you sure you want to logout?");
 
         builder.setPositiveButton("Yes", (dialog, which) -> {
             Intent intent = new Intent (context, LogIn_or_SignUp.class);

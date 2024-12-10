@@ -1,6 +1,7 @@
 package com.jtdev.all_study;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -38,11 +39,6 @@ public class Teacher_Edit_Profile_Page extends AppCompatActivity {
             startActivity(intent);
         });
 
-        logout_button.setOnClickListener(v -> {
-            PopUp_Logout_Confirm_Button popUp = new PopUp_Logout_Confirm_Button();
-            popUp.showConfirmButton(Teacher_Edit_Profile_Page.this);
-        });
-
         notification_button.setOnClickListener(v -> {
             Intent intent = new Intent(Teacher_Edit_Profile_Page.this, Teacher_Notification_Page.class);
             startActivity(intent);
@@ -57,6 +53,26 @@ public class Teacher_Edit_Profile_Page extends AppCompatActivity {
             Intent intent = new Intent(Teacher_Edit_Profile_Page.this, Teacher_Favorite_Server_Page.class);
             startActivity(intent);
         });
+
+        logout_button.setOnClickListener(v -> {
+            PopUp_Logout_Confirm_Button popUp = new PopUp_Logout_Confirm_Button();
+            popUp.showConfirmButton(Teacher_Edit_Profile_Page.this);
+        });
+
+    }
+
+        private void logout() {
+            // Clear the session or user data in SharedPreferences
+            SharedPreferences sharedPreferences = getSharedPreferences("UserSession", MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.clear();  // Clear all data
+            editor.apply();  // Save changes
+
+            // Redirect to LoginActivity
+            Intent intent = new Intent(Teacher_Edit_Profile_Page.this, Student_LogIn.class);  // Fixed the intent destination
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // Clear the activity stack
+            startActivity(intent);
+            finish();  // Close the current activity
 
     }
 }
