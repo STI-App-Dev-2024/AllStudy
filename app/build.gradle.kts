@@ -31,6 +31,7 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    buildToolsVersion = "34.0.0"
 }
 
 dependencies {
@@ -41,13 +42,17 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.media3.common)
 
-    //firebase
-    implementation(platform("com.google.firebase:firebase-bom:33.5.1"))
+    // Add androidx.core:core-ktx dependency
+    implementation("androidx.core:core-ktx:1.12.0")
+
+    // Firebase dependencies
+    implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
     implementation("com.google.firebase:firebase-analytics")
     implementation(libs.firebase.auth)
     implementation(libs.firebase.database)
+    implementation("io.appwrite:sdk-for-android:6.0.0")
 
-    //Test
+    // Test dependencies
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

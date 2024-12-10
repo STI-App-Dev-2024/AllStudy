@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -16,17 +17,18 @@ public class LogIn_or_SignUp extends AppCompatActivity {
 
     private CheckBox agree_box;
 
-    //For unit testing
     public boolean isValidEmail(String email) {
         String emailRegex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$";
         return email.matches(emailRegex);
-    } //For unit testing
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_02_login_or_sign_up);
+
+
 
         // Initialize UI elements by finding them using their IDs
         Button login_button = findViewById(R.id.login_button);
@@ -65,6 +67,6 @@ public class LogIn_or_SignUp extends AppCompatActivity {
             PopUp_Terms_and_Condition popUp = new PopUp_Terms_and_Condition();
             popUp.showPopUp(LogIn_or_SignUp.this);
         });
-
     }
 }
+

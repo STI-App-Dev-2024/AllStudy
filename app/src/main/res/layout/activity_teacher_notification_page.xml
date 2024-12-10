@@ -23,8 +23,8 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:text="@string/all_study"
-        android:textSize="40sp"
+        android:text="@string/notification"
+        android:textSize="35sp"
         android:fontFamily="@font/product_sans_bold" />
 
     <ImageButton
@@ -47,50 +47,6 @@
         android:layout_marginTop="28dp"
         android:layout_marginBottom="5dp"
         android:layout_below="@+id/all_study_title"
-        android:layout_centerHorizontal="true"
-        android:background="@android:color/transparent"/>
-
-    <ImageButton
-        android:id="@+id/rectangle_notification_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/notif_button_2"
-        android:src="@drawable/rectangle_30"
-        android:layout_marginBottom="5dp"
-        android:layout_below="@+id/rectangle_notification_1"
-        android:layout_centerHorizontal="true"
-        android:background="@android:color/transparent"/>
-
-    <ImageButton
-        android:id="@+id/rectangle_notification_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/notif_button_3"
-        android:src="@drawable/rectangle_30"
-        android:layout_marginBottom="5dp"
-        android:layout_below="@+id/rectangle_notification_2"
-        android:layout_centerHorizontal="true"
-        android:background="@android:color/transparent"/>
-
-    <ImageButton
-        android:id="@+id/rectangle_notification_4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/notif_button_4"
-        android:src="@drawable/rectangle_30"
-        android:layout_marginBottom="5dp"
-        android:layout_below="@+id/rectangle_notification_3"
-        android:layout_centerHorizontal="true"
-        android:background="@android:color/transparent"/>
-
-    <ImageButton
-        android:id="@+id/rectangle_notification_5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/notif_button_5"
-        android:src="@drawable/rectangle_30"
-        android:layout_marginBottom="5dp"
-        android:layout_below="@+id/rectangle_notification_4"
         android:layout_centerHorizontal="true"
         android:background="@android:color/transparent"/>
 

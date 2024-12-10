@@ -1,7 +1,12 @@
 package com.jtdev.all_study;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -10,6 +15,8 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -18,6 +25,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class Student_LogIn extends AppCompatActivity {
+
+    private static final String CHANNEL_ID = "simplified_coding";
+    private static final CharSequence CHANNEL_NAME = "Simplified Coding Notifications";
+    private static final String CHANNEL_DESCRIPTION = "This is the description of the channel.";
 
     private EditText email;
     private EditText password;
@@ -47,12 +58,19 @@ public class Student_LogIn extends AppCompatActivity {
             return insets;
         });
 
+
+        // Request Notification Permission (Android 13+)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            if (checkSelfPermission(android.Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+                requestPermissions(new String[]{android.Manifest.permission.POST_NOTIFICATIONS}, 101);
+            }
+        }
+
         // Set up login button click listener
-        login_button.setOnClickListener(v -> {
+        login_button.setOnClickListener(view -> {
             if (areAllFieldsValid()) {
                 String emailInput = email.getText().toString();
                 String passwordInput = password.getText().toString();
-                // Perform Firebase login
                 performLogin(emailInput, passwordInput);
             } else {
                 Toast.makeText(Student_LogIn.this, "Invalid Credentials", Toast.LENGTH_SHORT).show();
@@ -77,6 +95,7 @@ public class Student_LogIn extends AppCompatActivity {
             startActivity(intent);
         });
     }
+
 
     private boolean areAllFieldsValid() {
         boolean isValid = true;
@@ -107,12 +126,28 @@ public class Student_LogIn extends AppCompatActivity {
                         FirebaseUser user = mAuth.getCurrentUser();
                         Toast.makeText(Student_LogIn.this, "Welcome back, " + user.getEmail(), Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(Student_LogIn.this, Student_Splash_Screen.class);
+                        displayNotification();
                         startActivity(intent);
                         finish(); // Close the current activity
                     } else {
                         // Login failed
-                        Toast.makeText(Student_LogIn.this, "Authentication failed. Please check your credentials.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Student_LogIn.this, "Login failed. Please check your credentials.", Toast.LENGTH_SHORT).show();
                     }
                 });
+    }
+
+    private void displayNotification() {
+        Log.d("NotificationDebug", "Displaying notification...");
+
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this, CHANNEL_ID)
+                .setSmallIcon(R.drawable.studenticon)
+                .setContentTitle("Hello There Dear Student!")
+                .setContentText("AllStudy Server is Online!")
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setDefaults(NotificationCompat.DEFAULT_ALL)
+                .setAutoCancel(false);
+
+        NotificationManagerCompat mNotificationMgr = NotificationManagerCompat.from(this);
+        mNotificationMgr.notify(1, mBuilder.build());
     }
 }
