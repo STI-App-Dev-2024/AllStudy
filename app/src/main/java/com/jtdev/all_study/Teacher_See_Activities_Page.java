@@ -20,7 +20,7 @@ public class Teacher_See_Activities_Page extends AppCompatActivity {
         setContentView(R.layout.activity_teacher_see_activities_page);
 
         Button see_participants_button = findViewById(R.id.see_participants_button);
-        ImageButton logout_button = findViewById(R.id.logout_button);
+        ImageButton leave_server_button = findViewById(R.id.leave_server_button);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -33,7 +33,7 @@ public class Teacher_See_Activities_Page extends AppCompatActivity {
             startActivity(intent);
         });
 
-        logout_button.setOnClickListener(v -> {
+        leave_server_button.setOnClickListener(v -> {
             PopUp_Logout_Confirm_Button popUp = new PopUp_Logout_Confirm_Button();
             popUp.showConfirmButton(Teacher_See_Activities_Page.this);
         });

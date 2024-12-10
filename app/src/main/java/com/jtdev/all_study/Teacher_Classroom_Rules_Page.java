@@ -21,7 +21,7 @@ public class Teacher_Classroom_Rules_Page extends AppCompatActivity {
 
         ImageButton edit_profile_button = findViewById(R.id.edit_profile_button);
         Button see_activities_button = findViewById(R.id.see_activities_button);
-        ImageButton logout_button = findViewById(R.id.logout_button);
+        ImageButton leave_server_button = findViewById(R.id.leave_server_button);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -39,8 +39,8 @@ public class Teacher_Classroom_Rules_Page extends AppCompatActivity {
             startActivity(intent);
         });
 
-        logout_button.setOnClickListener(v -> {
-            PopUp_Logout_Confirm_Button popUp = new PopUp_Logout_Confirm_Button();
+        leave_server_button.setOnClickListener(v -> {
+            Teacher_PopUp_Leave_Server popUp = new Teacher_PopUp_Leave_Server();
             popUp.showConfirmButton(Teacher_Classroom_Rules_Page.this);
         });
 

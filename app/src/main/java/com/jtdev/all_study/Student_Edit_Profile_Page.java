@@ -24,6 +24,7 @@ public class Student_Edit_Profile_Page extends AppCompatActivity {
         ImageButton notification_button = findViewById(R.id.notification_button);
         ImageButton join_server_button = findViewById(R.id.join_server_button);
         ImageButton favorite_button = findViewById(R.id.favorite_button);
+        ImageButton logout_button = findViewById(R.id.logout_button);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -49,7 +50,10 @@ public class Student_Edit_Profile_Page extends AppCompatActivity {
         favorite_button.setOnClickListener(v -> {
             Intent intent = new Intent(Student_Edit_Profile_Page.this, Student_Favorite_Server_Page.class);
             startActivity(intent);
+        });
 
+        logout_button.setOnClickListener(v -> {
+            logout();
         });
 
     }
