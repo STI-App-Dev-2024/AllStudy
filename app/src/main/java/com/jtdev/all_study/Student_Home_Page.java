@@ -19,6 +19,11 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class Student_Home_Page extends AppCompatActivity {
 
+    private static final String PREFS_NAME = "NotificationPrefs";
+    private static final String KEY_NOTIFICATION_COUNT = "notification_count";
+
+    private TextView notificationBadge; // Reference for the notification badge
+
     private static final String CHANNEL_ID = "simplified_coding";
     private static final CharSequence CHANNEL_NAME = "Simplified Coding Notifications";
     private static final String CHANNEL_DESCRIPTION = "This is the description of the channel.";
@@ -31,7 +36,8 @@ public class Student_Home_Page extends AppCompatActivity {
     ImageButton notification_button;
     ImageButton join_server_button;
     ImageButton favorite_button;
-    TextView notificationBadge;    // Reference for the notification badge
+
+
 
     // Variable to hold the number of notifications
     private int notificationCount = 0;  // Start with 0 notifications
@@ -137,27 +143,31 @@ public class Student_Home_Page extends AppCompatActivity {
     // Method to dynamically set the notification badge count
     private void setNotificationBadge(int notificationCount) {
         if (notificationCount > 0) {
-            notificationBadge.setText(String.valueOf(notificationCount));  // Display the count
-            notificationBadge.setVisibility(TextView.VISIBLE);  // Show the badge
+            notificationBadge.setText(String.valueOf(notificationCount)); // Display count
+            notificationBadge.setVisibility(TextView.VISIBLE); // Show badge
         } else {
-            notificationBadge.setVisibility(TextView.GONE);  // Hide the badge if there are no notifications
+            notificationBadge.setVisibility(TextView.GONE); // Hide badge
         }
     }
-        private void displayNotification() {
-            Log.d("NotificationDebug", "Displaying notification...");
 
-            NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this, CHANNEL_ID)
-                    .setSmallIcon(R.drawable.studenticon)
-                    .setContentTitle("Hello There Dear Student!")
-                    .setContentText("Welcome to Computer Science Server! AllStudy Server is Online!")
-                    .setPriority(NotificationCompat.PRIORITY_HIGH)
-                    .setDefaults(NotificationCompat.DEFAULT_ALL)
-                    .setAutoCancel(false);
+private void displayNotification() {
+    Log.d("NotificationDebug", "Preparing to display notification...");
 
-            NotificationManagerCompat mNotificationMgr = NotificationManagerCompat.from(this);
-            mNotificationMgr.notify(1, mBuilder.build());
-        }
+    new Handler(Looper.getMainLooper()).postDelayed(() -> {
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this, CHANNEL_ID)
+                .setSmallIcon(R.drawable.teachericon)
+                .setContentTitle("Hello There Student!")
+                .setContentText("Welcome to Computer Science Server! AllStudy Server is Online!")
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setDefaults(NotificationCompat.DEFAULT_ALL)
+                .setAutoCancel(false);
 
+        NotificationManagerCompat mNotificationMgr = NotificationManagerCompat.from(this);
+        mNotificationMgr.notify(1, mBuilder.build());
+
+        Log.d("NotificationDebug", "Notification displayed.");
+    }, 1000); // 2000 milliseconds = 2 seconds
+}
             private void displayNotification2() {
                 Log.d("NotificationDebug", "Preparing to display notification...");
 

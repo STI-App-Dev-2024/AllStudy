@@ -44,6 +44,7 @@ dependencies {
 
     // Add androidx.core:core-ktx dependency
     implementation("androidx.core:core-ktx:1.12.0")
+    implementation ("com.squareup.okhttp3:okhttp:4.11.0")
 
     // Firebase dependencies
     implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
