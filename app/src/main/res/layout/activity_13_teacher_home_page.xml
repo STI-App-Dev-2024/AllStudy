@@ -135,9 +135,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/more_active_server"
         android:layout_marginTop="8dp"
-        android:contentDescription="Scroll horizontally to view more items"
-        android:scrollbars="none"
-        tools:ignore="HardcodedText">
+        android:contentDescription="@string/scroll_horizontally_to_view_more_items"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -148,13 +147,14 @@
             <!-- Placeholder views for the items -->
 
             <ImageButton
-                android:id="@+id/code_button"
+                android:id="@+id/server_button_1"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/code" />
 
             <ImageButton
+                android:id="@+id/server_button_2"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginEnd="8dp"
