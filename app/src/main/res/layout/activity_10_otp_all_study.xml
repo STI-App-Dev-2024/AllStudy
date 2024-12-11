@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OTP_AllStudy"
+    android:background="#F0F5F9">
+
+    <ImageView
+        android:id="@+id/splash_for_otp"
+        android:layout_width="360dp"
+        android:layout_height="385dp"
+        android:src="@drawable/halfsplash"
+        android:layout_centerHorizontal="true"
+        android:importantForAccessibility="no" />
+
+    <ImageView
+        android:id="@+id/rectangles"
+        android:layout_width="360dp"
+        android:layout_height="424dp"
+        android:src="@drawable/custom_rectangle"
+        android:layout_below="@+id/splash_for_otp"
+        android:layout_centerHorizontal="true"
+        android:importantForAccessibility="no" />
+
+    <TextView
+        android:id="@+id/verification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/splash_for_otp"
+        android:layout_centerInParent="true"
+        android:layout_margin="16dp"
+        android:textSize="35sp"
+        android:text="@string/verification"
+        android:fontFamily="@font/product_sans_bold"
+        android:contentDescription="@string/verification"/>
+
+    <LinearLayout
+        android:id="@+id/circlesLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/verification"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/otp1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="10dp"
+        android:autofillHints="verificationCode"
+        android:inputType="number"
+        android:maxLength="1"
+        android:gravity="center"
+        android:background="@drawable/circle_background"
+        android:nextFocusForward="@id/otp2"
+        android:hint="@string/_0"
+        android:textSize="30sp"
+        android:textColorHint="#6A5E5E" />
+
+    <EditText
+        android:id="@+id/otp2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="10dp"
+        android:autofillHints="verificationCode"
+        android:inputType="number"
+        android:maxLength="1"
+        android:gravity="center"
+        android:background="@drawable/circle_background"
+        android:nextFocusForward="@id/otp3"
+        android:hint="@string/_0"
+        android:textSize="30sp"
+        android:textColorHint="#6A5E5E" />
+
+    <EditText
+        android:id="@+id/otp3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="10dp"
+        android:autofillHints="verificationCode"
+        android:inputType="number"
+        android:maxLength="1"
+        android:gravity="center"
+        android:background="@drawable/circle_background"
+        android:nextFocusForward="@id/otp4"
+        android:hint="@string/_0"
+        android:textSize="30sp"
+        android:textColorHint="#6A5E5E" />
+
+    <EditText
+        android:id="@+id/otp4"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="10dp"
+        android:autofillHints="verificationCode"
+        android:inputType="number"
+        android:maxLength="1"
+        android:gravity="center"
+        android:background="@drawable/circle_background"
+        android:hint="@string/_0"
+        android:textSize="30sp"
+        android:textColorHint="#6A5E5E" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/send_button"
+        android:layout_width="294dp"
+        android:layout_height="49dp"
+        android:layout_below="@id/circlesLayout"
+        android:layout_margin="20dp"
+        android:text="@string/send"
+        android:textSize="20sp"
+        android:layout_centerInParent="true"
+        android:backgroundTint="#313231"
+        android:fontFamily="@font/product_sans_bold"/>
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/send_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dont_have_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/didn_t_receive_a_code"
+            android:fontFamily="@font/product_sans_regular"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/resend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/resend"
+            android:textColor="#26198F"
+            android:fontFamily="@font/product_sans_bold"
+            android:padding="5dp"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

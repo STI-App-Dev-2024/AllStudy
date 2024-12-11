@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "922723660844",
+    "project_id": "allstudy-bb29c",
+    "storage_bucket": "allstudy-bb29c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:922723660844:android:5b7d702fc15fe9e81e0d89",
+        "android_client_info": {
+          "package_name": "com.jtdev.all_study"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdgkSeCdnVtQd9m5iAOdtxEv9Rd1B3Sbg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
