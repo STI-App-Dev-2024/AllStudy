@@ -2,17 +2,24 @@ package com.jtdev.all_study;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class Student_Home_Page extends AppCompatActivity {
+
+    private static final String CHANNEL_ID = "simplified_coding";
+    private static final CharSequence CHANNEL_NAME = "Simplified Coding Notifications";
+    private static final String CHANNEL_DESCRIPTION = "This is the description of the channel.";
 
     ImageButton button1;
     ImageButton edit_profile_button;
@@ -64,6 +71,7 @@ public class Student_Home_Page extends AppCompatActivity {
 
         join_now_button.setOnClickListener(v -> {
             Intent intent = new Intent(Student_Home_Page.this, Student_Inside_Server_Page.class);
+            displayNotification();
             startActivity(intent);
         });
 
@@ -84,6 +92,7 @@ public class Student_Home_Page extends AppCompatActivity {
 
         join_server_button.setOnClickListener(v -> {
             Intent intent = new Intent(Student_Home_Page.this, Student_Inside_Server_Page.class);
+            displayNotification();
             startActivity(intent);
         });
 
@@ -123,4 +132,19 @@ public class Student_Home_Page extends AppCompatActivity {
             notificationBadge.setVisibility(TextView.GONE);  // Hide the badge if there are no notifications
         }
     }
-}
+        private void displayNotification() {
+            Log.d("NotificationDebug", "Displaying notification...");
+
+            NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this, CHANNEL_ID)
+                    .setSmallIcon(R.drawable.studenticon)
+                    .setContentTitle("Hello There Dear Student!")
+                    .setContentText("Welcome to Computer Science Server! AllStudy Server is Online!")
+                    .setPriority(NotificationCompat.PRIORITY_HIGH)
+                    .setDefaults(NotificationCompat.DEFAULT_ALL)
+                    .setAutoCancel(false);
+
+            NotificationManagerCompat mNotificationMgr = NotificationManagerCompat.from(this);
+            mNotificationMgr.notify(1, mBuilder.build());
+        }
+    }
+

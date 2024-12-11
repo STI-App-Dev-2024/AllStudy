@@ -43,9 +43,7 @@
         <activity
             android:name=".Teacher_Inside_Server_Page_2"
             android:exported="false" />
-        <activity
-            android:name=".Seemore_Page1"
-            android:exported="false" />
+       
         <activity
             android:name=".Student_Join_Server_Page"
             android:exported="false" />
