@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
@@ -131,19 +133,21 @@ public class Teacher_LogIn_Page extends AppCompatActivity {
     }
 
     private void displayNotification() {
-        Log.d("NotificationDebug", "Displaying notification...");
+        Log.d("NotificationDebug", "Preparing to display notification...");
 
-        // Build the notification
-        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this, CHANNEL_ID)
-                .setSmallIcon(R.drawable.teachericon)  // Use your teacher icon here
-                .setContentTitle("Welcome Teacher!")
-                .setContentText("AllStudy Server is Online!")
-                .setPriority(NotificationCompat.PRIORITY_HIGH)
-                .setDefaults(NotificationCompat.DEFAULT_ALL)
-                .setAutoCancel(true);
+        new Handler(Looper.getMainLooper()).postDelayed(() -> {
+            NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this, CHANNEL_ID)
+                    .setSmallIcon(R.drawable.teachericon)
+                    .setContentTitle("Hello There Teacher!")
+                    .setContentText("Welcome to AllStudy! AllStudy Server is Online!")
+                    .setPriority(NotificationCompat.PRIORITY_HIGH)
+                    .setDefaults(NotificationCompat.DEFAULT_ALL)
+                    .setAutoCancel(false);
 
-        // NotificationManagerCompat to display the notification
-        NotificationManagerCompat mNotificationMgr = NotificationManagerCompat.from(this);
-        mNotificationMgr.notify(1, mBuilder.build());
+            NotificationManagerCompat mNotificationMgr = NotificationManagerCompat.from(this);
+            mNotificationMgr.notify(1, mBuilder.build());
+
+            Log.d("NotificationDebug", "Notification displayed.");
+        }, 2000); // 2000 milliseconds = 2 seconds
     }
 }

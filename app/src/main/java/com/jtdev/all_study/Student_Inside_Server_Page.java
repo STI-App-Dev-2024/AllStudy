@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -51,6 +52,7 @@ public class Student_Inside_Server_Page extends AppCompatActivity {
         logout_button.setOnClickListener(v -> {
             Student_PopUp_Leave_Server popUp = new Student_PopUp_Leave_Server();
             popUp.showConfirmButton(Student_Inside_Server_Page.this);
+            Toast.makeText(this, "You Left the Server", Toast.LENGTH_SHORT).show();
         });
 
     }

@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
@@ -137,17 +139,21 @@ public class Student_LogIn extends AppCompatActivity {
     }
 
     private void displayNotification() {
-        Log.d("NotificationDebug", "Displaying notification...");
+        Log.d("NotificationDebug", "Preparing to display notification...");
 
-        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this, CHANNEL_ID)
-                .setSmallIcon(R.drawable.studenticon)
-                .setContentTitle("Hello There Dear Student!")
-                .setContentText("AllStudy Server is Online!")
-                .setPriority(NotificationCompat.PRIORITY_HIGH)
-                .setDefaults(NotificationCompat.DEFAULT_ALL)
-                .setAutoCancel(false);
+        new Handler(Looper.getMainLooper()).postDelayed(() -> {
+            NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this, CHANNEL_ID)
+                    .setSmallIcon(R.drawable.teachericon)
+                    .setContentTitle("Hello There Student!")
+                    .setContentText("Welcome to AllStudy Server")
+                    .setPriority(NotificationCompat.PRIORITY_HIGH)
+                    .setDefaults(NotificationCompat.DEFAULT_ALL)
+                    .setAutoCancel(false);
 
-        NotificationManagerCompat mNotificationMgr = NotificationManagerCompat.from(this);
-        mNotificationMgr.notify(1, mBuilder.build());
+            NotificationManagerCompat mNotificationMgr = NotificationManagerCompat.from(this);
+            mNotificationMgr.notify(1, mBuilder.build());
+
+            Log.d("NotificationDebug", "Notification displayed.");
+        }, 1000);
     }
 }
