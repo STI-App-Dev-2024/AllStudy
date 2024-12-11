@@ -101,6 +101,7 @@ public class Teacher_Home_Page extends AppCompatActivity {
             displayNotification();
             startActivity(intent);
         });
+
         server_button_2.setOnClickListener(v -> {
             Intent intent = new Intent(Teacher_Home_Page.this, Teacher_Inside_Server_Page_2.class);
             displayNotification2();

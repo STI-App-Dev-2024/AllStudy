@@ -112,7 +112,7 @@ public class Student_Home_Page extends AppCompatActivity {
         });
 
         button2.setOnClickListener(v -> {
-            Intent intent = new Intent(Student_Home_Page.this, Student_Inside_Server_Page.class);
+            Intent intent = new Intent(Student_Home_Page.this, Student_Inside_Server_Page_2.class);
             displayNotification2();
             startActivity(intent);
         });
