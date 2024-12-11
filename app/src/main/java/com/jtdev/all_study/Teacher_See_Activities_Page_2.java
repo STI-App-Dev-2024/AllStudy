@@ -11,16 +11,15 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Teacher_See_Classroom_Rules_Page extends AppCompatActivity {
+public class Teacher_See_Activities_Page_2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_teacher_see_classroom_rules);
+        setContentView(R.layout.activity_teacher_see_activities_page2);
 
-        ImageButton edit_profile_button = findViewById(R.id.edit_profile_button);
-        Button see_activities_button = findViewById(R.id.see_activities_button);
+        Button see_participants_button = findViewById(R.id.see_participants_button);
         ImageButton leave_server_button = findViewById(R.id.leave_server_button);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -29,19 +28,14 @@ public class Teacher_See_Classroom_Rules_Page extends AppCompatActivity {
             return insets;
         });
 
-        edit_profile_button.setOnClickListener(v -> {
-            Intent intent = new Intent(Teacher_See_Classroom_Rules_Page.this, Teacher_Edit_Profile_Page.class);
-            startActivity(intent);
-        });
-
-        see_activities_button.setOnClickListener(v -> {
-            Intent intent = new Intent(Teacher_See_Classroom_Rules_Page.this, Teacher_See_Activities_Page.class);
+        see_participants_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Teacher_See_Activities_Page_2.this, Teacher_Inside_Server_Page_2.class);
             startActivity(intent);
         });
 
         leave_server_button.setOnClickListener(v -> {
             Teacher_PopUp_Leave_Server popUp = new Teacher_PopUp_Leave_Server();
-            popUp.showConfirmButton(Teacher_See_Classroom_Rules_Page.this);
+            popUp.showConfirmButton(Teacher_See_Activities_Page_2.this);
         });
 
     }

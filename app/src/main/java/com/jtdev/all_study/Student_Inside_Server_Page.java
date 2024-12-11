@@ -25,7 +25,8 @@ public class Student_Inside_Server_Page extends AppCompatActivity {
         ImageButton edit_profile_button = findViewById(R.id.edit_profile_button);
         Button see_activities_button = findViewById(R.id.see_activities_button);
         ImageButton logout_button = findViewById(R.id.logout_button);
-        TextView    see_classroom_rules_click = findViewById(R.id.see_classroom_rules_click);
+        TextView see_classroom_rules_click = findViewById(R.id.see_classroom_rules_click);
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
