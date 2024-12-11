@@ -91,6 +91,7 @@
         android:layout_marginBottom="-12dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/log_out_button"
+        android:layout_centerHorizontal="true"
         android:src="@drawable/logout_button" />
 
 

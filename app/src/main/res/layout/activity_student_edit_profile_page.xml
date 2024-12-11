@@ -42,25 +42,28 @@
         android:contentDescription="@string/change_picture_button"
         android:src="@drawable/student_profile" />
 
-    <EditText
+    <TextView
         android:id="@+id/full_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/full_name"
+        android:fontFamily="@font/product_sans_bold"
+        android:text="@string/peter_griffin"
         android:layout_below="@id/all_study_title"
         android:textSize="25sp"
         android:layout_marginStart="120dp"
         android:layout_marginTop="35dp"/>
 
-    <EditText
+    <TextView
         android:id="@+id/bio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/bio"
+        android:text="\@User1234"
+        android:layout_marginVertical="5dp"
         android:layout_below="@id/full_name"
         android:textSize="18sp"
         android:layout_marginStart="120dp"
-        android:layout_marginTop="-10dp"/>
+        android:layout_marginTop="-10dp"
+        android:fontFamily="@font/product_sans_bold"/>
 
     <TextView
         android:id="@+id/about_me_title"
@@ -69,9 +72,10 @@
         android:text="@string/about_me"
         android:textSize="30sp"
         android:layout_below="@id/change_profile_button"
-        android:layout_marginTop="10dp"
         android:layout_marginStart="25dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:fontFamily="@font/product_sans_bold"
+        />
 
     <ImageView
         android:id="@+id/rectangle_profile"
@@ -88,10 +92,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"
-        android:src="@drawable/logout"
         android:background="@android:color/transparent"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:src="@drawable/logout" />
 
     <!-- Bottom Taskbar -->
     <ImageView
