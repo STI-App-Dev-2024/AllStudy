@@ -14,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class Student_Home_Page extends AppCompatActivity {
 
+    ImageButton button1;
     ImageButton edit_profile_button;
     Button join_now_button;
     Button see_more_button;
@@ -32,6 +33,7 @@ public class Student_Home_Page extends AppCompatActivity {
         setContentView(R.layout.activity_12_student_home_page);
 
         // Instantiated all buttons by getting their IDs from student_homepage.xml
+        button1 = findViewById(R.id.button1);
         edit_profile_button = findViewById(R.id.edit_profile_button);
         join_now_button = findViewById(R.id.join_now_button);
         see_more_button = findViewById(R.id.see_more_button);
@@ -89,8 +91,12 @@ public class Student_Home_Page extends AppCompatActivity {
             Intent intent = new Intent(Student_Home_Page.this, Student_Favorite_Server_Page.class);
             startActivity(intent);
         });
-    }
 
+        button1.setOnClickListener(v -> {
+            Intent intent = new Intent(Student_Home_Page.this, Student_Inside_Server_Page.class);
+            startActivity(intent);
+        });
+    }
     @Override
     protected void onResume() {
         super.onResume();

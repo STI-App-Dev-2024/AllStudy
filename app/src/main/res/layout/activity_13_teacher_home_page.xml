@@ -148,6 +148,7 @@
             <!-- Placeholder views for the items -->
 
             <ImageButton
+                android:id="@+id/code_button"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginEnd="8dp"

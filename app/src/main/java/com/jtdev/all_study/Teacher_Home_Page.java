@@ -14,6 +14,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class Teacher_Home_Page extends AppCompatActivity {
+    private ImageButton code_button;
 
     // SharedPreferences keys for notification management
     private static final String PREFS_NAME = "NotificationPrefs";
@@ -28,6 +29,7 @@ public class Teacher_Home_Page extends AppCompatActivity {
         setContentView(R.layout.activity_13_teacher_home_page);
 
         // Instantiate UI components
+        code_button = findViewById(R.id.code_button);
         ImageButton edit_profile_button = findViewById(R.id.edit_profile_button);
         Button join_now_button = findViewById(R.id.join_now_button);
         Button see_more_button = findViewById(R.id.see_more_button);
@@ -79,6 +81,11 @@ public class Teacher_Home_Page extends AppCompatActivity {
 
         favorite_button.setOnClickListener(v -> {
             Intent intent = new Intent(Teacher_Home_Page.this, Teacher_Favorite_Server_Page.class);
+            startActivity(intent);
+        });
+
+        code_button.setOnClickListener(v -> {
+            Intent intent = new Intent(Teacher_Home_Page.this, Teacher_Inside_Server_Page.class);
             startActivity(intent);
         });
     }
