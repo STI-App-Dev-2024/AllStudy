@@ -44,9 +44,6 @@
             android:name=".Student_Inside_Server_Page_2"
             android:exported="false" />
         <activity
-            android:name=".Student_See_Participants_Page_2"
-            android:exported="false" />
-        <activity
             android:name=".Student_See_Classroom_Rules_Page_2"
             android:exported="false" />
         <activity
@@ -54,9 +51,6 @@
             android:exported="false" />
         <activity
             android:name=".Teacher_See_Activities_Page_2"
-            android:exported="false" />
-        <activity
-            android:name=".Teacher_See_More_Page_2"
             android:exported="false" />
         <activity
             android:name=".Teacher_Inside_Server_Page_2"

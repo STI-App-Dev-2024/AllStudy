@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,7 +21,7 @@ public class Student_See_Classroom_Rules_Page_2 extends AppCompatActivity {
         setContentView(R.layout.activity_student_see_classroom_rules_page2);
 
         ImageButton edit_profile_button = findViewById(R.id.edit_profile_button);
-        Button see_activities_button = findViewById(R.id.see_activities_button);
+        TextView see_classroom_rules_click = findViewById(R.id.see_classroom_rules_click);
         ImageButton leave_server_button = findViewById(R.id.leave_server_button);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -34,7 +35,7 @@ public class Student_See_Classroom_Rules_Page_2 extends AppCompatActivity {
             startActivity(intent);
         });
 
-        see_activities_button.setOnClickListener(v -> {
+        see_classroom_rules_click.setOnClickListener(v -> {
             Intent intent = new Intent(Student_See_Classroom_Rules_Page_2.this, Student_See_Activities_Page_2.class);
             startActivity(intent);
         });
