@@ -51,20 +51,13 @@
         android:id="@+id/add_apps_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/add_apps_button"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginTop="400dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="-6dp"
-        android:backgroundTint="@android:color/transparent" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/add_apps"
-        android:layout_below="@+id/add_apps_button"
-        android:layout_centerHorizontal="true"
-        android:textSize="20sp"
-        android:fontFamily="@font/product_sans_bold" />
+        android:layout_marginVertical="450dp"
+        android:backgroundTint="@android:color/transparent"
+        android:src="@drawable/add_apps_button" />
 
     <Button
         android:id="@+id/create_server_button"
