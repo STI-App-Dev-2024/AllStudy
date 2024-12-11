@@ -22,6 +22,7 @@ public class Teacher_Enable_Apps_Page extends AppCompatActivity {
 
         ImageButton back_button = findViewById(R.id.back_button);
         ImageButton add_apps_button = findViewById(R.id.add_apps_button);
+        Button create_server_button = findViewById(R.id.create_server_button);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -37,6 +38,11 @@ public class Teacher_Enable_Apps_Page extends AppCompatActivity {
         add_apps_button.setOnClickListener(v -> {
             Intent intent = new Intent(Teacher_Enable_Apps_Page.this, Teacher_Enable_Apps_Page.class);
             startActivity(intent);
+        });
+
+        create_server_button.setOnClickListener(v -> {
+            PopUp_Create_Server_Confirm_Button popUp = new PopUp_Create_Server_Confirm_Button();
+            popUp.showConfirmButton(Teacher_Enable_Apps_Page.this);
         });
 
     }
